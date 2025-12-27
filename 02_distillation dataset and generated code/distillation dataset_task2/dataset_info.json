@@ -1,0 +1,10 @@
+{
+    "train": {
+      "file_name": "train2.json",
+      "formatting": "sharegpt"
+    },
+    "eval": {
+      "file_name": "eval2.json",
+      "formatting": "sharegpt"
+    }
+}
