@@ -1,0 +1,20 @@
+eval.batch_size: 2
+eval.cutoff_len: 2500
+eval.dataset:
+- eval
+eval.dataset_dir: /root/ambem_distill_03_task1
+eval.max_new_tokens: 8192
+eval.max_samples: '100000'
+eval.output_dir: eval_2025-04-09-10-05-55-3b-task1-lora-4lun-2500jieduan-eval0.111
+eval.predict: true
+eval.temperature: 0.1
+eval.top_p: 0.7
+top.booster: auto
+top.checkpoint_path:
+- train_2025-03-30-20-23-07-3b-task1-lora-4lun-2500jieduan-eval0.111
+top.finetuning_type: lora
+top.model_name: Qwen2.5-3B-Instruct
+top.quantization_bit: none
+top.quantization_method: bitsandbytes
+top.rope_scaling: none
+top.template: qwen
