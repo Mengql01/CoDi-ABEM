@@ -1,0 +1,3134 @@
+=== 第 1 对 (原编号: 4) ===
+Human_4: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.300 m (length) Ã 5.200 m (width) Ã 7.500 m (height), featuring 1.900 m (length) Ã 2.800 m (width) windows on both south and north walls with west edges offset 0.100 m from wall west edges, both having 1.25 m sill height.
+GPT_4: ```python
+("zone01",
+[(0, 0, 0), (0, 5.2, 0), (7.3, 5.2, 0), (7.3, 0, 0), (0, 0, 7.5), (0, 5.2, 7.5), (7.3, 5.2, 7.5), (7.3, 0, 7.5)],
+"z1_b, GROUND_FLOOR, b",
+"z1_t, EXT_ROOF, t",
+"z1_e, ADJ_WALL, e, zone02",
+"z1_w, EXT_WALL, w",
+"z1_n, EXT_WALL, n",
+"z1_s, EXT_WALL, s",
+"z1_1, EXT_WINDOW1, z1_s, (0.1,0,4.05), (0.1,0,1.25), (2.0,0,1.25), (2.0,0,4.05)",
+"z1_2, EXT_WINDOW1, z1_n, (0.1,5.2,1.25), (0.1,5.2,4.05), (2.0,5.2,4.05), (2.0,5.2,1.25)"
+),
+("zone02",
+[(7.3, 0, 0), (7.3, 5.2, 0), (14.6, 5.2, 0), (14.6, 0, 0), (7.3, 0, 7.5), (7.3, 5.2, 7.5), (14.6, 5.2, 7.5), (14.6, 0, 7.5)],
+"z2_b, GROUND_FLOOR, b",
+"z2_t, EXT_ROOF, t",
+"z2_e, ADJ_WALL, e, zone03",
+"z2_w, ADJ_WALL, w, zone01",
+"z2_n, EXT_WALL, n",
+"z2_s, EXT_WALL, s",
+"z2_1, EXT_WINDOW1, z2_s, (7.4,0,4.05), (7.4,0,1.25), (9.3,0,1.25), (9.3,0,4.05)",
+"z2_2, EXT_WINDOW1, z2_n, (7.4,5.2,1.25), (7.4,5.2,4.05), (9.3,5.2,4.05), (9.3,5.2,1.25)"
+),
+("zone03",
+[(14.6, 0, 0), (14.6, 5.2, 0), (21.9, 5.2, 0), (21.9, 0, 0), (14.6, 0, 7.5), (14.6, 5.2, 7.5), (21.9, 5.2, 7.5), (21.9, 0, 7.5)],
+"z3_b, GROUND_FLOOR, b",
+"z3_t, EXT_ROOF, t",
+"z3_e, ADJ_WALL, e, zone04",
+"z3_w, ADJ_WALL, w, zone02",
+"z3_n, EXT_WALL, n",
+"z3_s, EXT_WALL, s",
+"z3_1, EXT_WINDOW1, z3_s, (14.7,0,4.05), (14.7,0,1.25), (16.6,0,1.25), (16.6,0,4.05)",
+"z3_2, EXT_WINDOW1, z3_n, (14.7,5.2,1.25), (14.7,5.2,4.05), (16.6,5.2,4.05), (16.6,5.2,1.25)"
+),
+("zone04",
+[(21.9, 0, 0), (21.9, 5.2, 0), (29.2, 5.2, 0), (29.2, 0, 0), (21.9, 0, 7.5), (21.9, 5.2, 7.5), (29.2, 5.2, 7.5), (29.2, 0, 7.5)],
+"z4_b, GROUND_FLOOR, b",
+"z4_t, EXT_ROOF, t",
+"z4_e, ADJ_WALL, e, zone05",
+"z4_w, ADJ_WALL, w, zone03",
+"z4_n, EXT_WALL, n",
+"z4_s, EXT_WALL, s",
+"z4_1, EXT_WINDOW1, z4_s, (22.0,0,4.05), (22.0,0,1.25), (23.9,0,1.25), (23.9,0,4.05)",
+"z4_2, EXT_WINDOW1, z4_n, (22.0,5.2,1.25), (22.0,5.2,4.05), (23.9,5.2,4.05), (23.9,5.2,1.25)"
+),
+("zone05",
+[(29.2, 0, 0), (29.2, 5.2, 0), (36.5, 5.2, 0), (36.5, 0, 0), (29.2, 0, 7.5), (29.2, 5.2, 7.5), (36.5, 5.2, 7.5), (36.5, 0, 7.5)],
+"z5_b, GROUND_FLOOR, b",
+"z5_t, EXT_ROOF, t",
+"z5_e, EXT_WALL, e",
+"z5_w, ADJ_WALL, w, zone04",
+"z5_n, EXT_WALL, n",
+"z5_s, EXT_WALL, s",
+"z5_1, EXT_WINDOW1, z5_s, (29.3,0,4.05), (29.3,0,1.25), (31.2,0,1.25), (31.2,0,4.05)",
+"z5_2, EXT_WINDOW1, z5_n, (29.3,5.2,1.25), (29.3,5.2,4.05), (31.2,5.2,4.05), (31.2,5.2,1.25)"
+)
+```
+
+=== 第 2 对 (原编号: 21) ===
+Human_21: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.000 m (length) Ã 4.200 m (width) Ã 7.600 m (height), featuring 3.200 m (length) Ã 2.300 m (width) windows on both south and north walls with west edges offset 0.500 m from wall west edges, both having 1.25 m sill height.
+GPT_21: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.2, 0), (7, 4.2, 0), (7, 0, 0), (0, 0, 7.6), (0, 4.2, 7.6), (7, 4.2, 7.6), (7, 0, 7.6)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.5,0,3.55), (0.5,0,1.25), (3.7,0,1.25), (3.7,0,3.55)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.5,4.2,1.25), (0.5,4.2,3.55), (3.7,4.2,3.55), (3.7,4.2,1.25)"
+    ),
+    ("zone02",
+    [(7, 0, 0), (7, 4.2, 0), (14, 4.2, 0), (14, 0, 0), (7, 0, 7.6), (7, 4.2, 7.6), (14, 4.2, 7.6), (14, 0, 7.6)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (7.5,0,3.55), (7.5,0,1.25), (10.7,0,1.25), (10.7,0,3.55)",
+    "s2_2, EXT_WINDOW1, s2_n, (7.5,4.2,1.25), (7.5,4.2,3.55), (10.7,4.2,3.55), (10.7,4.2,1.25)"
+    ),
+    ("zone03",
+    [(14, 0, 0), (14, 4.2, 0), (21, 4.2, 0), (21, 0, 0), (14, 0, 7.6), (14, 4.2, 7.6), (21, 4.2, 7.6), (21, 0, 7.6)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (14.5,0,3.55), (14.5,0,1.25), (17.7,0,1.25), (17.7,0,3.55)",
+    "s3_2, EXT_WINDOW1, s3_n, (14.5,4.2,1.25), (14.5,4.2,3.55), (17.7,4.2,3.55), (17.7,4.2,1.25)"
+    ),
+    ("zone04",
+    [(21, 0, 0), (21, 4.2, 0), (28, 4.2, 0), (28, 0, 0), (21, 0, 7.6), (21, 4.2, 7.6), (28, 4.2, 7.6), (28, 0, 7.6)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (21.5,0,3.55), (21.5,0,1.25), (24.7,0,1.25), (24.7,0,3.55)",
+    "s4_2, EXT_WINDOW1, s4_n, (21.5,4.2,1.25), (21.5,4.2,3.55), (24.7,4.2,3.55), (24.7,4.2,1.25)"
+    ),
+    ("zone05",
+    [(28, 0, 0), (28, 4.2, 0), (35, 4.2, 0), (35, 0, 0), (28, 0, 7.6), (28, 4.2, 7.6), (35, 4.2, 7.6), (35, 0, 7.6)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (28.5,0,3.55), (28.5,0,1.25), (31.7,0,1.25), (31.7,0,3.55)",
+    "s5_2, EXT_WINDOW1, s5_n, (28.5,4.2,1.25), (28.5,4.2,3.55), (31.7,4.2,3.55), (31.7,4.2,1.25)"
+    )
+)
+```
+
+=== 第 3 对 (原编号: 49) ===
+Human_49: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.200 m (length) Ã 4.900 m (width) Ã 7.100 m (height), featuring 2.500 m (length) Ã 2.500 m (width) windows on both south and north walls with west edges offset 1.100 m from wall west edges, both having 1.25 m sill height.
+GPT_49: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.9, 0), (7.2, 4.9, 0), (7.2, 0, 0), (0, 0, 7.1), (0, 4.9, 7.1), (7.2, 4.9, 7.1), (7.2, 0, 7.1)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (1.1,0,3.75), (1.1,0,1.25), (3.6,0,1.25), (3.6,0,3.75)",
+    "s1_2, EXT_WINDOW1, s1_n, (1.1,4.9,1.25), (1.1,4.9,3.75), (3.6,4.9,3.75), (3.6,4.9,1.25)"
+    ),
+    ("zone02",
+    [(7.2, 0, 0), (7.2, 4.9, 0), (14.4, 4.9, 0), (14.4, 0, 0), (7.2, 0, 7.1), (7.2, 4.9, 7.1), (14.4, 4.9, 7.1), (14.4, 0, 7.1)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (8.3,0,3.75), (8.3,0,1.25), (10.8,0,1.25), (10.8,0,3.75)",
+    "s2_2, EXT_WINDOW1, s2_n, (8.3,4.9,1.25), (8.3,4.9,3.75), (10.8,4.9,3.75), (10.8,4.9,1.25)"
+    ),
+    ("zone03",
+    [(14.4, 0, 0), (14.4, 4.9, 0), (21.6, 4.9, 0), (21.6, 0, 0), (14.4, 0, 7.1), (14.4, 4.9, 7.1), (21.6, 4.9, 7.1), (21.6, 0, 7.1)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (15.5,0,3.75), (15.5,0,1.25), (18.0,0,1.25), (18.0,0,3.75)",
+    "s3_2, EXT_WINDOW1, s3_n, (15.5,4.9,1.25), (15.5,4.9,3.75), (18.0,4.9,3.75), (18.0,4.9,1.25)"
+    ),
+    ("zone04",
+    [(21.6, 0, 0), (21.6, 4.9, 0), (28.8, 4.9, 0), (28.8, 0, 0), (21.6, 0, 7.1), (21.6, 4.9, 7.1), (28.8, 4.9, 7.1), (28.8, 0, 7.1)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (22.7,0,3.75), (22.7,0,1.25), (25.2,0,1.25), (25.2,0,3.75)",
+    "s4_2, EXT_WINDOW1, s4_n, (22.7,4.9,1.25), (22.7,4.9,3.75), (25.2,4.9,3.75), (25.2,4.9,1.25)"
+    ),
+    ("zone05",
+    [(28.8, 0, 0), (28.8, 4.9, 0), (36.0, 4.9, 0), (36.0, 0, 0), (28.8, 0, 7.1), (28.8, 4.9, 7.1), (36.0, 4.9, 7.1), (36.0, 0, 7.1)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (29.9,0,3.75), (29.9,0,1.25), (32.4,0,1.25), (32.4,0,3.75)",
+    "s5_2, EXT_WINDOW1, s5_n, (29.9,4.9,1.25), (29.9,4.9,3.75), (32.4,4.9,3.75), (32.4,4.9,1.25)"
+    )
+)
+```
+
+=== 第 4 对 (原编号: 68) ===
+Human_68: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.800 m (length) Ã 4.300 m (width) Ã 7.900 m (height), featuring 3.600 m (length) Ã 2.100 m (width) windows on both south and north walls with west edges offset 0.300 m from wall west edges, both having 1.25 m sill height.
+GPT_68: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.3, 0), (5.8, 4.3, 0), (5.8, 0, 0), (0, 0, 7.9), (0, 4.3, 7.9), (5.8, 4.3, 7.9), (5.8, 0, 7.9)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.3,0,3.35), (0.3,0,1.25), (3.9,0,1.25), (3.9,0,3.35)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.3,4.3,1.25), (0.3,4.3,3.35), (3.9,4.3,3.35), (3.9,4.3,1.25)"
+    ),
+    ("zone02",
+    [(5.8, 0, 0), (5.8, 4.3, 0), (11.6, 4.3, 0), (11.6, 0, 0), (5.8, 0, 7.9), (5.8, 4.3, 7.9), (11.6, 4.3, 7.9), (11.6, 0, 7.9)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (6.1,0,3.35), (6.1,0,1.25), (9.7,0,1.25), (9.7,0,3.35)",
+    "s2_2, EXT_WINDOW1, s2_n, (6.1,4.3,1.25), (6.1,4.3,3.35), (9.7,4.3,3.35), (9.7,4.3,1.25)"
+    ),
+    ("zone03",
+    [(11.6, 0, 0), (11.6, 4.3, 0), (17.4, 4.3, 0), (17.4, 0, 0), (11.6, 0, 7.9), (11.6, 4.3, 7.9), (17.4, 4.3, 7.9), (17.4, 0, 7.9)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (11.9,0,3.35), (11.9,0,1.25), (15.5,0,1.25), (15.5,0,3.35)",
+    "s3_2, EXT_WINDOW1, s3_n, (11.9,4.3,1.25), (11.9,4.3,3.35), (15.5,4.3,3.35), (15.5,4.3,1.25)"
+    ),
+    ("zone04",
+    [(17.4, 0, 0), (17.4, 4.3, 0), (23.2, 4.3, 0), (23.2, 0, 0), (17.4, 0, 7.9), (17.4, 4.3, 7.9), (23.2, 4.3, 7.9), (23.2, 0, 7.9)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (17.7,0,3.35), (17.7,0,1.25), (21.3,0,1.25), (21.3,0,3.35)",
+    "s4_2, EXT_WINDOW1, s4_n, (17.7,4.3,1.25), (17.7,4.3,3.35), (21.3,4.3,3.35), (21.3,4.3,1.25)"
+    ),
+    ("zone05",
+    [(23.2, 0, 0), (23.2, 4.3, 0), (29.0, 4.3, 0), (29.0, 0, 0), (23.2, 0, 7.9), (23.2, 4.3, 7.9), (29.0, 4.3, 7.9), (29.0, 0, 7.9)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (23.5,0,3.35), (23.5,0,1.25), (27.1,0,1.25), (27.1,0,3.35)",
+    "s5_2, EXT_WINDOW1, s5_n, (23.5,4.3,1.25), (23.5,4.3,3.35), (27.1,4.3,3.35), (27.1,4.3,1.25)"
+    )
+)
+```
+
+=== 第 5 对 (原编号: 88) ===
+Human_88: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 6.900 m (length) Ã 4.200 m (width) Ã 6.500 m (height), featuring 2.700 m (length) Ã 2.200 m (width) windows on both south and north walls with west edges offset 0.700 m from wall west edges, both having 1.25 m sill height.
+GPT_88: ("zone01",
+[(0, 0, 0), (0, 4.2, 0), (6.9, 4.2, 0), (6.9, 0, 0), (0, 0, 6.5), (0, 4.2, 6.5), (6.9, 4.2, 6.5), (6.9, 0, 6.5)],
+"s1_b, GROUND_FLOOR, b",
+"s1_t, EXT_ROOF, t",
+"s1_e, ADJ_WALL, e, zone02",
+"s1_w, EXT_WALL, w",
+"s1_n, EXT_WALL, n",
+"s1_s, EXT_WALL, s",
+"s1_1, EXT_WINDOW1, s1_s, (0.7,0,3.45), (0.7,0,1.25), (3.4,0,1.25), (3.4,0,3.45)",
+"s1_2, EXT_WINDOW1, s1_n, (0.7,4.2,1.25), (0.7,4.2,3.45), (3.4,4.2,3.45), (3.4,4.2,1.25)"
+),
+("zone02",
+[(6.9, 0, 0), (6.9, 4.2, 0), (13.8, 4.2, 0), (13.8, 0, 0), (6.9, 0, 6.5), (6.9, 4.2, 6.5), (13.8, 4.2, 6.5), (13.8, 0, 6.5)],
+"s2_b, GROUND_FLOOR, b",
+"s2_t, EXT_ROOF, t",
+"s2_e, ADJ_WALL, e, zone03",
+"s2_w, ADJ_WALL, w, zone01",
+"s2_n, EXT_WALL, n",
+"s2_s, EXT_WALL, s",
+"s2_1, EXT_WINDOW1, s2_s, (7.6,0,3.45), (7.6,0,1.25), (10.3,0,1.25), (10.3,0,3.45)",
+"s2_2, EXT_WINDOW1, s2_n, (7.6,4.2,1.25), (7.6,4.2,3.45), (10.3,4.2,3.45), (10.3,4.2,1.25)"
+),
+("zone03",
+[(13.8, 0, 0), (13.8, 4.2, 0), (20.7, 4.2, 0), (20.7, 0, 0), (13.8, 0, 6.5), (13.8, 4.2, 6.5), (20.7, 4.2, 6.5), (20.7, 0, 6.5)],
+"s3_b, GROUND_FLOOR, b",
+"s3_t, EXT_ROOF, t",
+"s3_e, ADJ_WALL, e, zone04",
+"s3_w, ADJ_WALL, w, zone02",
+"s3_n, EXT_WALL, n",
+"s3_s, EXT_WALL, s",
+"s3_1, EXT_WINDOW1, s3_s, (14.5,0,3.45), (14.5,0,1.25), (17.2,0,1.25), (17.2,0,3.45)",
+"s3_2, EXT_WINDOW1, s3_n, (14.5,4.2,1.25), (14.5,4.2,3.45), (17.2,4.2,3.45), (17.2,4.2,1.25)"
+),
+("zone04",
+[(20.7, 0, 0), (20.7, 4.2, 0), (27.6, 4.2, 0), (27.6, 0, 0), (20.7, 0, 6.5), (20.7, 4.2, 6.5), (27.6, 4.2, 6.5), (27.6, 0, 6.5)],
+"s4_b, GROUND_FLOOR, b",
+"s4_t, EXT_ROOF, t",
+"s4_e, ADJ_WALL, e, zone05",
+"s4_w, ADJ_WALL, w, zone03",
+"s4_n, EXT_WALL, n",
+"s4_s, EXT_WALL, s",
+"s4_1, EXT_WINDOW1, s4_s, (21.4,0,3.45), (21.4,0,1.25), (24.1,0,1.25), (24.1,0,3.45)",
+"s4_2, EXT_WINDOW1, s4_n, (21.4,4.2,1.25), (21.4,4.2,3.45), (24.1,4.2,3.45), (24.1,4.2,1.25)"
+),
+("zone05",
+[(27.6, 0, 0), (27.6, 4.2, 0), (34.5, 4.2, 0), (34.5, 0, 0), (27.6, 0, 6.5), (27.6, 4.2, 6.5), (34.5, 4.2, 6.5), (34.5, 0, 6.5)],
+"s5_b, GROUND_FLOOR, b",
+"s5_t, EXT_ROOF, t",
+"s5_e, EXT_WALL, e",
+"s5_w, ADJ_WALL, w, zone04",
+"s5_n, EXT_WALL, n",
+"s5_s, EXT_WALL, s",
+"s5_1, EXT_WINDOW1, s5_s, (28.3,0,3.45), (28.3,0,1.25), (31.0,0,1.25), (31.0,0,3.45)",
+"s5_2, EXT_WINDOW1, s5_n, (28.3,4.2,1.25), (28.3,4.2,3.45), (31.0,4.2,3.45), (31.0,4.2,1.25)"
+)
+
+=== 第 6 对 (原编号: 105) ===
+Human_105: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.400 m (length) Ã 5.500 m (width) Ã 5.000 m (height), featuring 2.400 m (length) Ã 1.100 m (width) windows on both south and north walls with west edges offset 0.600 m from wall west edges, both having 1.25 m sill height.
+GPT_105: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.5, 0), (7.4, 5.5, 0), (7.4, 0, 0), (0, 0, 5.0), (0, 5.5, 5.0), (7.4, 5.5, 5.0), (7.4, 0, 5.0)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.6,0,2.35), (0.6,0,1.25), (3.0,0,1.25), (3.0,0,2.35)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.6,5.5,1.25), (0.6,5.5,2.35), (3.0,5.5,2.35), (3.0,5.5,1.25)"
+    ),
+    ("zone02",
+    [(7.4, 0, 0), (7.4, 5.5, 0), (14.8, 5.5, 0), (14.8, 0, 0), (7.4, 0, 5.0), (7.4, 5.5, 5.0), (14.8, 5.5, 5.0), (14.8, 0, 5.0)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (8.0,0,2.35), (8.0,0,1.25), (10.4,0,1.25), (10.4,0,2.35)",
+    "s2_2, EXT_WINDOW1, s2_n, (8.0,5.5,1.25), (8.0,5.5,2.35), (10.4,5.5,2.35), (10.4,5.5,1.25)"
+    ),
+    ("zone03",
+    [(14.8, 0, 0), (14.8, 5.5, 0), (22.2, 5.5, 0), (22.2, 0, 0), (14.8, 0, 5.0), (14.8, 5.5, 5.0), (22.2, 5.5, 5.0), (22.2, 0, 5.0)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (15.4,0,2.35), (15.4,0,1.25), (17.8,0,1.25), (17.8,0,2.35)",
+    "s3_2, EXT_WINDOW1, s3_n, (15.4,5.5,1.25), (15.4,5.5,2.35), (17.8,5.5,2.35), (17.8,5.5,1.25)"
+    ),
+    ("zone04",
+    [(22.2, 0, 0), (22.2, 5.5, 0), (29.6, 5.5, 0), (29.6, 0, 0), (22.2, 0, 5.0), (22.2, 5.5, 5.0), (29.6, 5.5, 5.0), (29.6, 0, 5.0)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (22.8,0,2.35), (22.8,0,1.25), (25.2,0,1.25), (25.2,0,2.35)",
+    "s4_2, EXT_WINDOW1, s4_n, (22.8,5.5,1.25), (22.8,5.5,2.35), (25.2,5.5,2.35), (25.2,5.5,1.25)"
+    ),
+    ("zone05",
+    [(29.6, 0, 0), (29.6, 5.5, 0), (37.0, 5.5, 0), (37.0, 0, 0), (29.6, 0, 5.0), (29.6, 5.5, 5.0), (37.0, 5.5, 5.0), (37.0, 0, 5.0)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (30.2,0,2.35), (30.2,0,1.25), (32.6,0,1.25), (32.6,0,2.35)",
+    "s5_2, EXT_WINDOW1, s5_n, (30.2,5.5,1.25), (30.2,5.5,2.35), (32.6,5.5,2.35), (32.6,5.5,1.25)"
+    )
+)
+```
+
+=== 第 7 对 (原编号: 124) ===
+Human_124: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.200 m (length) Ã 4.600 m (width) Ã 6.700 m (height), featuring 2.500 m (length) Ã 2.000 m (width) windows on both south and north walls with west edges offset 0.400 m from wall west edges, both having 1.25 m sill height.
+GPT_124: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.6, 0), (7.2, 4.6, 0), (7.2, 0, 0), (0, 0, 6.7), (0, 4.6, 6.7), (7.2, 4.6, 6.7), (7.2, 0, 6.7)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.4,0,3.25), (0.4,0,1.25), (2.9,0,1.25), (2.9,0,3.25)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.4,4.6,1.25), (0.4,4.6,3.25), (2.9,4.6,3.25), (2.9,4.6,1.25)"
+    ),
+    ("zone02",
+    [(7.2, 0, 0), (7.2, 4.6, 0), (14.4, 4.6, 0), (14.4, 0, 0), (7.2, 0, 6.7), (7.2, 4.6, 6.7), (14.4, 4.6, 6.7), (14.4, 0, 6.7)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (7.6,0,3.25), (7.6,0,1.25), (10.1,0,1.25), (10.1,0,3.25)",
+    "s2_2, EXT_WINDOW1, s2_n, (7.6,4.6,1.25), (7.6,4.6,3.25), (10.1,4.6,3.25), (10.1,4.6,1.25)"
+    ),
+    ("zone03",
+    [(14.4, 0, 0), (14.4, 4.6, 0), (21.6, 4.6, 0), (21.6, 0, 0), (14.4, 0, 6.7), (14.4, 4.6, 6.7), (21.6, 4.6, 6.7), (21.6, 0, 6.7)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (14.8,0,3.25), (14.8,0,1.25), (17.3,0,1.25), (17.3,0,3.25)",
+    "s3_2, EXT_WINDOW1, s3_n, (14.8,4.6,1.25), (14.8,4.6,3.25), (17.3,4.6,3.25), (17.3,4.6,1.25)"
+    ),
+    ("zone04",
+    [(21.6, 0, 0), (21.6, 4.6, 0), (28.8, 4.6, 0), (28.8, 0, 0), (21.6, 0, 6.7), (21.6, 4.6, 6.7), (28.8, 4.6, 6.7), (28.8, 0, 6.7)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (22.0,0,3.25), (22.0,0,1.25), (24.5,0,1.25), (24.5,0,3.25)",
+    "s4_2, EXT_WINDOW1, s4_n, (22.0,4.6,1.25), (22.0,4.6,3.25), (24.5,4.6,3.25), (24.5,4.6,1.25)"
+    ),
+    ("zone05",
+    [(28.8, 0, 0), (28.8, 4.6, 0), (36.0, 4.6, 0), (36.0, 0, 0), (28.8, 0, 6.7), (28.8, 4.6, 6.7), (36.0, 4.6, 6.7), (36.0, 0, 6.7)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (29.2,0,3.25), (29.2,0,1.25), (31.7,0,1.25), (31.7,0,3.25)",
+    "s5_2, EXT_WINDOW1, s5_n, (29.2,4.6,1.25), (29.2,4.6,3.25), (31.7,4.6,3.25), (31.7,4.6,1.25)"
+    )
+)
+```
+
+=== 第 8 对 (原编号: 158) ===
+Human_158: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.600 m (length) Ã 4.200 m (width) Ã 5.900 m (height), featuring 2.600 m (length) Ã 1.700 m (width) windows on both south and north walls with west edges offset 0.100 m from wall west edges, both having 1.25 m sill height.
+GPT_158: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.2, 0), (7.6, 4.2, 0), (7.6, 0, 0), (0, 0, 5.9), (0, 4.2, 5.9), (7.6, 4.2, 5.9), (7.6, 0, 5.9)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.1,0,2.95), (0.1,0,1.25), (2.7,0,1.25), (2.7,0,2.95)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.1,4.2,1.25), (0.1,4.2,2.95), (2.7,4.2,2.95), (2.7,4.2,1.25)"
+    ),
+    ("zone02",
+    [(7.6, 0, 0), (7.6, 4.2, 0), (15.2, 4.2, 0), (15.2, 0, 0), (7.6, 0, 5.9), (7.6, 4.2, 5.9), (15.2, 4.2, 5.9), (15.2, 0, 5.9)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (7.7,0,2.95), (7.7,0,1.25), (10.3,0,1.25), (10.3,0,2.95)",
+    "s2_2, EXT_WINDOW1, s2_n, (7.7,4.2,1.25), (7.7,4.2,2.95), (10.3,4.2,2.95), (10.3,4.2,1.25)"
+    ),
+    ("zone03",
+    [(15.2, 0, 0), (15.2, 4.2, 0), (22.8, 4.2, 0), (22.8, 0, 0), (15.2, 0, 5.9), (15.2, 4.2, 5.9), (22.8, 4.2, 5.9), (22.8, 0, 5.9)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (15.3,0,2.95), (15.3,0,1.25), (17.9,0,1.25), (17.9,0,2.95)",
+    "s3_2, EXT_WINDOW1, s3_n, (15.3,4.2,1.25), (15.3,4.2,2.95), (17.9,4.2,2.95), (17.9,4.2,1.25)"
+    ),
+    ("zone04",
+    [(22.8, 0, 0), (22.8, 4.2, 0), (30.4, 4.2, 0), (30.4, 0, 0), (22.8, 0, 5.9), (22.8, 4.2, 5.9), (30.4, 4.2, 5.9), (30.4, 0, 5.9)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (22.9,0,2.95), (22.9,0,1.25), (25.5,0,1.25), (25.5,0,2.95)",
+    "s4_2, EXT_WINDOW1, s4_n, (22.9,4.2,1.25), (22.9,4.2,2.95), (25.5,4.2,2.95), (25.5,4.2,1.25)"
+    ),
+    ("zone05",
+    [(30.4, 0, 0), (30.4, 4.2, 0), (38.0, 4.2, 0), (38.0, 0, 0), (30.4, 0, 5.9), (30.4, 4.2, 5.9), (38.0, 4.2, 5.9), (38.0, 0, 5.9)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (30.5,0,2.95), (30.5,0,1.25), (33.1,0,1.25), (33.1,0,2.95)",
+    "s5_2, EXT_WINDOW1, s5_n, (30.5,4.2,1.25), (30.5,4.2,2.95), (33.1,4.2,2.95), (33.1,4.2,1.25)"
+    )
+)
+```
+
+=== 第 9 对 (原编号: 163) ===
+Human_163: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.100 m (length) Ã 4.700 m (width) Ã 7.000 m (height), featuring 1.700 m (length) Ã 2.900 m (width) windows on both south and north walls with west edges offset 0.800 m from wall west edges, both having 1.25 m sill height.
+GPT_163: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.7, 0), (5.1, 4.7, 0), (5.1, 0, 0), (0, 0, 7.0), (0, 4.7, 7.0), (5.1, 4.7, 7.0), (5.1, 0, 7.0)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.8,0,4.15), (0.8,0,1.25), (2.5,0,1.25), (2.5,0,4.15)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.8,4.7,1.25), (0.8,4.7,4.15), (2.5,4.7,4.15), (2.5,4.7,1.25)"
+    ),
+    ("zone02",
+    [(5.1, 0, 0), (5.1, 4.7, 0), (10.2, 4.7, 0), (10.2, 0, 0), (5.1, 0, 7.0), (5.1, 4.7, 7.0), (10.2, 4.7, 7.0), (10.2, 0, 7.0)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (5.9,0,4.15), (5.9,0,1.25), (7.6,0,1.25), (7.6,0,4.15)",
+    "s2_2, EXT_WINDOW1, s2_n, (5.9,4.7,1.25), (5.9,4.7,4.15), (7.6,4.7,4.15), (7.6,4.7,1.25)"
+    ),
+    ("zone03",
+    [(10.2, 0, 0), (10.2, 4.7, 0), (15.3, 4.7, 0), (15.3, 0, 0), (10.2, 0, 7.0), (10.2, 4.7, 7.0), (15.3, 4.7, 7.0), (15.3, 0, 7.0)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (11.0,0,4.15), (11.0,0,1.25), (12.7,0,1.25), (12.7,0,4.15)",
+    "s3_2, EXT_WINDOW1, s3_n, (11.0,4.7,1.25), (11.0,4.7,4.15), (12.7,4.7,4.15), (12.7,4.7,1.25)"
+    ),
+    ("zone04",
+    [(15.3, 0, 0), (15.3, 4.7, 0), (20.4, 4.7, 0), (20.4, 0, 0), (15.3, 0, 7.0), (15.3, 4.7, 7.0), (20.4, 4.7, 7.0), (20.4, 0, 7.0)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (16.1,0,4.15), (16.1,0,1.25), (17.8,0,1.25), (17.8,0,4.15)",
+    "s4_2, EXT_WINDOW1, s4_n, (16.1,4.7,1.25), (16.1,4.7,4.15), (17.8,4.7,4.15), (17.8,4.7,1.25)"
+    ),
+    ("zone05",
+    [(20.4, 0, 0), (20.4, 4.7, 0), (25.5, 4.7, 0), (25.5, 0, 0), (20.4, 0, 7.0), (20.4, 4.7, 7.0), (25.5, 4.7, 7.0), (25.5, 0, 7.0)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (21.2,0,4.15), (21.2,0,1.25), (22.9,0,1.25), (22.9,0,4.15)",
+    "s5_2, EXT_WINDOW1, s5_n, (21.2,4.7,1.25), (21.2,4.7,4.15), (22.9,4.7,4.15), (22.9,4.7,1.25)"
+    )
+)
+```
+
+=== 第 10 对 (原编号: 199) ===
+Human_199: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.900 m (length) Ã 4.300 m (width) Ã 7.000 m (height), featuring 3.000 m (length) Ã 3.600 m (width) windows on both south and north walls with west edges offset 0.100 m from wall west edges, both having 1.25 m sill height.
+GPT_199: ```python
+(
+    "zone01",
+    [
+        (0, 0, 0), (0, 4.3, 0), (7.9, 4.3, 0), (7.9, 0, 0),
+        (0, 0, 7.0), (0, 4.3, 7.0), (7.9, 4.3, 7.0), (7.9, 0, 7.0)
+    ],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.1,0,4.85), (0.1,0,1.25), (3.1,0,1.25), (3.1,0,4.85)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.1,4.3,1.25), (0.1,4.3,4.85), (3.1,4.3,4.85), (3.1,4.3,1.25)"
+),
+(
+    "zone02",
+    [
+        (7.9, 0, 0), (7.9, 4.3, 0), (15.8, 4.3, 0), (15.8, 0, 0),
+        (7.9, 0, 7.0), (7.9, 4.3, 7.0), (15.8, 4.3, 7.0), (15.8, 0, 7.0)
+    ],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (8.0,0,4.85), (8.0,0,1.25), (11.0,0,1.25), (11.0,0,4.85)",
+    "s2_2, EXT_WINDOW1, s2_n, (8.0,4.3,1.25), (8.0,4.3,4.85), (11.0,4.3,4.85), (11.0,4.3,1.25)"
+),
+(
+    "zone03",
+    [
+        (15.8, 0, 0), (15.8, 4.3, 0), (23.7, 4.3, 0), (23.7, 0, 0),
+        (15.8, 0, 7.0), (15.8, 4.3, 7.0), (23.7, 4.3, 7.0), (23.7, 0, 7.0)
+    ],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (15.9,0,4.85), (15.9,0,1.25), (18.9,0,1.25), (18.9,0,4.85)",
+    "s3_2, EXT_WINDOW1, s3_n, (15.9,4.3,1.25), (15.9,4.3,4.85), (18.9,4.3,4.85), (18.9,4.3,1.25)"
+),
+(
+    "zone04",
+    [
+        (23.7, 0, 0), (23.7, 4.3, 0), (31.6, 4.3, 0), (31.6, 0, 0),
+        (23.7, 0, 7.0), (23.7, 4.3, 7.0), (31.6, 4.3, 7.0), (31.6, 0, 7.0)
+    ],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (23.8,0,4.85), (23.8,0,1.25), (26.8,0,1.25), (26.8,0,4.85)",
+    "s4_2, EXT_WINDOW1, s4_n, (23.8,4.3,1.25), (23.8,4.3,4.85), (26.8,4.3,4.85), (26.8,4.3,1.25)"
+),
+(
+    "zone05",
+    [
+        (31.6, 0, 0), (31.6, 4.3, 0), (39.5, 4.3, 0), (39.5, 0, 0),
+        (31.6, 0, 7.0), (31.6, 4.3, 7.0), (39.5, 4.3, 7.0), (39.5, 0, 7.0)
+    ],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (31.7,0,4.85), (31.7,0,1.25), (34.7,0,1.25), (34.7,0,4.85)",
+    "s5_2, EXT_WINDOW1, s5_n, (31.7,4.3,1.25), (31.7,4.3,4.85), (34.7,4.3,4.85), (34.7,4.3,1.25)"
+)
+```
+
+=== 第 11 对 (原编号: 214) ===
+Human_214: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.600 m (length) Ã 5.100 m (width) Ã 6.600 m (height), featuring 3.100 m (length) Ã 1.300 m (width) windows on both south and north walls with west edges offset 1.000 m from wall west edges, both having 1.25 m sill height.
+GPT_214: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.1, 0), (7.6, 5.1, 0), (7.6, 0, 0), (0, 0, 6.6), (0, 5.1, 6.6), (7.6, 5.1, 6.6), (7.6, 0, 6.6)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (1.0,0,2.55), (1.0,0,1.25), (4.1,0,1.25), (4.1,0,2.55)",
+    "s1_2, EXT_WINDOW1, s1_n, (1.0,5.1,1.25), (1.0,5.1,2.55), (4.1,5.1,2.55), (4.1,5.1,1.25)"
+    ),
+    ("zone02",
+    [(7.6, 0, 0), (7.6, 5.1, 0), (15.2, 5.1, 0), (15.2, 0, 0), (7.6, 0, 6.6), (7.6, 5.1, 6.6), (15.2, 5.1, 6.6), (15.2, 0, 6.6)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (8.6,0,2.55), (8.6,0,1.25), (11.7,0,1.25), (11.7,0,2.55)",
+    "s2_2, EXT_WINDOW1, s2_n, (8.6,5.1,1.25), (8.6,5.1,2.55), (11.7,5.1,2.55), (11.7,5.1,1.25)"
+    ),
+    ("zone03",
+    [(15.2, 0, 0), (15.2, 5.1, 0), (22.8, 5.1, 0), (22.8, 0, 0), (15.2, 0, 6.6), (15.2, 5.1, 6.6), (22.8, 5.1, 6.6), (22.8, 0, 6.6)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (16.2,0,2.55), (16.2,0,1.25), (19.3,0,1.25), (19.3,0,2.55)",
+    "s3_2, EXT_WINDOW1, s3_n, (16.2,5.1,1.25), (16.2,5.1,2.55), (19.3,5.1,2.55), (19.3,5.1,1.25)"
+    ),
+    ("zone04",
+    [(22.8, 0, 0), (22.8, 5.1, 0), (30.4, 5.1, 0), (30.4, 0, 0), (22.8, 0, 6.6), (22.8, 5.1, 6.6), (30.4, 5.1, 6.6), (30.4, 0, 6.6)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (23.8,0,2.55), (23.8,0,1.25), (26.9,0,1.25), (26.9,0,2.55)",
+    "s4_2, EXT_WINDOW1, s4_n, (23.8,5.1,1.25), (23.8,5.1,2.55), (26.9,5.1,2.55), (26.9,5.1,1.25)"
+    ),
+    ("zone05",
+    [(30.4, 0, 0), (30.4, 5.1, 0), (38.0, 5.1, 0), (38.0, 0, 0), (30.4, 0, 6.6), (30.4, 5.1, 6.6), (38.0, 5.1, 6.6), (38.0, 0, 6.6)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (31.4,0,2.55), (31.4,0,1.25), (34.5,0,1.25), (34.5,0,2.55)",
+    "s5_2, EXT_WINDOW1, s5_n, (31.4,5.1,1.25), (31.4,5.1,2.55), (34.5,5.1,2.55), (34.5,5.1,1.25)"
+    )
+)
+```
+
+=== 第 12 对 (原编号: 222) ===
+Human_222: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.500 m (length) Ã 5.400 m (width) Ã 7.000 m (height), featuring 2.800 m (length) Ã 3.000 m (width) windows on both south and north walls with west edges offset 0.700 m from wall west edges, both having 1.25 m sill height.
+GPT_222: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.4, 0), (7.5, 5.4, 0), (7.5, 0, 0), (0, 0, 7.0), (0, 5.4, 7.0), (7.5, 5.4, 7.0), (7.5, 0, 7.0)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.7,0,4.25), (0.7,0,1.25), (3.5,0,1.25), (3.5,0,4.25)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.7,5.4,1.25), (0.7,5.4,4.25), (3.5,5.4,4.25), (3.5,5.4,1.25)"
+    ),
+    ("zone02",
+    [(7.5, 0, 0), (7.5, 5.4, 0), (15.0, 5.4, 0), (15.0, 0, 0), (7.5, 0, 7.0), (7.5, 5.4, 7.0), (15.0, 5.4, 7.0), (15.0, 0, 7.0)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (8.2,0,4.25), (8.2,0,1.25), (11.0,0,1.25), (11.0,0,4.25)",
+    "s2_2, EXT_WINDOW1, s2_n, (8.2,5.4,1.25), (8.2,5.4,4.25), (11.0,5.4,4.25), (11.0,5.4,1.25)"
+    ),
+    ("zone03",
+    [(15.0, 0, 0), (15.0, 5.4, 0), (22.5, 5.4, 0), (22.5, 0, 0), (15.0, 0, 7.0), (15.0, 5.4, 7.0), (22.5, 5.4, 7.0), (22.5, 0, 7.0)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (15.7,0,4.25), (15.7,0,1.25), (18.5,0,1.25), (18.5,0,4.25)",
+    "s3_2, EXT_WINDOW1, s3_n, (15.7,5.4,1.25), (15.7,5.4,4.25), (18.5,5.4,4.25), (18.5,5.4,1.25)"
+    ),
+    ("zone04",
+    [(22.5, 0, 0), (22.5, 5.4, 0), (30.0, 5.4, 0), (30.0, 0, 0), (22.5, 0, 7.0), (22.5, 5.4, 7.0), (30.0, 5.4, 7.0), (30.0, 0, 7.0)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (23.2,0,4.25), (23.2,0,1.25), (26.0,0,1.25), (26.0,0,4.25)",
+    "s4_2, EXT_WINDOW1, s4_n, (23.2,5.4,1.25), (23.2,5.4,4.25), (26.0,5.4,4.25), (26.0,5.4,1.25)"
+    ),
+    ("zone05",
+    [(30.0, 0, 0), (30.0, 5.4, 0), (37.5, 5.4, 0), (37.5, 0, 0), (30.0, 0, 7.0), (30.0, 5.4, 7.0), (37.5, 5.4, 7.0), (37.5, 0, 7.0)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (30.7,0,4.25), (30.7,0,1.25), (33.5,0,1.25), (33.5,0,4.25)",
+    "s5_2, EXT_WINDOW1, s5_n, (30.7,5.4,1.25), (30.7,5.4,4.25), (33.5,5.4,4.25), (33.5,5.4,1.25)"
+    )
+)
+```
+
+=== 第 13 对 (原编号: 241) ===
+Human_241: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.500 m (length) Ã 5.500 m (width) Ã 6.400 m (height), featuring 3.200 m (length) Ã 2.900 m (width) windows on both south and north walls with west edges offset 1.000 m from wall west edges, both having 1.25 m sill height.
+GPT_241: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.5, 0), (5.5, 5.5, 0), (5.5, 0, 0), (0, 0, 6.4), (0, 5.5, 6.4), (5.5, 5.5, 6.4), (5.5, 0, 6.4)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (1.0,0,4.15), (1.0,0,1.25), (4.2,0,1.25), (4.2,0,4.15)",
+    "s1_2, EXT_WINDOW1, s1_n, (1.0,5.5,1.25), (1.0,5.5,4.15), (4.2,5.5,4.15), (4.2,5.5,1.25)"
+    ),
+    ("zone02",
+    [(5.5, 0, 0), (5.5, 5.5, 0), (11.0, 5.5, 0), (11.0, 0, 0), (5.5, 0, 6.4), (5.5, 5.5, 6.4), (11.0, 5.5, 6.4), (11.0, 0, 6.4)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (6.5,0,4.15), (6.5,0,1.25), (9.7,0,1.25), (9.7,0,4.15)",
+    "s2_2, EXT_WINDOW1, s2_n, (6.5,5.5,1.25), (6.5,5.5,4.15), (9.7,5.5,4.15), (9.7,5.5,1.25)"
+    ),
+    ("zone03",
+    [(11.0, 0, 0), (11.0, 5.5, 0), (16.5, 5.5, 0), (16.5, 0, 0), (11.0, 0, 6.4), (11.0, 5.5, 6.4), (16.5, 5.5, 6.4), (16.5, 0, 6.4)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (12.0,0,4.15), (12.0,0,1.25), (15.2,0,1.25), (15.2,0,4.15)",
+    "s3_2, EXT_WINDOW1, s3_n, (12.0,5.5,1.25), (12.0,5.5,4.15), (15.2,5.5,4.15), (15.2,5.5,1.25)"
+    ),
+    ("zone04",
+    [(16.5, 0, 0), (16.5, 5.5, 0), (22.0, 5.5, 0), (22.0, 0, 0), (16.5, 0, 6.4), (16.5, 5.5, 6.4), (22.0, 5.5, 6.4), (22.0, 0, 6.4)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (17.5,0,4.15), (17.5,0,1.25), (20.7,0,1.25), (20.7,0,4.15)",
+    "s4_2, EXT_WINDOW1, s4_n, (17.5,5.5,1.25), (17.5,5.5,4.15), (20.7,5.5,4.15), (20.7,5.5,1.25)"
+    ),
+    ("zone05",
+    [(22.0, 0, 0), (22.0, 5.5, 0), (27.5, 5.5, 0), (27.5, 0, 0), (22.0, 0, 6.4), (22.0, 5.5, 6.4), (27.5, 5.5, 6.4), (27.5, 0, 6.4)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (23.0,0,4.15), (23.0,0,1.25), (26.2,0,1.25), (26.2,0,4.15)",
+    "s5_2, EXT_WINDOW1, s5_n, (23.0,5.5,1.25), (23.0,5.5,4.15), (26.2,5.5,4.15), (26.2,5.5,1.25)"
+    )
+)
+```
+
+=== 第 14 对 (原编号: 263) ===
+Human_263: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.700 m (length) Ã 5.000 m (width) Ã 7.000 m (height), featuring 3.200 m (length) Ã 2.600 m (width) windows on both south and north walls with west edges offset 0.400 m from wall west edges, both having 1.25 m sill height.
+GPT_263: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5, 0), (5.7, 5, 0), (5.7, 0, 0), (0, 0, 7), (0, 5, 7), (5.7, 5, 7), (5.7, 0, 7)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.4,0,3.85), (0.4,0,1.25), (3.6,0,1.25), (3.6,0,3.85)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.4,5,1.25), (0.4,5,3.85), (3.6,5,3.85), (3.6,5,1.25)"
+    ),
+    ("zone02",
+    [(5.7, 0, 0), (5.7, 5, 0), (11.4, 5, 0), (11.4, 0, 0), (5.7, 0, 7), (5.7, 5, 7), (11.4, 5, 7), (11.4, 0, 7)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (6.1,0,3.85), (6.1,0,1.25), (9.3,0,1.25), (9.3,0,3.85)",
+    "s2_2, EXT_WINDOW1, s2_n, (6.1,5,1.25), (6.1,5,3.85), (9.3,5,3.85), (9.3,5,1.25)"
+    ),
+    ("zone03",
+    [(11.4, 0, 0), (11.4, 5, 0), (17.1, 5, 0), (17.1, 0, 0), (11.4, 0, 7), (11.4, 5, 7), (17.1, 5, 7), (17.1, 0, 7)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (11.8,0,3.85), (11.8,0,1.25), (15.0,0,1.25), (15.0,0,3.85)",
+    "s3_2, EXT_WINDOW1, s3_n, (11.8,5,1.25), (11.8,5,3.85), (15.0,5,3.85), (15.0,5,1.25)"
+    ),
+    ("zone04",
+    [(17.1, 0, 0), (17.1, 5, 0), (22.8, 5, 0), (22.8, 0, 0), (17.1, 0, 7), (17.1, 5, 7), (22.8, 5, 7), (22.8, 0, 7)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (17.5,0,3.85), (17.5,0,1.25), (20.7,0,1.25), (20.7,0,3.85)",
+    "s4_2, EXT_WINDOW1, s4_n, (17.5,5,1.25), (17.5,5,3.85), (20.7,5,3.85), (20.7,5,1.25)"
+    ),
+    ("zone05",
+    [(22.8, 0, 0), (22.8, 5, 0), (28.5, 5, 0), (28.5, 0, 0), (22.8, 0, 7), (22.8, 5, 7), (28.5, 5, 7), (28.5, 0, 7)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (23.2,0,3.85), (23.2,0,1.25), (26.4,0,1.25), (26.4,0,3.85)",
+    "s5_2, EXT_WINDOW1, s5_n, (23.2,5,1.25), (23.2,5,3.85), (26.4,5,3.85), (26.4,5,1.25)"
+    )
+)
+```
+
+=== 第 15 对 (原编号: 287) ===
+Human_287: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 6.600 m (length) Ã 5.800 m (width) Ã 6.000 m (height), featuring 1.800 m (length) Ã 3.300 m (width) windows on both south and north walls with west edges offset 0.300 m from wall west edges, both having 1.25 m sill height.
+GPT_287: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.8, 0), (6.6, 5.8, 0), (6.6, 0, 0), (0, 0, 6.0), (0, 5.8, 6.0), (6.6, 5.8, 6.0), (6.6, 0, 6.0)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.3,0,4.55), (0.3,0,1.25), (2.1,0,1.25), (2.1,0,4.55)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.3,5.8,1.25), (0.3,5.8,4.55), (2.1,5.8,4.55), (2.1,5.8,1.25)"
+    ),
+    ("zone02",
+    [(6.6, 0, 0), (6.6, 5.8, 0), (13.2, 5.8, 0), (13.2, 0, 0), (6.6, 0, 6.0), (6.6, 5.8, 6.0), (13.2, 5.8, 6.0), (13.2, 0, 6.0)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (6.9,0,4.55), (6.9,0,1.25), (8.7,0,1.25), (8.7,0,4.55)",
+    "s2_2, EXT_WINDOW1, s2_n, (6.9,5.8,1.25), (6.9,5.8,4.55), (8.7,5.8,4.55), (8.7,5.8,1.25)"
+    ),
+    ("zone03",
+    [(13.2, 0, 0), (13.2, 5.8, 0), (19.8, 5.8, 0), (19.8, 0, 0), (13.2, 0, 6.0), (13.2, 5.8, 6.0), (19.8, 5.8, 6.0), (19.8, 0, 6.0)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (13.5,0,4.55), (13.5,0,1.25), (15.3,0,1.25), (15.3,0,4.55)",
+    "s3_2, EXT_WINDOW1, s3_n, (13.5,5.8,1.25), (13.5,5.8,4.55), (15.3,5.8,4.55), (15.3,5.8,1.25)"
+    ),
+    ("zone04",
+    [(19.8, 0, 0), (19.8, 5.8, 0), (26.4, 5.8, 0), (26.4, 0, 0), (19.8, 0, 6.0), (19.8, 5.8, 6.0), (26.4, 5.8, 6.0), (26.4, 0, 6.0)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (20.1,0,4.55), (20.1,0,1.25), (21.9,0,1.25), (21.9,0,4.55)",
+    "s4_2, EXT_WINDOW1, s4_n, (20.1,5.8,1.25), (20.1,5.8,4.55), (21.9,5.8,4.55), (21.9,5.8,1.25)"
+    ),
+    ("zone05",
+    [(26.4, 0, 0), (26.4, 5.8, 0), (33.0, 5.8, 0), (33.0, 0, 0), (26.4, 0, 6.0), (26.4, 5.8, 6.0), (33.0, 5.8, 6.0), (33.0, 0, 6.0)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (26.7,0,4.55), (26.7,0,1.25), (28.5,0,1.25), (28.5,0,4.55)",
+    "s5_2, EXT_WINDOW1, s5_n, (26.7,5.8,1.25), (26.7,5.8,4.55), (28.5,5.8,4.55), (28.5,5.8,1.25)"
+    )
+)
+```
+
+=== 第 16 对 (原编号: 308) ===
+Human_308: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.300 m (length) Ã 4.700 m (width) Ã 6.600 m (height), featuring 2.700 m (length) Ã 1.100 m (width) windows on both south and north walls with west edges offset 1.000 m from wall west edges, both having 1.25 m sill height.
+GPT_308: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.7, 0), (7.3, 4.7, 0), (7.3, 0, 0), (0, 0, 6.6), (0, 4.7, 6.6), (7.3, 4.7, 6.6), (7.3, 0, 6.6)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (1.0,0,2.35), (1.0,0,1.25), (3.7,0,1.25), (3.7,0,2.35)",
+    "s1_2, EXT_WINDOW1, s1_n, (1.0,4.7,1.25), (1.0,4.7,2.35), (3.7,4.7,2.35), (3.7,4.7,1.25)"
+    ),
+    ("zone02",
+    [(7.3, 0, 0), (7.3, 4.7, 0), (14.6, 4.7, 0), (14.6, 0, 0), (7.3, 0, 6.6), (7.3, 4.7, 6.6), (14.6, 4.7, 6.6), (14.6, 0, 6.6)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (8.3,0,2.35), (8.3,0,1.25), (11.0,0,1.25), (11.0,0,2.35)",
+    "s2_2, EXT_WINDOW1, s2_n, (8.3,4.7,1.25), (8.3,4.7,2.35), (11.0,4.7,2.35), (11.0,4.7,1.25)"
+    ),
+    ("zone03",
+    [(14.6, 0, 0), (14.6, 4.7, 0), (21.9, 4.7, 0), (21.9, 0, 0), (14.6, 0, 6.6), (14.6, 4.7, 6.6), (21.9, 4.7, 6.6), (21.9, 0, 6.6)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (15.6,0,2.35), (15.6,0,1.25), (18.3,0,1.25), (18.3,0,2.35)",
+    "s3_2, EXT_WINDOW1, s3_n, (15.6,4.7,1.25), (15.6,4.7,2.35), (18.3,4.7,2.35), (18.3,4.7,1.25)"
+    ),
+    ("zone04",
+    [(21.9, 0, 0), (21.9, 4.7, 0), (29.2, 4.7, 0), (29.2, 0, 0), (21.9, 0, 6.6), (21.9, 4.7, 6.6), (29.2, 4.7, 6.6), (29.2, 0, 6.6)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (22.9,0,2.35), (22.9,0,1.25), (25.6,0,1.25), (25.6,0,2.35)",
+    "s4_2, EXT_WINDOW1, s4_n, (22.9,4.7,1.25), (22.9,4.7,2.35), (25.6,4.7,2.35), (25.6,4.7,1.25)"
+    ),
+    ("zone05",
+    [(29.2, 0, 0), (29.2, 4.7, 0), (36.5, 4.7, 0), (36.5, 0, 0), (29.2, 0, 6.6), (29.2, 4.7, 6.6), (36.5, 4.7, 6.6), (36.5, 0, 6.6)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (30.2,0,2.35), (30.2,0,1.25), (32.9,0,1.25), (32.9,0,2.35)",
+    "s5_2, EXT_WINDOW1, s5_n, (30.2,4.7,1.25), (30.2,4.7,2.35), (32.9,4.7,2.35), (32.9,4.7,1.25)"
+    )
+)
+```
+
+=== 第 17 对 (原编号: 337) ===
+Human_337: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.000 m (length) Ã 5.800 m (width) Ã 7.200 m (height), featuring 2.700 m (length) Ã 2.600 m (width) windows on both south and north walls with west edges offset 1.000 m from wall west edges, both having 1.25 m sill height.
+GPT_337: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.8, 0), (7, 5.8, 0), (7, 0, 0), (0, 0, 7.2), (0, 5.8, 7.2), (7, 5.8, 7.2), (7, 0, 7.2)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (1.0,0,3.85), (1.0,0,1.25), (3.7,0,1.25), (3.7,0,3.85)",
+    "s1_2, EXT_WINDOW1, s1_n, (1.0,5.8,1.25), (1.0,5.8,3.85), (3.7,5.8,3.85), (3.7,5.8,1.25)"
+    ),
+    ("zone02",
+    [(7, 0, 0), (7, 5.8, 0), (14, 5.8, 0), (14, 0, 0), (7, 0, 7.2), (7, 5.8, 7.2), (14, 5.8, 7.2), (14, 0, 7.2)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (8.0,0,3.85), (8.0,0,1.25), (10.7,0,1.25), (10.7,0,3.85)",
+    "s2_2, EXT_WINDOW1, s2_n, (8.0,5.8,1.25), (8.0,5.8,3.85), (10.7,5.8,3.85), (10.7,5.8,1.25)"
+    ),
+    ("zone03",
+    [(14, 0, 0), (14, 5.8, 0), (21, 5.8, 0), (21, 0, 0), (14, 0, 7.2), (14, 5.8, 7.2), (21, 5.8, 7.2), (21, 0, 7.2)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (15.0,0,3.85), (15.0,0,1.25), (17.7,0,1.25), (17.7,0,3.85)",
+    "s3_2, EXT_WINDOW1, s3_n, (15.0,5.8,1.25), (15.0,5.8,3.85), (17.7,5.8,3.85), (17.7,5.8,1.25)"
+    ),
+    ("zone04",
+    [(21, 0, 0), (21, 5.8, 0), (28, 5.8, 0), (28, 0, 0), (21, 0, 7.2), (21, 5.8, 7.2), (28, 5.8, 7.2), (28, 0, 7.2)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (22.0,0,3.85), (22.0,0,1.25), (24.7,0,1.25), (24.7,0,3.85)",
+    "s4_2, EXT_WINDOW1, s4_n, (22.0,5.8,1.25), (22.0,5.8,3.85), (24.7,5.8,3.85), (24.7,5.8,1.25)"
+    ),
+    ("zone05",
+    [(28, 0, 0), (28, 5.8, 0), (35, 5.8, 0), (35, 0, 0), (28, 0, 7.2), (28, 5.8, 7.2), (35, 5.8, 7.2), (35, 0, 7.2)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (29.0,0,3.85), (29.0,0,1.25), (31.7,0,1.25), (31.7,0,3.85)",
+    "s5_2, EXT_WINDOW1, s5_n, (29.0,5.8,1.25), (29.0,5.8,3.85), (31.7,5.8,3.85), (31.7,5.8,1.25)"
+    )
+)
+```
+
+=== 第 18 对 (原编号: 360) ===
+Human_360: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.200 m (length) Ã 5.400 m (width) Ã 7.300 m (height), featuring 1.700 m (length) Ã 2.300 m (width) windows on both south and north walls with west edges offset 0.200 m from wall west edges, both having 1.25 m sill height.
+GPT_360: ```python
+(
+    "zone01",
+    [
+        (0, 0, 0), (0, 5.4, 0), (7.2, 5.4, 0), (7.2, 0, 0),
+        (0, 0, 7.3), (0, 5.4, 7.3), (7.2, 5.4, 7.3), (7.2, 0, 7.3)
+    ],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.2,0,3.55), (0.2,0,1.25), (1.9,0,1.25), (1.9,0,3.55)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.2,5.4,1.25), (0.2,5.4,3.55), (1.9,5.4,3.55), (1.9,5.4,1.25)"
+),
+(
+    "zone02",
+    [
+        (7.2, 0, 0), (7.2, 5.4, 0), (14.4, 5.4, 0), (14.4, 0, 0),
+        (7.2, 0, 7.3), (7.2, 5.4, 7.3), (14.4, 5.4, 7.3), (14.4, 0, 7.3)
+    ],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (7.4,0,3.55), (7.4,0,1.25), (9.1,0,1.25), (9.1,0,3.55)",
+    "s2_2, EXT_WINDOW1, s2_n, (7.4,5.4,1.25), (7.4,5.4,3.55), (9.1,5.4,3.55), (9.1,5.4,1.25)"
+),
+(
+    "zone03",
+    [
+        (14.4, 0, 0), (14.4, 5.4, 0), (21.6, 5.4, 0), (21.6, 0, 0),
+        (14.4, 0, 7.3), (14.4, 5.4, 7.3), (21.6, 5.4, 7.3), (21.6, 0, 7.3)
+    ],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (14.6,0,3.55), (14.6,0,1.25), (16.3,0,1.25), (16.3,0,3.55)",
+    "s3_2, EXT_WINDOW1, s3_n, (14.6,5.4,1.25), (14.6,5.4,3.55), (16.3,5.4,3.55), (16.3,5.4,1.25)"
+),
+(
+    "zone04",
+    [
+        (21.6, 0, 0), (21.6, 5.4, 0), (28.8, 5.4, 0), (28.8, 0, 0),
+        (21.6, 0, 7.3), (21.6, 5.4, 7.3), (28.8, 5.4, 7.3), (28.8, 0, 7.3)
+    ],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (21.8,0,3.55), (21.8,0,1.25), (23.5,0,1.25), (23.5,0,3.55)",
+    "s4_2, EXT_WINDOW1, s4_n, (21.8,5.4,1.25), (21.8,5.4,3.55), (23.5,5.4,3.55), (23.5,5.4,1.25)"
+),
+(
+    "zone05",
+    [
+        (28.8, 0, 0), (28.8, 5.4, 0), (36.0, 5.4, 0), (36.0, 0, 0),
+        (28.8, 0, 7.3), (28.8, 5.4, 7.3), (36.0, 5.4, 7.3), (36.0, 0, 7.3)
+    ],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (29.0,0,3.55), (29.0,0,1.25), (30.7,0,1.25), (30.7,0,3.55)",
+    "s5_2, EXT_WINDOW1, s5_n, (29.0,5.4,1.25), (29.0,5.4,3.55), (30.7,5.4,3.55), (30.7,5.4,1.25)"
+)
+```
+
+=== 第 19 对 (原编号: 361) ===
+Human_361: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 6.000 m (length) Ã 4.100 m (width) Ã 7.400 m (height), featuring 2.200 m (length) Ã 2.000 m (width) windows on both south and north walls with west edges offset 1.000 m from wall west edges, both having 1.25 m sill height.
+GPT_361: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.1, 0), (6, 4.1, 0), (6, 0, 0), (0, 0, 7.4), (0, 4.1, 7.4), (6, 4.1, 7.4), (6, 0, 7.4)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (1.000,0,3.250), (1.000,0,1.250), (3.200,0,1.250), (3.200,0,3.250)",
+    "s1_2, EXT_WINDOW1, s1_n, (1.000,4.1,1.250), (1.000,4.1,3.250), (3.200,4.1,3.250), (3.200,4.1,1.250)"
+    ),
+    ("zone02",
+    [(6, 0, 0), (6, 4.1, 0), (12, 4.1, 0), (12, 0, 0), (6, 0, 7.4), (6, 4.1, 7.4), (12, 4.1, 7.4), (12, 0, 7.4)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (7.000,0,3.250), (7.000,0,1.250), (9.200,0,1.250), (9.200,0,3.250)",
+    "s2_2, EXT_WINDOW1, s2_n, (7.000,4.1,1.250), (7.000,4.1,3.250), (9.200,4.1,3.250), (9.200,4.1,1.250)"
+    ),
+    ("zone03",
+    [(12, 0, 0), (12, 4.1, 0), (18, 4.1, 0), (18, 0, 0), (12, 0, 7.4), (12, 4.1, 7.4), (18, 4.1, 7.4), (18, 0, 7.4)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (13.000,0,3.250), (13.000,0,1.250), (15.200,0,1.250), (15.200,0,3.250)",
+    "s3_2, EXT_WINDOW1, s3_n, (13.000,4.1,1.250), (13.000,4.1,3.250), (15.200,4.1,3.250), (15.200,4.1,1.250)"
+    ),
+    ("zone04",
+    [(18, 0, 0), (18, 4.1, 0), (24, 4.1, 0), (24, 0, 0), (18, 0, 7.4), (18, 4.1, 7.4), (24, 4.1, 7.4), (24, 0, 7.4)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (19.000,0,3.250), (19.000,0,1.250), (21.200,0,1.250), (21.200,0,3.250)",
+    "s4_2, EXT_WINDOW1, s4_n, (19.000,4.1,1.250), (19.000,4.1,3.250), (21.200,4.1,3.250), (21.200,4.1,1.250)"
+    ),
+    ("zone05",
+    [(24, 0, 0), (24, 4.1, 0), (30, 4.1, 0), (30, 0, 0), (24, 0, 7.4), (24, 4.1, 7.4), (30, 4.1, 7.4), (30, 0, 7.4)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (25.000,0,3.250), (25.000,0,1.250), (27.200,0,1.250), (27.200,0,3.250)",
+    "s5_2, EXT_WINDOW1, s5_n, (25.000,4.1,1.250), (25.000,4.1,3.250), (27.200,4.1,3.250), (27.200,4.1,1.250)"
+    )
+)
+```
+
+=== 第 20 对 (原编号: 398) ===
+Human_398: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.300 m (length) Ã 5.600 m (width) Ã 7.200 m (height), featuring 1.900 m (length) Ã 1.200 m (width) windows on both south and north walls with west edges offset 1.000 m from wall west edges, both having 1.25 m sill height.
+GPT_398: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.6, 0), (7.3, 5.6, 0), (7.3, 0, 0), (0, 0, 7.2), (0, 5.6, 7.2), (7.3, 5.6, 7.2), (7.3, 0, 7.2)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (1.0,0,2.45), (1.0,0,1.25), (2.9,0,1.25), (2.9,0,2.45)",
+    "s1_2, EXT_WINDOW1, s1_n, (1.0,5.6,1.25), (1.0,5.6,2.45), (2.9,5.6,2.45), (2.9,5.6,1.25)"
+    ),
+    ("zone02",
+    [(7.3, 0, 0), (7.3, 5.6, 0), (14.6, 5.6, 0), (14.6, 0, 0), (7.3, 0, 7.2), (7.3, 5.6, 7.2), (14.6, 5.6, 7.2), (14.6, 0, 7.2)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (8.3,0,2.45), (8.3,0,1.25), (10.2,0,1.25), (10.2,0,2.45)",
+    "s2_2, EXT_WINDOW1, s2_n, (8.3,5.6,1.25), (8.3,5.6,2.45), (10.2,5.6,2.45), (10.2,5.6,1.25)"
+    ),
+    ("zone03",
+    [(14.6, 0, 0), (14.6, 5.6, 0), (21.9, 5.6, 0), (21.9, 0, 0), (14.6, 0, 7.2), (14.6, 5.6, 7.2), (21.9, 5.6, 7.2), (21.9, 0, 7.2)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (15.6,0,2.45), (15.6,0,1.25), (17.5,0,1.25), (17.5,0,2.45)",
+    "s3_2, EXT_WINDOW1, s3_n, (15.6,5.6,1.25), (15.6,5.6,2.45), (17.5,5.6,2.45), (17.5,5.6,1.25)"
+    ),
+    ("zone04",
+    [(21.9, 0, 0), (21.9, 5.6, 0), (29.2, 5.6, 0), (29.2, 0, 0), (21.9, 0, 7.2), (21.9, 5.6, 7.2), (29.2, 5.6, 7.2), (29.2, 0, 7.2)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (22.9,0,2.45), (22.9,0,1.25), (24.8,0,1.25), (24.8,0,2.45)",
+    "s4_2, EXT_WINDOW1, s4_n, (22.9,5.6,1.25), (22.9,5.6,2.45), (24.8,5.6,2.45), (24.8,5.6,1.25)"
+    ),
+    ("zone05",
+    [(29.2, 0, 0), (29.2, 5.6, 0), (36.5, 5.6, 0), (36.5, 0, 0), (29.2, 0, 7.2), (29.2, 5.6, 7.2), (36.5, 5.6, 7.2), (36.5, 0, 7.2)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (30.2,0,2.45), (30.2,0,1.25), (32.1,0,1.25), (32.1,0,2.45)",
+    "s5_2, EXT_WINDOW1, s5_n, (30.2,5.6,1.25), (30.2,5.6,2.45), (32.1,5.6,2.45), (32.1,5.6,1.25)"
+    )
+)
+```
+
+=== 第 21 对 (原编号: 407) ===
+Human_407: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.400 m (length) Ã 4.200 m (width) Ã 7.000 m (height), featuring 2.700 m (length) Ã 2.300 m (width) windows on both south and north walls with west edges offset 0.700 m from wall west edges, both having 1.25 m sill height.
+GPT_407: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.2, 0), (5.4, 4.2, 0), (5.4, 0, 0), (0, 0, 7.0), (0, 4.2, 7.0), (5.4, 4.2, 7.0), (5.4, 0, 7.0)],
+    "z1_b, GROUND_FLOOR, b",
+    "z1_t, EXT_ROOF, t",
+    "z1_e, ADJ_WALL, e, zone02",
+    "z1_w, EXT_WALL, w",
+    "z1_n, EXT_WALL, n",
+    "z1_s, EXT_WALL, s",
+    "z1_1, EXT_WINDOW1, z1_s, (0.7,0,3.55), (0.7,0,1.25), (3.4,0,1.25), (3.4,0,3.55)",
+    "z1_2, EXT_WINDOW1, z1_n, (0.7,4.2,1.25), (0.7,4.2,3.55), (3.4,4.2,3.55), (3.4,4.2,1.25)"
+    ),
+    ("zone02",
+    [(5.4, 0, 0), (5.4, 4.2, 0), (10.8, 4.2, 0), (10.8, 0, 0), (5.4, 0, 7.0), (5.4, 4.2, 7.0), (10.8, 4.2, 7.0), (10.8, 0, 7.0)],
+    "z2_b, GROUND_FLOOR, b",
+    "z2_t, EXT_ROOF, t",
+    "z2_e, ADJ_WALL, e, zone03",
+    "z2_w, ADJ_WALL, w, zone01",
+    "z2_n, EXT_WALL, n",
+    "z2_s, EXT_WALL, s",
+    "z2_1, EXT_WINDOW1, z2_s, (6.1,0,3.55), (6.1,0,1.25), (8.8,0,1.25), (8.8,0,3.55)",
+    "z2_2, EXT_WINDOW1, z2_n, (6.1,4.2,1.25), (6.1,4.2,3.55), (8.8,4.2,3.55), (8.8,4.2,1.25)"
+    ),
+    ("zone03",
+    [(10.8, 0, 0), (10.8, 4.2, 0), (16.2, 4.2, 0), (16.2, 0, 0), (10.8, 0, 7.0), (10.8, 4.2, 7.0), (16.2, 4.2, 7.0), (16.2, 0, 7.0)],
+    "z3_b, GROUND_FLOOR, b",
+    "z3_t, EXT_ROOF, t",
+    "z3_e, ADJ_WALL, e, zone04",
+    "z3_w, ADJ_WALL, w, zone02",
+    "z3_n, EXT_WALL, n",
+    "z3_s, EXT_WALL, s",
+    "z3_1, EXT_WINDOW1, z3_s, (11.5,0,3.55), (11.5,0,1.25), (14.2,0,1.25), (14.2,0,3.55)",
+    "z3_2, EXT_WINDOW1, z3_n, (11.5,4.2,1.25), (11.5,4.2,3.55), (14.2,4.2,3.55), (14.2,4.2,1.25)"
+    ),
+    ("zone04",
+    [(16.2, 0, 0), (16.2, 4.2, 0), (21.6, 4.2, 0), (21.6, 0, 0), (16.2, 0, 7.0), (16.2, 4.2, 7.0), (21.6, 4.2, 7.0), (21.6, 0, 7.0)],
+    "z4_b, GROUND_FLOOR, b",
+    "z4_t, EXT_ROOF, t",
+    "z4_e, ADJ_WALL, e, zone05",
+    "z4_w, ADJ_WALL, w, zone03",
+    "z4_n, EXT_WALL, n",
+    "z4_s, EXT_WALL, s",
+    "z4_1, EXT_WINDOW1, z4_s, (16.9,0,3.55), (16.9,0,1.25), (19.6,0,1.25), (19.6,0,3.55)",
+    "z4_2, EXT_WINDOW1, z4_n, (16.9,4.2,1.25), (16.9,4.2,3.55), (19.6,4.2,3.55), (19.6,4.2,1.25)"
+    ),
+    ("zone05",
+    [(21.6, 0, 0), (21.6, 4.2, 0), (27.0, 4.2, 0), (27.0, 0, 0), (21.6, 0, 7.0), (21.6, 4.2, 7.0), (27.0, 4.2, 7.0), (27.0, 0, 7.0)],
+    "z5_b, GROUND_FLOOR, b",
+    "z5_t, EXT_ROOF, t",
+    "z5_e, EXT_WALL, e",
+    "z5_w, ADJ_WALL, w, zone04",
+    "z5_n, EXT_WALL, n",
+    "z5_s, EXT_WALL, s",
+    "z5_1, EXT_WINDOW1, z5_s, (22.3,0,3.55), (22.3,0,1.25), (25.0,0,1.25), (25.0,0,3.55)",
+    "z5_2, EXT_WINDOW1, z5_n, (22.3,4.2,1.25), (22.3,4.2,3.55), (25.0,4.2,3.55), (25.0,4.2,1.25)"
+    )
+)
+```
+
+=== 第 22 对 (原编号: 438) ===
+Human_438: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.700 m (length) Ã 4.800 m (width) Ã 5.400 m (height), featuring 3.000 m (length) Ã 3.600 m (width) windows on both south and north walls with west edges offset 0.900 m from wall west edges, both having 1.25 m sill height.
+GPT_438: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.8, 0), (5.7, 4.8, 0), (5.7, 0, 0), (0, 0, 5.4), (0, 4.8, 5.4), (5.7, 4.8, 5.4), (5.7, 0, 5.4)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.9,0,4.85), (0.9,0,1.25), (3.9,0,1.25), (3.9,0,4.85)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.9,4.8,1.25), (0.9,4.8,4.85), (3.9,4.8,4.85), (3.9,4.8,1.25)"
+    ),
+    ("zone02",
+    [(5.7, 0, 0), (5.7, 4.8, 0), (11.4, 4.8, 0), (11.4, 0, 0), (5.7, 0, 5.4), (5.7, 4.8, 5.4), (11.4, 4.8, 5.4), (11.4, 0, 5.4)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (6.6,0,4.85), (6.6,0,1.25), (9.6,0,1.25), (9.6,0,4.85)",
+    "s2_2, EXT_WINDOW1, s2_n, (6.6,4.8,1.25), (6.6,4.8,4.85), (9.6,4.8,4.85), (9.6,4.8,1.25)"
+    ),
+    ("zone03",
+    [(11.4, 0, 0), (11.4, 4.8, 0), (17.1, 4.8, 0), (17.1, 0, 0), (11.4, 0, 5.4), (11.4, 4.8, 5.4), (17.1, 4.8, 5.4), (17.1, 0, 5.4)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (12.3,0,4.85), (12.3,0,1.25), (15.3,0,1.25), (15.3,0,4.85)",
+    "s3_2, EXT_WINDOW1, s3_n, (12.3,4.8,1.25), (12.3,4.8,4.85), (15.3,4.8,4.85), (15.3,4.8,1.25)"
+    ),
+    ("zone04",
+    [(17.1, 0, 0), (17.1, 4.8, 0), (22.8, 4.8, 0), (22.8, 0, 0), (17.1, 0, 5.4), (17.1, 4.8, 5.4), (22.8, 4.8, 5.4), (22.8, 0, 5.4)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (18.0,0,4.85), (18.0,0,1.25), (21.0,0,1.25), (21.0,0,4.85)",
+    "s4_2, EXT_WINDOW1, s4_n, (18.0,4.8,1.25), (18.0,4.8,4.85), (21.0,4.8,4.85), (21.0,4.8,1.25)"
+    ),
+    ("zone05",
+    [(22.8, 0, 0), (22.8, 4.8, 0), (28.5, 4.8, 0), (28.5, 0, 0), (22.8, 0, 5.4), (22.8, 4.8, 5.4), (28.5, 4.8, 5.4), (28.5, 0, 5.4)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (23.7,0,4.85), (23.7,0,1.25), (26.7,0,1.25), (26.7,0,4.85)",
+    "s5_2, EXT_WINDOW1, s5_n, (23.7,4.8,1.25), (23.7,4.8,4.85), (26.7,4.8,4.85), (26.7,4.8,1.25)"
+    )
+)
+```
+
+=== 第 23 对 (原编号: 454) ===
+Human_454: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.000 m (length) Ã 4.900 m (width) Ã 6.800 m (height), featuring 3.200 m (length) Ã 1.900 m (width) windows on both south and north walls with west edges offset 0.500 m from wall west edges, both having 1.25 m sill height.
+GPT_454: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.9, 0), (7, 4.9, 0), (7, 0, 0), (0, 0, 6.8), (0, 4.9, 6.8), (7, 4.9, 6.8), (7, 0, 6.8)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.5,0,3.15), (0.5,0,1.25), (3.7,0,1.25), (3.7,0,3.15)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.5,4.9,1.25), (0.5,4.9,3.15), (3.7,4.9,3.15), (3.7,4.9,1.25)"
+    ),
+    ("zone02",
+    [(7, 0, 0), (7, 4.9, 0), (14, 4.9, 0), (14, 0, 0), (7, 0, 6.8), (7, 4.9, 6.8), (14, 4.9, 6.8), (14, 0, 6.8)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (7.5,0,3.15), (7.5,0,1.25), (10.7,0,1.25), (10.7,0,3.15)",
+    "s2_2, EXT_WINDOW1, s2_n, (7.5,4.9,1.25), (7.5,4.9,3.15), (10.7,4.9,3.15), (10.7,4.9,1.25)"
+    ),
+    ("zone03",
+    [(14, 0, 0), (14, 4.9, 0), (21, 4.9, 0), (21, 0, 0), (14, 0, 6.8), (14, 4.9, 6.8), (21, 4.9, 6.8), (21, 0, 6.8)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (14.5,0,3.15), (14.5,0,1.25), (17.7,0,1.25), (17.7,0,3.15)",
+    "s3_2, EXT_WINDOW1, s3_n, (14.5,4.9,1.25), (14.5,4.9,3.15), (17.7,4.9,3.15), (17.7,4.9,1.25)"
+    ),
+    ("zone04",
+    [(21, 0, 0), (21, 4.9, 0), (28, 4.9, 0), (28, 0, 0), (21, 0, 6.8), (21, 4.9, 6.8), (28, 4.9, 6.8), (28, 0, 6.8)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (21.5,0,3.15), (21.5,0,1.25), (24.7,0,1.25), (24.7,0,3.15)",
+    "s4_2, EXT_WINDOW1, s4_n, (21.5,4.9,1.25), (21.5,4.9,3.15), (24.7,4.9,3.15), (24.7,4.9,1.25)"
+    ),
+    ("zone05",
+    [(28, 0, 0), (28, 4.9, 0), (35, 4.9, 0), (35, 0, 0), (28, 0, 6.8), (28, 4.9, 6.8), (35, 4.9, 6.8), (35, 0, 6.8)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (28.5,0,3.15), (28.5,0,1.25), (31.7,0,1.25), (31.7,0,3.15)",
+    "s5_2, EXT_WINDOW1, s5_n, (28.5,4.9,1.25), (28.5,4.9,3.15), (31.7,4.9,3.15), (31.7,4.9,1.25)"
+    )
+)
+```
+
+=== 第 24 对 (原编号: 468) ===
+Human_468: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.000 m (length) Ã 5.200 m (width) Ã 7.100 m (height), featuring 2.700 m (length) Ã 3.200 m (width) windows on both south and north walls with west edges offset 0.300 m from wall west edges, both having 1.25 m sill height.
+GPT_468: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.2, 0), (7, 5.2, 0), (7, 0, 0), (0, 0, 7.1), (0, 5.2, 7.1), (7, 5.2, 7.1), (7, 0, 7.1)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.3,0,4.45), (0.3,0,1.25), (3.0,0,1.25), (3.0,0,4.45)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.3,5.2,1.25), (0.3,5.2,4.45), (3.0,5.2,4.45), (3.0,5.2,1.25)"
+    ),
+    ("zone02",
+    [(7, 0, 0), (7, 5.2, 0), (14, 5.2, 0), (14, 0, 0), (7, 0, 7.1), (7, 5.2, 7.1), (14, 5.2, 7.1), (14, 0, 7.1)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (7.3,0,4.45), (7.3,0,1.25), (10.0,0,1.25), (10.0,0,4.45)",
+    "s2_2, EXT_WINDOW1, s2_n, (7.3,5.2,1.25), (7.3,5.2,4.45), (10.0,5.2,4.45), (10.0,5.2,1.25)"
+    ),
+    ("zone03",
+    [(14, 0, 0), (14, 5.2, 0), (21, 5.2, 0), (21, 0, 0), (14, 0, 7.1), (14, 5.2, 7.1), (21, 5.2, 7.1), (21, 0, 7.1)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (14.3,0,4.45), (14.3,0,1.25), (17.0,0,1.25), (17.0,0,4.45)",
+    "s3_2, EXT_WINDOW1, s3_n, (14.3,5.2,1.25), (14.3,5.2,4.45), (17.0,5.2,4.45), (17.0,5.2,1.25)"
+    ),
+    ("zone04",
+    [(21, 0, 0), (21, 5.2, 0), (28, 5.2, 0), (28, 0, 0), (21, 0, 7.1), (21, 5.2, 7.1), (28, 5.2, 7.1), (28, 0, 7.1)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (21.3,0,4.45), (21.3,0,1.25), (24.0,0,1.25), (24.0,0,4.45)",
+    "s4_2, EXT_WINDOW1, s4_n, (21.3,5.2,1.25), (21.3,5.2,4.45), (24.0,5.2,4.45), (24.0,5.2,1.25)"
+    ),
+    ("zone05",
+    [(28, 0, 0), (28, 5.2, 0), (35, 5.2, 0), (35, 0, 0), (28, 0, 7.1), (28, 5.2, 7.1), (35, 5.2, 7.1), (35, 0, 7.1)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (28.3,0,4.45), (28.3,0,1.25), (31.0,0,1.25), (31.0,0,4.45)",
+    "s5_2, EXT_WINDOW1, s5_n, (28.3,5.2,1.25), (28.3,5.2,4.45), (31.0,5.2,4.45), (31.0,5.2,1.25)"
+    )
+)
+```
+
+=== 第 25 对 (原编号: 495) ===
+Human_495: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.400 m (length) Ã 5.100 m (width) Ã 6.600 m (height), featuring 3.400 m (length) Ã 3.600 m (width) windows on both south and north walls with west edges offset 0.700 m from wall west edges, both having 1.25 m sill height.
+GPT_495: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.1, 0), (7.4, 5.1, 0), (7.4, 0, 0), (0, 0, 6.6), (0, 5.1, 6.6), (7.4, 5.1, 6.6), (7.4, 0, 6.6)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.7,0,4.85), (0.7,0,1.25), (4.1,0,1.25), (4.1,0,4.85)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.7,5.1,1.25), (0.7,5.1,4.85), (4.1,5.1,4.85), (4.1,5.1,1.25)"
+    ),
+    ("zone02",
+    [(7.4, 0, 0), (7.4, 5.1, 0), (14.8, 5.1, 0), (14.8, 0, 0), (7.4, 0, 6.6), (7.4, 5.1, 6.6), (14.8, 5.1, 6.6), (14.8, 0, 6.6)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (8.1,0,4.85), (8.1,0,1.25), (11.5,0,1.25), (11.5,0,4.85)",
+    "s2_2, EXT_WINDOW1, s2_n, (8.1,5.1,1.25), (8.1,5.1,4.85), (11.5,5.1,4.85), (11.5,5.1,1.25)"
+    ),
+    ("zone03",
+    [(14.8, 0, 0), (14.8, 5.1, 0), (22.2, 5.1, 0), (22.2, 0, 0), (14.8, 0, 6.6), (14.8, 5.1, 6.6), (22.2, 5.1, 6.6), (22.2, 0, 6.6)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (15.5,0,4.85), (15.5,0,1.25), (18.9,0,1.25), (18.9,0,4.85)",
+    "s3_2, EXT_WINDOW1, s3_n, (15.5,5.1,1.25), (15.5,5.1,4.85), (18.9,5.1,4.85), (18.9,5.1,1.25)"
+    ),
+    ("zone04",
+    [(22.2, 0, 0), (22.2, 5.1, 0), (29.6, 5.1, 0), (29.6, 0, 0), (22.2, 0, 6.6), (22.2, 5.1, 6.6), (29.6, 5.1, 6.6), (29.6, 0, 6.6)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (22.9,0,4.85), (22.9,0,1.25), (26.3,0,1.25), (26.3,0,4.85)",
+    "s4_2, EXT_WINDOW1, s4_n, (22.9,5.1,1.25), (22.9,5.1,4.85), (26.3,5.1,4.85), (26.3,5.1,1.25)"
+    ),
+    ("zone05",
+    [(29.6, 0, 0), (29.6, 5.1, 0), (37.0, 5.1, 0), (37.0, 0, 0), (29.6, 0, 6.6), (29.6, 5.1, 6.6), (37.0, 5.1, 6.6), (37.0, 0, 6.6)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (30.3,0,4.85), (30.3,0,1.25), (33.7,0,1.25), (33.7,0,4.85)",
+    "s5_2, EXT_WINDOW1, s5_n, (30.3,5.1,1.25), (30.3,5.1,4.85), (33.7,5.1,4.85), (33.7,5.1,1.25)"
+    )
+)
+```
+
+=== 第 26 对 (原编号: 519) ===
+Human_519: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.200 m (length) Ã 5.400 m (width) Ã 6.800 m (height), featuring 2.000 m (length) Ã 1.000 m (width) windows on both south and north walls with west edges offset 0.400 m from wall west edges, both having 1.25 m sill height.
+GPT_519: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.4, 0), (5.2, 5.4, 0), (5.2, 0, 0), (0, 0, 6.8), (0, 5.4, 6.8), (5.2, 5.4, 6.8), (5.2, 0, 6.8)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.4,0,2.25), (0.4,0,1.25), (2.4,0,1.25), (2.4,0,2.25)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.4,5.4,1.25), (0.4,5.4,2.25), (2.4,5.4,2.25), (2.4,5.4,1.25)"
+    ),
+    ("zone02",
+    [(5.2, 0, 0), (5.2, 5.4, 0), (10.4, 5.4, 0), (10.4, 0, 0), (5.2, 0, 6.8), (5.2, 5.4, 6.8), (10.4, 5.4, 6.8), (10.4, 0, 6.8)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (5.6,0,2.25), (5.6,0,1.25), (7.6,0,1.25), (7.6,0,2.25)",
+    "s2_2, EXT_WINDOW1, s2_n, (5.6,5.4,1.25), (5.6,5.4,2.25), (7.6,5.4,2.25), (7.6,5.4,1.25)"
+    ),
+    ("zone03",
+    [(10.4, 0, 0), (10.4, 5.4, 0), (15.6, 5.4, 0), (15.6, 0, 0), (10.4, 0, 6.8), (10.4, 5.4, 6.8), (15.6, 5.4, 6.8), (15.6, 0, 6.8)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (10.8,0,2.25), (10.8,0,1.25), (12.8,0,1.25), (12.8,0,2.25)",
+    "s3_2, EXT_WINDOW1, s3_n, (10.8,5.4,1.25), (10.8,5.4,2.25), (12.8,5.4,2.25), (12.8,5.4,1.25)"
+    ),
+    ("zone04",
+    [(15.6, 0, 0), (15.6, 5.4, 0), (20.8, 5.4, 0), (20.8, 0, 0), (15.6, 0, 6.8), (15.6, 5.4, 6.8), (20.8, 5.4, 6.8), (20.8, 0, 6.8)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (16.0,0,2.25), (16.0,0,1.25), (18.0,0,1.25), (18.0,0,2.25)",
+    "s4_2, EXT_WINDOW1, s4_n, (16.0,5.4,1.25), (16.0,5.4,2.25), (18.0,5.4,2.25), (18.0,5.4,1.25)"
+    ),
+    ("zone05",
+    [(20.8, 0, 0), (20.8, 5.4, 0), (26.0, 5.4, 0), (26.0, 0, 0), (20.8, 0, 6.8), (20.8, 5.4, 6.8), (26.0, 5.4, 6.8), (26.0, 0, 6.8)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (21.2,0,2.25), (21.2,0,1.25), (23.2,0,1.25), (23.2,0,2.25)",
+    "s5_2, EXT_WINDOW1, s5_n, (21.2,5.4,1.25), (21.2,5.4,2.25), (23.2,5.4,2.25), (23.2,5.4,1.25)"
+    )
+)
+```
+
+=== 第 27 对 (原编号: 529) ===
+Human_529: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.200 m (length) Ã 5.800 m (width) Ã 6.000 m (height), featuring 3.400 m (length) Ã 2.900 m (width) windows on both south and north walls with west edges offset 1.100 m from wall west edges, both having 1.25 m sill height.
+GPT_529: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.8, 0), (7.2, 5.8, 0), (7.2, 0, 0), (0, 0, 6.0), (0, 5.8, 6.0), (7.2, 5.8, 6.0), (7.2, 0, 6.0)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (1.1,0,4.15), (1.1,0,1.25), (4.5,0,1.25), (4.5,0,4.15)",
+    "s1_2, EXT_WINDOW1, s1_n, (1.1,5.8,1.25), (1.1,5.8,4.15), (4.5,5.8,4.15), (4.5,5.8,1.25)"
+    ),
+    ("zone02",
+    [(7.2, 0, 0), (7.2, 5.8, 0), (14.4, 5.8, 0), (14.4, 0, 0), (7.2, 0, 6.0), (7.2, 5.8, 6.0), (14.4, 5.8, 6.0), (14.4, 0, 6.0)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (8.3,0,4.15), (8.3,0,1.25), (11.7,0,1.25), (11.7,0,4.15)",
+    "s2_2, EXT_WINDOW1, s2_n, (8.3,5.8,1.25), (8.3,5.8,4.15), (11.7,5.8,4.15), (11.7,5.8,1.25)"
+    ),
+    ("zone03",
+    [(14.4, 0, 0), (14.4, 5.8, 0), (21.6, 5.8, 0), (21.6, 0, 0), (14.4, 0, 6.0), (14.4, 5.8, 6.0), (21.6, 5.8, 6.0), (21.6, 0, 6.0)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (15.5,0,4.15), (15.5,0,1.25), (18.9,0,1.25), (18.9,0,4.15)",
+    "s3_2, EXT_WINDOW1, s3_n, (15.5,5.8,1.25), (15.5,5.8,4.15), (18.9,5.8,4.15), (18.9,5.8,1.25)"
+    ),
+    ("zone04",
+    [(21.6, 0, 0), (21.6, 5.8, 0), (28.8, 5.8, 0), (28.8, 0, 0), (21.6, 0, 6.0), (21.6, 5.8, 6.0), (28.8, 5.8, 6.0), (28.8, 0, 6.0)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (22.7,0,4.15), (22.7,0,1.25), (26.1,0,1.25), (26.1,0,4.15)",
+    "s4_2, EXT_WINDOW1, s4_n, (22.7,5.8,1.25), (22.7,5.8,4.15), (26.1,5.8,4.15), (26.1,5.8,1.25)"
+    ),
+    ("zone05",
+    [(28.8, 0, 0), (28.8, 5.8, 0), (36.0, 5.8, 0), (36.0, 0, 0), (28.8, 0, 6.0), (28.8, 5.8, 6.0), (36.0, 5.8, 6.0), (36.0, 0, 6.0)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (29.9,0,4.15), (29.9,0,1.25), (33.3,0,1.25), (33.3,0,4.15)",
+    "s5_2, EXT_WINDOW1, s5_n, (29.9,5.8,1.25), (29.9,5.8,4.15), (33.3,5.8,4.15), (33.3,5.8,1.25)"
+    )
+)
+```
+
+=== 第 28 对 (原编号: 541) ===
+Human_541: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 6.300 m (length) Ã 4.700 m (width) Ã 6.200 m (height), featuring 3.300 m (length) Ã 3.600 m (width) windows on both south and north walls with west edges offset 1.100 m from wall west edges, both having 1.25 m sill height.
+GPT_541: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.700, 0), (6.300, 4.700, 0), (6.300, 0, 0), (0, 0, 6.200), (0, 4.700, 6.200), (6.300, 4.700, 6.200), (6.300, 0, 6.200)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (1.100,0,4.85), (1.100,0,1.25), (4.400,0,1.25), (4.400,0,4.85)",
+    "s1_2, EXT_WINDOW1, s1_n, (1.100,4.700,1.25), (1.100,4.700,4.85), (4.400,4.700,4.85), (4.400,4.700,1.25)"
+    ),
+    ("zone02",
+    [(6.300, 0, 0), (6.300, 4.700, 0), (12.600, 4.700, 0), (12.600, 0, 0), (6.300, 0, 6.200), (6.300, 4.700, 6.200), (12.600, 4.700, 6.200), (12.600, 0, 6.200)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (7.400,0,4.85), (7.400,0,1.25), (10.700,0,1.25), (10.700,0,4.85)",
+    "s2_2, EXT_WINDOW1, s2_n, (7.400,4.700,1.25), (7.400,4.700,4.85), (10.700,4.700,4.85), (10.700,4.700,1.25)"
+    ),
+    ("zone03",
+    [(12.600, 0, 0), (12.600, 4.700, 0), (18.900, 4.700, 0), (18.900, 0, 0), (12.600, 0, 6.200), (12.600, 4.700, 6.200), (18.900, 4.700, 6.200), (18.900, 0, 6.200)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (13.700,0,4.85), (13.700,0,1.25), (17.000,0,1.25), (17.000,0,4.85)",
+    "s3_2, EXT_WINDOW1, s3_n, (13.700,4.700,1.25), (13.700,4.700,4.85), (17.000,4.700,4.85), (17.000,4.700,1.25)"
+    ),
+    ("zone04",
+    [(18.900, 0, 0), (18.900, 4.700, 0), (25.200, 4.700, 0), (25.200, 0, 0), (18.900, 0, 6.200), (18.900, 4.700, 6.200), (25.200, 4.700, 6.200), (25.200, 0, 6.200)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (20.000,0,4.85), (20.000,0,1.25), (23.300,0,1.25), (23.300,0,4.85)",
+    "s4_2, EXT_WINDOW1, s4_n, (20.000,4.700,1.25), (20.000,4.700,4.85), (23.300,4.700,4.85), (23.300,4.700,1.25)"
+    ),
+    ("zone05",
+    [(25.200, 0, 0), (25.200, 4.700, 0), (31.500, 4.700, 0), (31.500, 0, 0), (25.200, 0, 6.200), (25.200, 4.700, 6.200), (31.500, 4.700, 6.200), (31.500, 0, 6.200)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (26.300,0,4.85), (26.300,0,1.25), (29.600,0,1.25), (29.600,0,4.85)",
+    "s5_2, EXT_WINDOW1, s5_n, (26.300,4.700,1.25), (26.300,4.700,4.85), (29.600,4.700,4.85), (29.600,4.700,1.25)"
+    )
+)
+```
+
+=== 第 29 对 (原编号: 566) ===
+Human_566: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.300 m (length) Ã 4.500 m (width) Ã 5.400 m (height), featuring 2.100 m (length) Ã 3.400 m (width) windows on both south and north walls with west edges offset 0.400 m from wall west edges, both having 1.25 m sill height.
+GPT_566: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.5, 0), (5.3, 4.5, 0), (5.3, 0, 0), (0, 0, 5.4), (0, 4.5, 5.4), (5.3, 4.5, 5.4), (5.3, 0, 5.4)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.4,0,4.65), (0.4,0,1.25), (2.5,0,1.25), (2.5,0,4.65)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.4,4.5,1.25), (0.4,4.5,4.65), (2.5,4.5,4.65), (2.5,4.5,1.25)"
+    ),
+    ("zone02",
+    [(5.3, 0, 0), (5.3, 4.5, 0), (10.6, 4.5, 0), (10.6, 0, 0), (5.3, 0, 5.4), (5.3, 4.5, 5.4), (10.6, 4.5, 5.4), (10.6, 0, 5.4)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (5.7,0,4.65), (5.7,0,1.25), (7.8,0,1.25), (7.8,0,4.65)",
+    "s2_2, EXT_WINDOW1, s2_n, (5.7,4.5,1.25), (5.7,4.5,4.65), (7.8,4.5,4.65), (7.8,4.5,1.25)"
+    ),
+    ("zone03",
+    [(10.6, 0, 0), (10.6, 4.5, 0), (15.9, 4.5, 0), (15.9, 0, 0), (10.6, 0, 5.4), (10.6, 4.5, 5.4), (15.9, 4.5, 5.4), (15.9, 0, 5.4)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (11.0,0,4.65), (11.0,0,1.25), (13.1,0,1.25), (13.1,0,4.65)",
+    "s3_2, EXT_WINDOW1, s3_n, (11.0,4.5,1.25), (11.0,4.5,4.65), (13.1,4.5,4.65), (13.1,4.5,1.25)"
+    ),
+    ("zone04",
+    [(15.9, 0, 0), (15.9, 4.5, 0), (21.2, 4.5, 0), (21.2, 0, 0), (15.9, 0, 5.4), (15.9, 4.5, 5.4), (21.2, 4.5, 5.4), (21.2, 0, 5.4)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (16.3,0,4.65), (16.3,0,1.25), (18.4,0,1.25), (18.4,0,4.65)",
+    "s4_2, EXT_WINDOW1, s4_n, (16.3,4.5,1.25), (16.3,4.5,4.65), (18.4,4.5,4.65), (18.4,4.5,1.25)"
+    ),
+    ("zone05",
+    [(21.2, 0, 0), (21.2, 4.5, 0), (26.5, 4.5, 0), (26.5, 0, 0), (21.2, 0, 5.4), (21.2, 4.5, 5.4), (26.5, 4.5, 5.4), (26.5, 0, 5.4)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (21.6,0,4.65), (21.6,0,1.25), (23.7,0,1.25), (23.7,0,4.65)",
+    "s5_2, EXT_WINDOW1, s5_n, (21.6,4.5,1.25), (21.6,4.5,4.65), (23.7,4.5,4.65), (23.7,4.5,1.25)"
+    )
+)
+```
+
+=== 第 30 对 (原编号: 594) ===
+Human_594: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.900 m (length) Ã 5.600 m (width) Ã 5.000 m (height), featuring 2.700 m (length) Ã 2.900 m (width) windows on both south and north walls with west edges offset 0.900 m from wall west edges, both having 1.25 m sill height.
+GPT_594: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.6, 0), (7.9, 5.6, 0), (7.9, 0, 0), (0, 0, 5.0), (0, 5.6, 5.0), (7.9, 5.6, 5.0), (7.9, 0, 5.0)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.9,0,4.15), (0.9,0,1.25), (3.6,0,1.25), (3.6,0,4.15)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.9,5.6,1.25), (0.9,5.6,4.15), (3.6,5.6,4.15), (3.6,5.6,1.25)"
+    ),
+    ("zone02",
+    [(7.9, 0, 0), (7.9, 5.6, 0), (15.8, 5.6, 0), (15.8, 0, 0), (7.9, 0, 5.0), (7.9, 5.6, 5.0), (15.8, 5.6, 5.0), (15.8, 0, 5.0)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (8.8,0,4.15), (8.8,0,1.25), (11.5,0,1.25), (11.5,0,4.15)",
+    "s2_2, EXT_WINDOW1, s2_n, (8.8,5.6,1.25), (8.8,5.6,4.15), (11.5,5.6,4.15), (11.5,5.6,1.25)"
+    ),
+    ("zone03",
+    [(15.8, 0, 0), (15.8, 5.6, 0), (23.7, 5.6, 0), (23.7, 0, 0), (15.8, 0, 5.0), (15.8, 5.6, 5.0), (23.7, 5.6, 5.0), (23.7, 0, 5.0)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (16.7,0,4.15), (16.7,0,1.25), (19.4,0,1.25), (19.4,0,4.15)",
+    "s3_2, EXT_WINDOW1, s3_n, (16.7,5.6,1.25), (16.7,5.6,4.15), (19.4,5.6,4.15), (19.4,5.6,1.25)"
+    ),
+    ("zone04",
+    [(23.7, 0, 0), (23.7, 5.6, 0), (31.6, 5.6, 0), (31.6, 0, 0), (23.7, 0, 5.0), (23.7, 5.6, 5.0), (31.6, 5.6, 5.0), (31.6, 0, 5.0)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (24.6,0,4.15), (24.6,0,1.25), (27.3,0,1.25), (27.3,0,4.15)",
+    "s4_2, EXT_WINDOW1, s4_n, (24.6,5.6,1.25), (24.6,5.6,4.15), (27.3,5.6,4.15), (27.3,5.6,1.25)"
+    ),
+    ("zone05",
+    [(31.6, 0, 0), (31.6, 5.6, 0), (39.5, 5.6, 0), (39.5, 0, 0), (31.6, 0, 5.0), (31.6, 5.6, 5.0), (39.5, 5.6, 5.0), (39.5, 0, 5.0)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (32.5,0,4.15), (32.5,0,1.25), (35.2,0,1.25), (35.2,0,4.15)",
+    "s5_2, EXT_WINDOW1, s5_n, (32.5,5.6,1.25), (32.5,5.6,4.15), (35.2,5.6,4.15), (35.2,5.6,1.25)"
+    )
+)
+```
+
+=== 第 31 对 (原编号: 611) ===
+Human_611: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 6.000 m (length) Ã 4.700 m (width) Ã 7.300 m (height), featuring 3.400 m (length) Ã 2.400 m (width) windows on both south and north walls with west edges offset 0.900 m from wall west edges, both having 1.25 m sill height.
+GPT_611: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.7, 0), (6, 4.7, 0), (6, 0, 0), (0, 0, 7.3), (0, 4.7, 7.3), (6, 4.7, 7.3), (6, 0, 7.3)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.9,0,3.65), (0.9,0,1.25), (4.3,0,1.25), (4.3,0,3.65)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.9,4.7,1.25), (0.9,4.7,3.65), (4.3,4.7,3.65), (4.3,4.7,1.25)"
+    ),
+    ("zone02",
+    [(6, 0, 0), (6, 4.7, 0), (12, 4.7, 0), (12, 0, 0), (6, 0, 7.3), (6, 4.7, 7.3), (12, 4.7, 7.3), (12, 0, 7.3)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (6.9,0,3.65), (6.9,0,1.25), (10.3,0,1.25), (10.3,0,3.65)",
+    "s2_2, EXT_WINDOW1, s2_n, (6.9,4.7,1.25), (6.9,4.7,3.65), (10.3,4.7,3.65), (10.3,4.7,1.25)"
+    ),
+    ("zone03",
+    [(12, 0, 0), (12, 4.7, 0), (18, 4.7, 0), (18, 0, 0), (12, 0, 7.3), (12, 4.7, 7.3), (18, 4.7, 7.3), (18, 0, 7.3)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (12.9,0,3.65), (12.9,0,1.25), (16.3,0,1.25), (16.3,0,3.65)",
+    "s3_2, EXT_WINDOW1, s3_n, (12.9,4.7,1.25), (12.9,4.7,3.65), (16.3,4.7,3.65), (16.3,4.7,1.25)"
+    ),
+    ("zone04",
+    [(18, 0, 0), (18, 4.7, 0), (24, 4.7, 0), (24, 0, 0), (18, 0, 7.3), (18, 4.7, 7.3), (24, 4.7, 7.3), (24, 0, 7.3)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (18.9,0,3.65), (18.9,0,1.25), (22.3,0,1.25), (22.3,0,3.65)",
+    "s4_2, EXT_WINDOW1, s4_n, (18.9,4.7,1.25), (18.9,4.7,3.65), (22.3,4.7,3.65), (22.3,4.7,1.25)"
+    ),
+    ("zone05",
+    [(24, 0, 0), (24, 4.7, 0), (30, 4.7, 0), (30, 0, 0), (24, 0, 7.3), (24, 4.7, 7.3), (30, 4.7, 7.3), (30, 0, 7.3)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (24.9,0,3.65), (24.9,0,1.25), (28.3,0,1.25), (28.3,0,3.65)",
+    "s5_2, EXT_WINDOW1, s5_n, (24.9,4.7,1.25), (24.9,4.7,3.65), (28.3,4.7,3.65), (28.3,4.7,1.25)"
+    )
+)
+```
+
+=== 第 32 对 (原编号: 629) ===
+Human_629: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 6.600 m (length) Ã 4.100 m (width) Ã 6.900 m (height), featuring 1.600 m (length) Ã 2.300 m (width) windows on both south and north walls with west edges offset 0.600 m from wall west edges, both having 1.25 m sill height.
+GPT_629: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.1, 0), (6.6, 4.1, 0), (6.6, 0, 0), (0, 0, 6.9), (0, 4.1, 6.9), (6.6, 4.1, 6.9), (6.6, 0, 6.9)],
+    "z1_b, GROUND_FLOOR, b",
+    "z1_t, EXT_ROOF, t",
+    "z1_e, ADJ_WALL, e, zone02",
+    "z1_w, EXT_WALL, w",
+    "z1_n, EXT_WALL, n",
+    "z1_s, EXT_WALL, s",
+    "z1_1, EXT_WINDOW1, z1_s, (0.6,0,3.55), (0.6,0,1.25), (2.2,0,1.25), (2.2,0,3.55)",
+    "z1_2, EXT_WINDOW1, z1_n, (0.6,4.1,1.25), (0.6,4.1,3.55), (2.2,4.1,3.55), (2.2,4.1,1.25)"
+    ),
+    ("zone02",
+    [(6.6, 0, 0), (6.6, 4.1, 0), (13.2, 4.1, 0), (13.2, 0, 0), (6.6, 0, 6.9), (6.6, 4.1, 6.9), (13.2, 4.1, 6.9), (13.2, 0, 6.9)],
+    "z2_b, GROUND_FLOOR, b",
+    "z2_t, EXT_ROOF, t",
+    "z2_e, ADJ_WALL, e, zone03",
+    "z2_w, ADJ_WALL, w, zone01",
+    "z2_n, EXT_WALL, n",
+    "z2_s, EXT_WALL, s",
+    "z2_1, EXT_WINDOW1, z2_s, (7.2,0,3.55), (7.2,0,1.25), (8.8,0,1.25), (8.8,0,3.55)",
+    "z2_2, EXT_WINDOW1, z2_n, (7.2,4.1,1.25), (7.2,4.1,3.55), (8.8,4.1,3.55), (8.8,4.1,1.25)"
+    ),
+    ("zone03",
+    [(13.2, 0, 0), (13.2, 4.1, 0), (19.8, 4.1, 0), (19.8, 0, 0), (13.2, 0, 6.9), (13.2, 4.1, 6.9), (19.8, 4.1, 6.9), (19.8, 0, 6.9)],
+    "z3_b, GROUND_FLOOR, b",
+    "z3_t, EXT_ROOF, t",
+    "z3_e, ADJ_WALL, e, zone04",
+    "z3_w, ADJ_WALL, w, zone02",
+    "z3_n, EXT_WALL, n",
+    "z3_s, EXT_WALL, s",
+    "z3_1, EXT_WINDOW1, z3_s, (13.8,0,3.55), (13.8,0,1.25), (15.4,0,1.25), (15.4,0,3.55)",
+    "z3_2, EXT_WINDOW1, z3_n, (13.8,4.1,1.25), (13.8,4.1,3.55), (15.4,4.1,3.55), (15.4,4.1,1.25)"
+    ),
+    ("zone04",
+    [(19.8, 0, 0), (19.8, 4.1, 0), (26.4, 4.1, 0), (26.4, 0, 0), (19.8, 0, 6.9), (19.8, 4.1, 6.9), (26.4, 4.1, 6.9), (26.4, 0, 6.9)],
+    "z4_b, GROUND_FLOOR, b",
+    "z4_t, EXT_ROOF, t",
+    "z4_e, ADJ_WALL, e, zone05",
+    "z4_w, ADJ_WALL, w, zone03",
+    "z4_n, EXT_WALL, n",
+    "z4_s, EXT_WALL, s",
+    "z4_1, EXT_WINDOW1, z4_s, (20.4,0,3.55), (20.4,0,1.25), (22.0,0,1.25), (22.0,0,3.55)",
+    "z4_2, EXT_WINDOW1, z4_n, (20.4,4.1,1.25), (20.4,4.1,3.55), (22.0,4.1,3.55), (22.0,4.1,1.25)"
+    ),
+    ("zone05",
+    [(26.4, 0, 0), (26.4, 4.1, 0), (33.0, 4.1, 0), (33.0, 0, 0), (26.4, 0, 6.9), (26.4, 4.1, 6.9), (33.0, 4.1, 6.9), (33.0, 0, 6.9)],
+    "z5_b, GROUND_FLOOR, b",
+    "z5_t, EXT_ROOF, t",
+    "z5_e, EXT_WALL, e",
+    "z5_w, ADJ_WALL, w, zone04",
+    "z5_n, EXT_WALL, n",
+    "z5_s, EXT_WALL, s",
+    "z5_1, EXT_WINDOW1, z5_s, (27.0,0,3.55), (27.0,0,1.25), (28.6,0,1.25), (28.6,0,3.55)",
+    "z5_2, EXT_WINDOW1, z5_n, (27.0,4.1,1.25), (27.0,4.1,3.55), (28.6,4.1,3.55), (28.6,4.1,1.25)"
+    )
+)
+```
+
+=== 第 33 对 (原编号: 645) ===
+Human_645: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 6.000 m (length) Ã 5.600 m (width) Ã 5.200 m (height), featuring 3.400 m (length) Ã 2.500 m (width) windows on both south and north walls with west edges offset 0.100 m from wall west edges, both having 1.25 m sill height.
+GPT_645: ("zone01",
+[(0, 0, 0), (0, 5.6, 0), (6, 5.6, 0), (6, 0, 0), (0, 0, 5.2), (0, 5.6, 5.2), (6, 5.6, 5.2), (6, 0, 5.2)],
+"s1_b, GROUND_FLOOR, b",
+"s1_t, EXT_ROOF, t",
+"s1_e, ADJ_WALL, e, zone02",
+"s1_w, EXT_WALL, w",
+"s1_n, EXT_WALL, n",
+"s1_s, EXT_WALL, s",
+"s1_1, EXT_WINDOW1, s1_s, (0.1,0,3.75), (0.1,0,1.25), (3.5,0,1.25), (3.5,0,3.75)",
+"s1_2, EXT_WINDOW1, s1_n, (0.1,5.6,1.25), (0.1,5.6,3.75), (3.5,5.6,3.75), (3.5,5.6,1.25)"
+),
+("zone02",
+[(6, 0, 0), (6, 5.6, 0), (12, 5.6, 0), (12, 0, 0), (6, 0, 5.2), (6, 5.6, 5.2), (12, 5.6, 5.2), (12, 0, 5.2)],
+"s2_b, GROUND_FLOOR, b",
+"s2_t, EXT_ROOF, t",
+"s2_e, ADJ_WALL, e, zone03",
+"s2_w, ADJ_WALL, w, zone01",
+"s2_n, EXT_WALL, n",
+"s2_s, EXT_WALL, s",
+"s2_1, EXT_WINDOW1, s2_s, (6.1,0,3.75), (6.1,0,1.25), (9.5,0,1.25), (9.5,0,3.75)",
+"s2_2, EXT_WINDOW1, s2_n, (6.1,5.6,1.25), (6.1,5.6,3.75), (9.5,5.6,3.75), (9.5,5.6,1.25)"
+),
+("zone03",
+[(12, 0, 0), (12, 5.6, 0), (18, 5.6, 0), (18, 0, 0), (12, 0, 5.2), (12, 5.6, 5.2), (18, 5.6, 5.2), (18, 0, 5.2)],
+"s3_b, GROUND_FLOOR, b",
+"s3_t, EXT_ROOF, t",
+"s3_e, ADJ_WALL, e, zone04",
+"s3_w, ADJ_WALL, w, zone02",
+"s3_n, EXT_WALL, n",
+"s3_s, EXT_WALL, s",
+"s3_1, EXT_WINDOW1, s3_s, (12.1,0,3.75), (12.1,0,1.25), (15.5,0,1.25), (15.5,0,3.75)",
+"s3_2, EXT_WINDOW1, s3_n, (12.1,5.6,1.25), (12.1,5.6,3.75), (15.5,5.6,3.75), (15.5,5.6,1.25)"
+),
+("zone04",
+[(18, 0, 0), (18, 5.6, 0), (24, 5.6, 0), (24, 0, 0), (18, 0, 5.2), (18, 5.6, 5.2), (24, 5.6, 5.2), (24, 0, 5.2)],
+"s4_b, GROUND_FLOOR, b",
+"s4_t, EXT_ROOF, t",
+"s4_e, ADJ_WALL, e, zone05",
+"s4_w, ADJ_WALL, w, zone03",
+"s4_n, EXT_WALL, n",
+"s4_s, EXT_WALL, s",
+"s4_1, EXT_WINDOW1, s4_s, (18.1,0,3.75), (18.1,0,1.25), (21.5,0,1.25), (21.5,0,3.75)",
+"s4_2, EXT_WINDOW1, s4_n, (18.1,5.6,1.25), (18.1,5.6,3.75), (21.5,5.6,3.75), (21.5,5.6,1.25)"
+),
+("zone05",
+[(24, 0, 0), (24, 5.6, 0), (30, 5.6, 0), (30, 0, 0), (24, 0, 5.2), (24, 5.6, 5.2), (30, 5.6, 5.2), (30, 0, 5.2)],
+"s5_b, GROUND_FLOOR, b",
+"s5_t, EXT_ROOF, t",
+"s5_e, EXT_WALL, e",
+"s5_w, ADJ_WALL, w, zone04",
+"s5_n, EXT_WALL, n",
+"s5_s, EXT_WALL, s",
+"s5_1, EXT_WINDOW1, s5_s, (24.1,0,3.75), (24.1,0,1.25), (27.5,0,1.25), (27.5,0,3.75)",
+"s5_2, EXT_WINDOW1, s5_n, (24.1,5.6,1.25), (24.1,5.6,3.75), (27.5,5.6,3.75), (27.5,5.6,1.25)"
+)
+
+=== 第 34 对 (原编号: 667) ===
+Human_667: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.200 m (length) Ã 5.500 m (width) Ã 5.100 m (height), featuring 2.300 m (length) Ã 1.300 m (width) windows on both south and north walls with west edges offset 0.700 m from wall west edges, both having 1.25 m sill height.
+GPT_667: ("zone01",
+[(0, 0, 0), (0, 5.5, 0), (5.2, 5.5, 0), (5.2, 0, 0), (0, 0, 5.1), (0, 5.5, 5.1), (5.2, 5.5, 5.1), (5.2, 0, 5.1)],
+"s1_b, GROUND_FLOOR, b",
+"s1_t, EXT_ROOF, t",
+"s1_e, ADJ_WALL, e, zone02",
+"s1_w, EXT_WALL, w",
+"s1_n, EXT_WALL, n",
+"s1_s, EXT_WALL, s",
+"s1_1, EXT_WINDOW1, s1_s, (0.7,0,2.55), (0.7,0,1.25), (3.0,0,1.25), (3.0,0,2.55)",
+"s1_2, EXT_WINDOW1, s1_n, (0.7,5.5,1.25), (0.7,5.5,2.55), (3.0,5.5,2.55), (3.0,5.5,1.25)"
+),
+("zone02",
+[(5.2, 0, 0), (5.2, 5.5, 0), (10.4, 5.5, 0), (10.4, 0, 0), (5.2, 0, 5.1), (5.2, 5.5, 5.1), (10.4, 5.5, 5.1), (10.4, 0, 5.1)],
+"s2_b, GROUND_FLOOR, b",
+"s2_t, EXT_ROOF, t",
+"s2_e, ADJ_WALL, e, zone03",
+"s2_w, ADJ_WALL, w, zone01",
+"s2_n, EXT_WALL, n",
+"s2_s, EXT_WALL, s",
+"s2_1, EXT_WINDOW1, s2_s, (5.9,0,2.55), (5.9,0,1.25), (8.2,0,1.25), (8.2,0,2.55)",
+"s2_2, EXT_WINDOW1, s2_n, (5.9,5.5,1.25), (5.9,5.5,2.55), (8.2,5.5,2.55), (8.2,5.5,1.25)"
+),
+("zone03",
+[(10.4, 0, 0), (10.4, 5.5, 0), (15.6, 5.5, 0), (15.6, 0, 0), (10.4, 0, 5.1), (10.4, 5.5, 5.1), (15.6, 5.5, 5.1), (15.6, 0, 5.1)],
+"s3_b, GROUND_FLOOR, b",
+"s3_t, EXT_ROOF, t",
+"s3_e, ADJ_WALL, e, zone04",
+"s3_w, ADJ_WALL, w, zone02",
+"s3_n, EXT_WALL, n",
+"s3_s, EXT_WALL, s",
+"s3_1, EXT_WINDOW1, s3_s, (11.1,0,2.55), (11.1,0,1.25), (13.4,0,1.25), (13.4,0,2.55)",
+"s3_2, EXT_WINDOW1, s3_n, (11.1,5.5,1.25), (11.1,5.5,2.55), (13.4,5.5,2.55), (13.4,5.5,1.25)"
+),
+("zone04",
+[(15.6, 0, 0), (15.6, 5.5, 0), (20.8, 5.5, 0), (20.8, 0, 0), (15.6, 0, 5.1), (15.6, 5.5, 5.1), (20.8, 5.5, 5.1), (20.8, 0, 5.1)],
+"s4_b, GROUND_FLOOR, b",
+"s4_t, EXT_ROOF, t",
+"s4_e, ADJ_WALL, e, zone05",
+"s4_w, ADJ_WALL, w, zone03",
+"s4_n, EXT_WALL, n",
+"s4_s, EXT_WALL, s",
+"s4_1, EXT_WINDOW1, s4_s, (16.3,0,2.55), (16.3,0,1.25), (18.6,0,1.25), (18.6,0,2.55)",
+"s4_2, EXT_WINDOW1, s4_n, (16.3,5.5,1.25), (16.3,5.5,2.55), (18.6,5.5,2.55), (18.6,5.5,1.25)"
+),
+("zone05",
+[(20.8, 0, 0), (20.8, 5.5, 0), (26.0, 5.5, 0), (26.0, 0, 0), (20.8, 0, 5.1), (20.8, 5.5, 5.1), (26.0, 5.5, 5.1), (26.0, 0, 5.1)],
+"s5_b, GROUND_FLOOR, b",
+"s5_t, EXT_ROOF, t",
+"s5_e, EXT_WALL, e",
+"s5_w, ADJ_WALL, w, zone04",
+"s5_n, EXT_WALL, n",
+"s5_s, EXT_WALL, s",
+"s5_1, EXT_WINDOW1, s5_s, (21.5,0,2.55), (21.5,0,1.25), (23.8,0,1.25), (23.8,0,2.55)",
+"s5_2, EXT_WINDOW1, s5_n, (21.5,5.5,1.25), (21.5,5.5,2.55), (23.8,5.5,2.55), (23.8,5.5,1.25)"
+)
+
+=== 第 35 对 (原编号: 691) ===
+Human_691: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.600 m (length) Ã 5.500 m (width) Ã 5.800 m (height), featuring 1.700 m (length) Ã 2.800 m (width) windows on both south and north walls with west edges offset 1.200 m from wall west edges, both having 1.25 m sill height.
+GPT_691: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.5, 0), (5.6, 5.5, 0), (5.6, 0, 0), (0, 0, 5.8), (0, 5.5, 5.8), (5.6, 5.5, 5.8), (5.6, 0, 5.8)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (1.2,0,4.05), (1.2,0,1.25), (2.9,0,1.25), (2.9,0,4.05)",
+    "s1_2, EXT_WINDOW1, s1_n, (1.2,5.5,1.25), (1.2,5.5,4.05), (2.9,5.5,4.05), (2.9,5.5,1.25)"
+    ),
+    ("zone02",
+    [(5.6, 0, 0), (5.6, 5.5, 0), (11.2, 5.5, 0), (11.2, 0, 0), (5.6, 0, 5.8), (5.6, 5.5, 5.8), (11.2, 5.5, 5.8), (11.2, 0, 5.8)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (6.8,0,4.05), (6.8,0,1.25), (8.5,0,1.25), (8.5,0,4.05)",
+    "s2_2, EXT_WINDOW1, s2_n, (6.8,5.5,1.25), (6.8,5.5,4.05), (8.5,5.5,4.05), (8.5,5.5,1.25)"
+    ),
+    ("zone03",
+    [(11.2, 0, 0), (11.2, 5.5, 0), (16.8, 5.5, 0), (16.8, 0, 0), (11.2, 0, 5.8), (11.2, 5.5, 5.8), (16.8, 5.5, 5.8), (16.8, 0, 5.8)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (12.4,0,4.05), (12.4,0,1.25), (14.1,0,1.25), (14.1,0,4.05)",
+    "s3_2, EXT_WINDOW1, s3_n, (12.4,5.5,1.25), (12.4,5.5,4.05), (14.1,5.5,4.05), (14.1,5.5,1.25)"
+    ),
+    ("zone04",
+    [(16.8, 0, 0), (16.8, 5.5, 0), (22.4, 5.5, 0), (22.4, 0, 0), (16.8, 0, 5.8), (16.8, 5.5, 5.8), (22.4, 5.5, 5.8), (22.4, 0, 5.8)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (18.0,0,4.05), (18.0,0,1.25), (19.7,0,1.25), (19.7,0,4.05)",
+    "s4_2, EXT_WINDOW1, s4_n, (18.0,5.5,1.25), (18.0,5.5,4.05), (19.7,5.5,4.05), (19.7,5.5,1.25)"
+    ),
+    ("zone05",
+    [(22.4, 0, 0), (22.4, 5.5, 0), (28.0, 5.5, 0), (28.0, 0, 0), (22.4, 0, 5.8), (22.4, 5.5, 5.8), (28.0, 5.5, 5.8), (28.0, 0, 5.8)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (23.6,0,4.05), (23.6,0,1.25), (25.3,0,1.25), (25.3,0,4.05)",
+    "s5_2, EXT_WINDOW1, s5_n, (23.6,5.5,1.25), (23.6,5.5,4.05), (25.3,5.5,4.05), (25.3,5.5,1.25)"
+    )
+)
+```
+
+=== 第 36 对 (原编号: 704) ===
+Human_704: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.800 m (length) Ã 4.900 m (width) Ã 7.400 m (height), featuring 2.700 m (length) Ã 1.300 m (width) windows on both south and north walls with west edges offset 0.200 m from wall west edges, both having 1.25 m sill height.
+GPT_704: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.9, 0), (7.8, 4.9, 0), (7.8, 0, 0), (0, 0, 7.4), (0, 4.9, 7.4), (7.8, 4.9, 7.4), (7.8, 0, 7.4)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.2,0,2.55), (0.2,0,1.25), (2.9,0,1.25), (2.9,0,2.55)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.2,4.9,1.25), (0.2,4.9,2.55), (2.9,4.9,2.55), (2.9,4.9,1.25)"
+    ),
+    ("zone02",
+    [(7.8, 0, 0), (7.8, 4.9, 0), (15.6, 4.9, 0), (15.6, 0, 0), (7.8, 0, 7.4), (7.8, 4.9, 7.4), (15.6, 4.9, 7.4), (15.6, 0, 7.4)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (8.0,0,2.55), (8.0,0,1.25), (10.7,0,1.25), (10.7,0,2.55)",
+    "s2_2, EXT_WINDOW1, s2_n, (8.0,4.9,1.25), (8.0,4.9,2.55), (10.7,4.9,2.55), (10.7,4.9,1.25)"
+    ),
+    ("zone03",
+    [(15.6, 0, 0), (15.6, 4.9, 0), (23.4, 4.9, 0), (23.4, 0, 0), (15.6, 0, 7.4), (15.6, 4.9, 7.4), (23.4, 4.9, 7.4), (23.4, 0, 7.4)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (15.8,0,2.55), (15.8,0,1.25), (18.5,0,1.25), (18.5,0,2.55)",
+    "s3_2, EXT_WINDOW1, s3_n, (15.8,4.9,1.25), (15.8,4.9,2.55), (18.5,4.9,2.55), (18.5,4.9,1.25)"
+    ),
+    ("zone04",
+    [(23.4, 0, 0), (23.4, 4.9, 0), (31.2, 4.9, 0), (31.2, 0, 0), (23.4, 0, 7.4), (23.4, 4.9, 7.4), (31.2, 4.9, 7.4), (31.2, 0, 7.4)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (23.6,0,2.55), (23.6,0,1.25), (26.3,0,1.25), (26.3,0,2.55)",
+    "s4_2, EXT_WINDOW1, s4_n, (23.6,4.9,1.25), (23.6,4.9,2.55), (26.3,4.9,2.55), (26.3,4.9,1.25)"
+    ),
+    ("zone05",
+    [(31.2, 0, 0), (31.2, 4.9, 0), (39.0, 4.9, 0), (39.0, 0, 0), (31.2, 0, 7.4), (31.2, 4.9, 7.4), (39.0, 4.9, 7.4), (39.0, 0, 7.4)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (31.4,0,2.55), (31.4,0,1.25), (34.1,0,1.25), (34.1,0,2.55)",
+    "s5_2, EXT_WINDOW1, s5_n, (31.4,4.9,1.25), (31.4,4.9,2.55), (34.1,4.9,2.55), (34.1,4.9,1.25)"
+    )
+)
+```
+
+=== 第 37 对 (原编号: 723) ===
+Human_723: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.900 m (length) Ã 5.800 m (width) Ã 5.000 m (height), featuring 1.900 m (length) Ã 3.300 m (width) windows on both south and north walls with west edges offset 0.900 m from wall west edges, both having 1.25 m sill height.
+GPT_723: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.8, 0), (7.9, 5.8, 0), (7.9, 0, 0), (0, 0, 5.0), (0, 5.8, 5.0), (7.9, 5.8, 5.0), (7.9, 0, 5.0)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.9,0,4.55), (0.9,0,1.25), (2.8,0,1.25), (2.8,0,4.55)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.9,5.8,1.25), (0.9,5.8,4.55), (2.8,5.8,4.55), (2.8,5.8,1.25)"
+    ),
+    ("zone02",
+    [(7.9, 0, 0), (7.9, 5.8, 0), (15.8, 5.8, 0), (15.8, 0, 0), (7.9, 0, 5.0), (7.9, 5.8, 5.0), (15.8, 5.8, 5.0), (15.8, 0, 5.0)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (8.8,0,4.55), (8.8,0,1.25), (10.7,0,1.25), (10.7,0,4.55)",
+    "s2_2, EXT_WINDOW1, s2_n, (8.8,5.8,1.25), (8.8,5.8,4.55), (10.7,5.8,4.55), (10.7,5.8,1.25)"
+    ),
+    ("zone03",
+    [(15.8, 0, 0), (15.8, 5.8, 0), (23.7, 5.8, 0), (23.7, 0, 0), (15.8, 0, 5.0), (15.8, 5.8, 5.0), (23.7, 5.8, 5.0), (23.7, 0, 5.0)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (16.7,0,4.55), (16.7,0,1.25), (18.6,0,1.25), (18.6,0,4.55)",
+    "s3_2, EXT_WINDOW1, s3_n, (16.7,5.8,1.25), (16.7,5.8,4.55), (18.6,5.8,4.55), (18.6,5.8,1.25)"
+    ),
+    ("zone04",
+    [(23.7, 0, 0), (23.7, 5.8, 0), (31.6, 5.8, 0), (31.6, 0, 0), (23.7, 0, 5.0), (23.7, 5.8, 5.0), (31.6, 5.8, 5.0), (31.6, 0, 5.0)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (24.6,0,4.55), (24.6,0,1.25), (26.5,0,1.25), (26.5,0,4.55)",
+    "s4_2, EXT_WINDOW1, s4_n, (24.6,5.8,1.25), (24.6,5.8,4.55), (26.5,5.8,4.55), (26.5,5.8,1.25)"
+    ),
+    ("zone05",
+    [(31.6, 0, 0), (31.6, 5.8, 0), (39.5, 5.8, 0), (39.5, 0, 0), (31.6, 0, 5.0), (31.6, 5.8, 5.0), (39.5, 5.8, 5.0), (39.5, 0, 5.0)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (32.5,0,4.55), (32.5,0,1.25), (34.4,0,1.25), (34.4,0,4.55)",
+    "s5_2, EXT_WINDOW1, s5_n, (32.5,5.8,1.25), (32.5,5.8,4.55), (34.4,5.8,4.55), (34.4,5.8,1.25)"
+    )
+)
+```
+
+=== 第 38 对 (原编号: 753) ===
+Human_753: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 6.200 m (length) Ã 4.500 m (width) Ã 7.400 m (height), featuring 3.500 m (length) Ã 3.400 m (width) windows on both south and north walls with west edges offset 0.700 m from wall west edges, both having 1.25 m sill height.
+GPT_753: ```python
+(
+"zone01",
+[(0, 0, 0), (0, 4.5, 0), (6.2, 4.5, 0), (6.2, 0, 0), (0, 0, 7.4), (0, 4.5, 7.4), (6.2, 4.5, 7.4), (6.2, 0, 7.4)],
+"s1_b, GROUND_FLOOR, b",
+"s1_t, EXT_ROOF, t",
+"s1_e, ADJ_WALL, e, zone02",
+"s1_w, EXT_WALL, w",
+"s1_n, EXT_WALL, n",
+"s1_s, EXT_WALL, s",
+"s1_1, EXT_WINDOW1, s1_s, (0.7,0,4.65), (0.7,0,1.25), (4.2,0,1.25), (4.2,0,4.65)",
+"s1_2, EXT_WINDOW1, s1_n, (0.7,4.5,1.25), (0.7,4.5,4.65), (4.2,4.5,4.65), (4.2,4.5,1.25)"
+),
+(
+"zone02",
+[(6.2, 0, 0), (6.2, 4.5, 0), (12.4, 4.5, 0), (12.4, 0, 0), (6.2, 0, 7.4), (6.2, 4.5, 7.4), (12.4, 4.5, 7.4), (12.4, 0, 7.4)],
+"s2_b, GROUND_FLOOR, b",
+"s2_t, EXT_ROOF, t",
+"s2_e, ADJ_WALL, e, zone03",
+"s2_w, ADJ_WALL, w, zone01",
+"s2_n, EXT_WALL, n",
+"s2_s, EXT_WALL, s",
+"s2_1, EXT_WINDOW1, s2_s, (6.9,0,4.65), (6.9,0,1.25), (10.4,0,1.25), (10.4,0,4.65)",
+"s2_2, EXT_WINDOW1, s2_n, (6.9,4.5,1.25), (6.9,4.5,4.65), (10.4,4.5,4.65), (10.4,4.5,1.25)"
+),
+(
+"zone03",
+[(12.4, 0, 0), (12.4, 4.5, 0), (18.6, 4.5, 0), (18.6, 0, 0), (12.4, 0, 7.4), (12.4, 4.5, 7.4), (18.6, 4.5, 7.4), (18.6, 0, 7.4)],
+"s3_b, GROUND_FLOOR, b",
+"s3_t, EXT_ROOF, t",
+"s3_e, ADJ_WALL, e, zone04",
+"s3_w, ADJ_WALL, w, zone02",
+"s3_n, EXT_WALL, n",
+"s3_s, EXT_WALL, s",
+"s3_1, EXT_WINDOW1, s3_s, (13.1,0,4.65), (13.1,0,1.25), (16.6,0,1.25), (16.6,0,4.65)",
+"s3_2, EXT_WINDOW1, s3_n, (13.1,4.5,1.25), (13.1,4.5,4.65), (16.6,4.5,4.65), (16.6,4.5,1.25)"
+),
+(
+"zone04",
+[(18.6, 0, 0), (18.6, 4.5, 0), (24.8, 4.5, 0), (24.8, 0, 0), (18.6, 0, 7.4), (18.6, 4.5, 7.4), (24.8, 4.5, 7.4), (24.8, 0, 7.4)],
+"s4_b, GROUND_FLOOR, b",
+"s4_t, EXT_ROOF, t",
+"s4_e, ADJ_WALL, e, zone05",
+"s4_w, ADJ_WALL, w, zone03",
+"s4_n, EXT_WALL, n",
+"s4_s, EXT_WALL, s",
+"s4_1, EXT_WINDOW1, s4_s, (19.3,0,4.65), (19.3,0,1.25), (22.8,0,1.25), (22.8,0,4.65)",
+"s4_2, EXT_WINDOW1, s4_n, (19.3,4.5,1.25), (19.3,4.5,4.65), (22.8,4.5,4.65), (22.8,4.5,1.25)"
+),
+(
+"zone05",
+[(24.8, 0, 0), (24.8, 4.5, 0), (31.0, 4.5, 0), (31.0, 0, 0), (24.8, 0, 7.4), (24.8, 4.5, 7.4), (31.0, 4.5, 7.4), (31.0, 0, 7.4)],
+"s5_b, GROUND_FLOOR, b",
+"s5_t, EXT_ROOF, t",
+"s5_e, EXT_WALL, e",
+"s5_w, ADJ_WALL, w, zone04",
+"s5_n, EXT_WALL, n",
+"s5_s, EXT_WALL, s",
+"s5_1, EXT_WINDOW1, s5_s, (25.5,0,4.65), (25.5,0,1.25), (29.0,0,1.25), (29.0,0,4.65)",
+"s5_2, EXT_WINDOW1, s5_n, (25.5,4.5,1.25), (25.5,4.5,4.65), (29.0,4.5,4.65), (29.0,4.5,1.25)"
+)
+```
+
+=== 第 39 对 (原编号: 764) ===
+Human_764: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 7.400 m (length) Ã 4.000 m (width) Ã 5.900 m (height), featuring 2.700 m (length) Ã 2.800 m (width) windows on both south and north walls with west edges offset 1.100 m from wall west edges, both having 1.25 m sill height.
+GPT_764: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4, 0), (7.4, 4, 0), (7.4, 0, 0), (0, 0, 5.9), (0, 4, 5.9), (7.4, 4, 5.9), (7.4, 0, 5.9)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (1.1,0,4.05), (1.1,0,1.25), (3.8,0,1.25), (3.8,0,4.05)",
+    "s1_2, EXT_WINDOW1, s1_n, (1.1,4,1.25), (1.1,4,4.05), (3.8,4,4.05), (3.8,4,1.25)"
+    ),
+    ("zone02",
+    [(7.4, 0, 0), (7.4, 4, 0), (14.8, 4, 0), (14.8, 0, 0), (7.4, 0, 5.9), (7.4, 4, 5.9), (14.8, 4, 5.9), (14.8, 0, 5.9)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (8.5,0,4.05), (8.5,0,1.25), (11.2,0,1.25), (11.2,0,4.05)",
+    "s2_2, EXT_WINDOW1, s2_n, (8.5,4,1.25), (8.5,4,4.05), (11.2,4,4.05), (11.2,4,1.25)"
+    ),
+    ("zone03",
+    [(14.8, 0, 0), (14.8, 4, 0), (22.2, 4, 0), (22.2, 0, 0), (14.8, 0, 5.9), (14.8, 4, 5.9), (22.2, 4, 5.9), (22.2, 0, 5.9)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (15.9,0,4.05), (15.9,0,1.25), (18.6,0,1.25), (18.6,0,4.05)",
+    "s3_2, EXT_WINDOW1, s3_n, (15.9,4,1.25), (15.9,4,4.05), (18.6,4,4.05), (18.6,4,1.25)"
+    ),
+    ("zone04",
+    [(22.2, 0, 0), (22.2, 4, 0), (29.6, 4, 0), (29.6, 0, 0), (22.2, 0, 5.9), (22.2, 4, 5.9), (29.6, 4, 5.9), (29.6, 0, 5.9)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (23.3,0,4.05), (23.3,0,1.25), (26.0,0,1.25), (26.0,0,4.05)",
+    "s4_2, EXT_WINDOW1, s4_n, (23.3,4,1.25), (23.3,4,4.05), (26.0,4,4.05), (26.0,4,1.25)"
+    ),
+    ("zone05",
+    [(29.6, 0, 0), (29.6, 4, 0), (37.0, 4, 0), (37.0, 0, 0), (29.6, 0, 5.9), (29.6, 4, 5.9), (37.0, 4, 5.9), (37.0, 0, 5.9)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (30.7,0,4.05), (30.7,0,1.25), (33.4,0,1.25), (33.4,0,4.05)",
+    "s5_2, EXT_WINDOW1, s5_n, (30.7,4,1.25), (30.7,4,4.05), (33.4,4,4.05), (33.4,4,1.25)"
+    )
+)
+```
+
+=== 第 40 对 (原编号: 792) ===
+Human_792: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 6.300 m (length) Ã 5.300 m (width) Ã 7.100 m (height), featuring 3.300 m (length) Ã 3.300 m (width) windows on both south and north walls with west edges offset 1.200 m from wall west edges, both having 1.25 m sill height.
+GPT_792: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.3, 0), (6.3, 5.3, 0), (6.3, 0, 0), (0, 0, 7.1), (0, 5.3, 7.1), (6.3, 5.3, 7.1), (6.3, 0, 7.1)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (1.2,0,4.55), (1.2,0,1.25), (4.5,0,1.25), (4.5,0,4.55)",
+    "s1_2, EXT_WINDOW1, s1_n, (1.2,5.3,1.25), (1.2,5.3,4.55), (4.5,5.3,4.55), (4.5,5.3,1.25)"
+    ),
+    ("zone02",
+    [(6.3, 0, 0), (6.3, 5.3, 0), (12.6, 5.3, 0), (12.6, 0, 0), (6.3, 0, 7.1), (6.3, 5.3, 7.1), (12.6, 5.3, 7.1), (12.6, 0, 7.1)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (7.5,0,4.55), (7.5,0,1.25), (10.8,0,1.25), (10.8,0,4.55)",
+    "s2_2, EXT_WINDOW1, s2_n, (7.5,5.3,1.25), (7.5,5.3,4.55), (10.8,5.3,4.55), (10.8,5.3,1.25)"
+    ),
+    ("zone03",
+    [(12.6, 0, 0), (12.6, 5.3, 0), (18.9, 5.3, 0), (18.9, 0, 0), (12.6, 0, 7.1), (12.6, 5.3, 7.1), (18.9, 5.3, 7.1), (18.9, 0, 7.1)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (13.8,0,4.55), (13.8,0,1.25), (17.1,0,1.25), (17.1,0,4.55)",
+    "s3_2, EXT_WINDOW1, s3_n, (13.8,5.3,1.25), (13.8,5.3,4.55), (17.1,5.3,4.55), (17.1,5.3,1.25)"
+    ),
+    ("zone04",
+    [(18.9, 0, 0), (18.9, 5.3, 0), (25.2, 5.3, 0), (25.2, 0, 0), (18.9, 0, 7.1), (18.9, 5.3, 7.1), (25.2, 5.3, 7.1), (25.2, 0, 7.1)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (20.1,0,4.55), (20.1,0,1.25), (23.4,0,1.25), (23.4,0,4.55)",
+    "s4_2, EXT_WINDOW1, s4_n, (20.1,5.3,1.25), (20.1,5.3,4.55), (23.4,5.3,4.55), (23.4,5.3,1.25)"
+    ),
+    ("zone05",
+    [(25.2, 0, 0), (25.2, 5.3, 0), (31.5, 5.3, 0), (31.5, 0, 0), (25.2, 0, 7.1), (25.2, 5.3, 7.1), (31.5, 5.3, 7.1), (31.5, 0, 7.1)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (26.4,0,4.55), (26.4,0,1.25), (29.7,0,1.25), (29.7,0,4.55)",
+    "s5_2, EXT_WINDOW1, s5_n, (26.4,5.3,1.25), (26.4,5.3,4.55), (29.7,5.3,4.55), (29.7,5.3,1.25)"
+    )
+)
+```
+
+=== 第 41 对 (原编号: 812) ===
+Human_812: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 6.700 m (length) Ã 6.000 m (width) Ã 5.500 m (height), featuring 3.000 m (length) Ã 3.600 m (width) windows on both south and north walls with west edges offset 0.300 m from wall west edges, both having 1.25 m sill height.
+GPT_812: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 6, 0), (6.7, 6, 0), (6.7, 0, 0), (0, 0, 5.5), (0, 6, 5.5), (6.7, 6, 5.5), (6.7, 0, 5.5)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.3,0,4.85), (0.3,0,1.25), (3.3,0,1.25), (3.3,0,4.85)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.3,6,1.25), (0.3,6,4.85), (3.3,6,4.85), (3.3,6,1.25)"
+    ),
+    ("zone02",
+    [(6.7, 0, 0), (6.7, 6, 0), (13.4, 6, 0), (13.4, 0, 0), (6.7, 0, 5.5), (6.7, 6, 5.5), (13.4, 6, 5.5), (13.4, 0, 5.5)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (7.0,0,4.85), (7.0,0,1.25), (10.0,0,1.25), (10.0,0,4.85)",
+    "s2_2, EXT_WINDOW1, s2_n, (7.0,6,1.25), (7.0,6,4.85), (10.0,6,4.85), (10.0,6,1.25)"
+    ),
+    ("zone03",
+    [(13.4, 0, 0), (13.4, 6, 0), (20.1, 6, 0), (20.1, 0, 0), (13.4, 0, 5.5), (13.4, 6, 5.5), (20.1, 6, 5.5), (20.1, 0, 5.5)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (13.7,0,4.85), (13.7,0,1.25), (16.7,0,1.25), (16.7,0,4.85)",
+    "s3_2, EXT_WINDOW1, s3_n, (13.7,6,1.25), (13.7,6,4.85), (16.7,6,4.85), (16.7,6,1.25)"
+    ),
+    ("zone04",
+    [(20.1, 0, 0), (20.1, 6, 0), (26.8, 6, 0), (26.8, 0, 0), (20.1, 0, 5.5), (20.1, 6, 5.5), (26.8, 6, 5.5), (26.8, 0, 5.5)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (20.4,0,4.85), (20.4,0,1.25), (23.4,0,1.25), (23.4,0,4.85)",
+    "s4_2, EXT_WINDOW1, s4_n, (20.4,6,1.25), (20.4,6,4.85), (23.4,6,4.85), (23.4,6,1.25)"
+    ),
+    ("zone05",
+    [(26.8, 0, 0), (26.8, 6, 0), (33.5, 6, 0), (33.5, 0, 0), (26.8, 0, 5.5), (26.8, 6, 5.5), (33.5, 6, 5.5), (33.5, 0, 5.5)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (27.1,0,4.85), (27.1,0,1.25), (30.1,0,1.25), (30.1,0,4.85)",
+    "s5_2, EXT_WINDOW1, s5_n, (27.1,6,1.25), (27.1,6,4.85), (30.1,6,4.85), (30.1,6,1.25)"
+    )
+)
+```
+
+=== 第 42 对 (原编号: 840) ===
+Human_840: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.100 m (length) Ã 4.100 m (width) Ã 6.000 m (height), featuring 2.700 m (length) Ã 2.800 m (width) windows on both south and north walls with west edges offset 0.500 m from wall west edges, both having 1.25 m sill height.
+GPT_840: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.100, 0), (5.100, 4.100, 0), (5.100, 0, 0), 
+     (0, 0, 6.000), (0, 4.100, 6.000), (5.100, 4.100, 6.000), (5.100, 0, 6.000)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.500,0,4.050), (0.500,0,1.250), (3.200,0,1.250), (3.200,0,4.050)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.500,4.100,1.250), (0.500,4.100,4.050), (3.200,4.100,4.050), (3.200,4.100,1.250)"
+    ),
+    
+    ("zone02",
+    [(5.100, 0, 0), (5.100, 4.100, 0), (10.200, 4.100, 0), (10.200, 0, 0), 
+     (5.100, 0, 6.000), (5.100, 4.100, 6.000), (10.200, 4.100, 6.000), (10.200, 0, 6.000)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (5.600,0,4.050), (5.600,0,1.250), (8.300,0,1.250), (8.300,0,4.050)",
+    "s2_2, EXT_WINDOW1, s2_n, (5.600,4.100,1.250), (5.600,4.100,4.050), (8.300,4.100,4.050), (8.300,4.100,1.250)"
+    ),
+    
+    ("zone03",
+    [(10.200, 0, 0), (10.200, 4.100, 0), (15.300, 4.100, 0), (15.300, 0, 0), 
+     (10.200, 0, 6.000), (10.200, 4.100, 6.000), (15.300, 4.100, 6.000), (15.300, 0, 6.000)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (10.700,0,4.050), (10.700,0,1.250), (13.400,0,1.250), (13.400,0,4.050)",
+    "s3_2, EXT_WINDOW1, s3_n, (10.700,4.100,1.250), (10.700,4.100,4.050), (13.400,4.100,4.050), (13.400,4.100,1.250)"
+    ),
+    
+    ("zone04",
+    [(15.300, 0, 0), (15.300, 4.100, 0), (20.400, 4.100, 0), (20.400, 0, 0), 
+     (15.300, 0, 6.000), (15.300, 4.100, 6.000), (20.400, 4.100, 6.000), (20.400, 0, 6.000)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (15.800,0,4.050), (15.800,0,1.250), (18.500,0,1.250), (18.500,0,4.050)",
+    "s4_2, EXT_WINDOW1, s4_n, (15.800,4.100,1.250), (15.800,4.100,4.050), (18.500,4.100,4.050), (18.500,4.100,1.250)"
+    ),
+    
+    ("zone05",
+    [(20.400, 0, 0), (20.400, 4.100, 0), (25.500, 4.100, 0), (25.500, 0, 0), 
+     (20.400, 0, 6.000), (20.400, 4.100, 6.000), (25.500, 4.100, 6.000), (25.500, 0, 6.000)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (20.900,0,4.050), (20.900,0,1.250), (23.600,0,1.250), (23.600,0,4.050)",
+    "s5_2, EXT_WINDOW1, s5_n, (20.900,4.100,1.250), (20.900,4.100,4.050), (23.600,4.100,4.050), (23.600,4.100,1.250)"
+    )
+)
+```
+
+=== 第 43 对 (原编号: 849) ===
+Human_849: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.200 m (length) Ã 4.500 m (width) Ã 5.400 m (height), featuring 2.200 m (length) Ã 2.900 m (width) windows on both south and north walls with west edges offset 0.200 m from wall west edges, both having 1.25 m sill height.
+GPT_849: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.5, 0), (5.2, 4.5, 0), (5.2, 0, 0), (0, 0, 5.4), (0, 4.5, 5.4), (5.2, 4.5, 5.4), (5.2, 0, 5.4)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.2,0,4.15), (0.2,0,1.25), (2.4,0,1.25), (2.4,0,4.15)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.2,4.5,1.25), (0.2,4.5,4.15), (2.4,4.5,4.15), (2.4,4.5,1.25)"
+    ),
+    ("zone02",
+    [(5.2, 0, 0), (5.2, 4.5, 0), (10.4, 4.5, 0), (10.4, 0, 0), (5.2, 0, 5.4), (5.2, 4.5, 5.4), (10.4, 4.5, 5.4), (10.4, 0, 5.4)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (5.4,0,4.15), (5.4,0,1.25), (7.6,0,1.25), (7.6,0,4.15)",
+    "s2_2, EXT_WINDOW1, s2_n, (5.4,4.5,1.25), (5.4,4.5,4.15), (7.6,4.5,4.15), (7.6,4.5,1.25)"
+    ),
+    ("zone03",
+    [(10.4, 0, 0), (10.4, 4.5, 0), (15.6, 4.5, 0), (15.6, 0, 0), (10.4, 0, 5.4), (10.4, 4.5, 5.4), (15.6, 4.5, 5.4), (15.6, 0, 5.4)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (10.6,0,4.15), (10.6,0,1.25), (12.8,0,1.25), (12.8,0,4.15)",
+    "s3_2, EXT_WINDOW1, s3_n, (10.6,4.5,1.25), (10.6,4.5,4.15), (12.8,4.5,4.15), (12.8,4.5,1.25)"
+    ),
+    ("zone04",
+    [(15.6, 0, 0), (15.6, 4.5, 0), (20.8, 4.5, 0), (20.8, 0, 0), (15.6, 0, 5.4), (15.6, 4.5, 5.4), (20.8, 4.5, 5.4), (20.8, 0, 5.4)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (15.8,0,4.15), (15.8,0,1.25), (18.0,0,1.25), (18.0,0,4.15)",
+    "s4_2, EXT_WINDOW1, s4_n, (15.8,4.5,1.25), (15.8,4.5,4.15), (18.0,4.5,4.15), (18.0,4.5,1.25)"
+    ),
+    ("zone05",
+    [(20.8, 0, 0), (20.8, 4.5, 0), (26.0, 4.5, 0), (26.0, 0, 0), (20.8, 0, 5.4), (20.8, 4.5, 5.4), (26.0, 4.5, 5.4), (26.0, 0, 5.4)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (21.0,0,4.15), (21.0,0,1.25), (23.2,0,1.25), (23.2,0,4.15)",
+    "s5_2, EXT_WINDOW1, s5_n, (21.0,4.5,1.25), (21.0,4.5,4.15), (23.2,4.5,4.15), (23.2,4.5,1.25)"
+    )
+)
+```
+
+=== 第 44 对 (原编号: 862) ===
+Human_862: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 6.300 m (length) Ã 4.300 m (width) Ã 5.200 m (height), featuring 2.300 m (length) Ã 2.300 m (width) windows on both south and north walls with west edges offset 0.800 m from wall west edges, both having 1.25 m sill height.
+GPT_862: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 4.3, 0), (6.3, 4.3, 0), (6.3, 0, 0), (0, 0, 5.2), (0, 4.3, 5.2), (6.3, 4.3, 5.2), (6.3, 0, 5.2)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.8,0,3.55), (0.8,0,1.25), (3.1,0,1.25), (3.1,0,3.55)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.8,4.3,1.25), (0.8,4.3,3.55), (3.1,4.3,3.55), (3.1,4.3,1.25)"
+    ),
+    ("zone02",
+    [(6.3, 0, 0), (6.3, 4.3, 0), (12.6, 4.3, 0), (12.6, 0, 0), (6.3, 0, 5.2), (6.3, 4.3, 5.2), (12.6, 4.3, 5.2), (12.6, 0, 5.2)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (7.1,0,3.55), (7.1,0,1.25), (9.4,0,1.25), (9.4,0,3.55)",
+    "s2_2, EXT_WINDOW1, s2_n, (7.1,4.3,1.25), (7.1,4.3,3.55), (9.4,4.3,3.55), (9.4,4.3,1.25)"
+    ),
+    ("zone03",
+    [(12.6, 0, 0), (12.6, 4.3, 0), (18.9, 4.3, 0), (18.9, 0, 0), (12.6, 0, 5.2), (12.6, 4.3, 5.2), (18.9, 4.3, 5.2), (18.9, 0, 5.2)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (13.4,0,3.55), (13.4,0,1.25), (15.7,0,1.25), (15.7,0,3.55)",
+    "s3_2, EXT_WINDOW1, s3_n, (13.4,4.3,1.25), (13.4,4.3,3.55), (15.7,4.3,3.55), (15.7,4.3,1.25)"
+    ),
+    ("zone04",
+    [(18.9, 0, 0), (18.9, 4.3, 0), (25.2, 4.3, 0), (25.2, 0, 0), (18.9, 0, 5.2), (18.9, 4.3, 5.2), (25.2, 4.3, 5.2), (25.2, 0, 5.2)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (19.7,0,3.55), (19.7,0,1.25), (22.0,0,1.25), (22.0,0,3.55)",
+    "s4_2, EXT_WINDOW1, s4_n, (19.7,4.3,1.25), (19.7,4.3,3.55), (22.0,4.3,3.55), (22.0,4.3,1.25)"
+    ),
+    ("zone05",
+    [(25.2, 0, 0), (25.2, 4.3, 0), (31.5, 4.3, 0), (31.5, 0, 0), (25.2, 0, 5.2), (25.2, 4.3, 5.2), (31.5, 4.3, 5.2), (31.5, 0, 5.2)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (26.0,0,3.55), (26.0,0,1.25), (28.3,0,1.25), (28.3,0,3.55)",
+    "s5_2, EXT_WINDOW1, s5_n, (26.0,4.3,1.25), (26.0,4.3,3.55), (28.3,4.3,3.55), (28.3,4.3,1.25)"
+    )
+)
+```
+
+=== 第 45 对 (原编号: 895) ===
+Human_895: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.400 m (length) Ã 5.100 m (width) Ã 6.100 m (height), featuring 2.500 m (length) Ã 2.800 m (width) windows on both south and north walls with west edges offset 0.200 m from wall west edges, both having 1.25 m sill height.
+GPT_895: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.1, 0), (5.4, 5.1, 0), (5.4, 0, 0), (0, 0, 6.1), (0, 5.1, 6.1), (5.4, 5.1, 6.1), (5.4, 0, 6.1)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.2,0,4.05), (0.2,0,1.25), (2.7,0,1.25), (2.7,0,4.05)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.2,5.1,1.25), (0.2,5.1,4.05), (2.7,5.1,4.05), (2.7,5.1,1.25)"
+    ),
+    ("zone02",
+    [(5.4, 0, 0), (5.4, 5.1, 0), (10.8, 5.1, 0), (10.8, 0, 0), (5.4, 0, 6.1), (5.4, 5.1, 6.1), (10.8, 5.1, 6.1), (10.8, 0, 6.1)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (5.6,0,4.05), (5.6,0,1.25), (8.1,0,1.25), (8.1,0,4.05)",
+    "s2_2, EXT_WINDOW1, s2_n, (5.6,5.1,1.25), (5.6,5.1,4.05), (8.1,5.1,4.05), (8.1,5.1,1.25)"
+    ),
+    ("zone03",
+    [(10.8, 0, 0), (10.8, 5.1, 0), (16.2, 5.1, 0), (16.2, 0, 0), (10.8, 0, 6.1), (10.8, 5.1, 6.1), (16.2, 5.1, 6.1), (16.2, 0, 6.1)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (11.0,0,4.05), (11.0,0,1.25), (13.5,0,1.25), (13.5,0,4.05)",
+    "s3_2, EXT_WINDOW1, s3_n, (11.0,5.1,1.25), (11.0,5.1,4.05), (13.5,5.1,4.05), (13.5,5.1,1.25)"
+    ),
+    ("zone04",
+    [(16.2, 0, 0), (16.2, 5.1, 0), (21.6, 5.1, 0), (21.6, 0, 0), (16.2, 0, 6.1), (16.2, 5.1, 6.1), (21.6, 5.1, 6.1), (21.6, 0, 6.1)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (16.4,0,4.05), (16.4,0,1.25), (18.9,0,1.25), (18.9,0,4.05)",
+    "s4_2, EXT_WINDOW1, s4_n, (16.4,5.1,1.25), (16.4,5.1,4.05), (18.9,5.1,4.05), (18.9,5.1,1.25)"
+    ),
+    ("zone05",
+    [(21.6, 0, 0), (21.6, 5.1, 0), (27.0, 5.1, 0), (27.0, 0, 0), (21.6, 0, 6.1), (21.6, 5.1, 6.1), (27.0, 5.1, 6.1), (27.0, 0, 6.1)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (21.8,0,4.05), (21.8,0,1.25), (24.3,0,1.25), (24.3,0,4.05)",
+    "s5_2, EXT_WINDOW1, s5_n, (21.8,5.1,1.25), (21.8,5.1,4.05), (24.3,5.1,4.05), (24.3,5.1,1.25)"
+    )
+)
+```
+
+=== 第 46 对 (原编号: 918) ===
+Human_918: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 6.000 m (length) Ã 5.900 m (width) Ã 7.700 m (height), featuring 2.200 m (length) Ã 3.400 m (width) windows on both south and north walls with west edges offset 0.200 m from wall west edges, both having 1.25 m sill height.
+GPT_918: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.9, 0), (6, 5.9, 0), (6, 0, 0), (0, 0, 7.7), (0, 5.9, 7.7), (6, 5.9, 7.7), (6, 0, 7.7)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.2,0,4.65), (0.2,0,1.25), (2.4,0,1.25), (2.4,0,4.65)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.2,5.9,1.25), (0.2,5.9,4.65), (2.4,5.9,4.65), (2.4,5.9,1.25)"
+    ),
+    ("zone02",
+    [(6, 0, 0), (6, 5.9, 0), (12, 5.9, 0), (12, 0, 0), (6, 0, 7.7), (6, 5.9, 7.7), (12, 5.9, 7.7), (12, 0, 7.7)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (6.2,0,4.65), (6.2,0,1.25), (8.4,0,1.25), (8.4,0,4.65)",
+    "s2_2, EXT_WINDOW1, s2_n, (6.2,5.9,1.25), (6.2,5.9,4.65), (8.4,5.9,4.65), (8.4,5.9,1.25)"
+    ),
+    ("zone03",
+    [(12, 0, 0), (12, 5.9, 0), (18, 5.9, 0), (18, 0, 0), (12, 0, 7.7), (12, 5.9, 7.7), (18, 5.9, 7.7), (18, 0, 7.7)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (12.2,0,4.65), (12.2,0,1.25), (14.4,0,1.25), (14.4,0,4.65)",
+    "s3_2, EXT_WINDOW1, s3_n, (12.2,5.9,1.25), (12.2,5.9,4.65), (14.4,5.9,4.65), (14.4,5.9,1.25)"
+    ),
+    ("zone04",
+    [(18, 0, 0), (18, 5.9, 0), (24, 5.9, 0), (24, 0, 0), (18, 0, 7.7), (18, 5.9, 7.7), (24, 5.9, 7.7), (24, 0, 7.7)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (18.2,0,4.65), (18.2,0,1.25), (20.4,0,1.25), (20.4,0,4.65)",
+    "s4_2, EXT_WINDOW1, s4_n, (18.2,5.9,1.25), (18.2,5.9,4.65), (20.4,5.9,4.65), (20.4,5.9,1.25)"
+    ),
+    ("zone05",
+    [(24, 0, 0), (24, 5.9, 0), (30, 5.9, 0), (30, 0, 0), (24, 0, 7.7), (24, 5.9, 7.7), (30, 5.9, 7.7), (30, 0, 7.7)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (24.2,0,4.65), (24.2,0,1.25), (26.4,0,1.25), (26.4,0,4.65)",
+    "s5_2, EXT_WINDOW1, s5_n, (24.2,5.9,1.25), (24.2,5.9,4.65), (26.4,5.9,4.65), (26.4,5.9,1.25)"
+    )
+)
+```
+
+=== 第 47 对 (原编号: 924) ===
+Human_924: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.600 m (length) Ã 5.000 m (width) Ã 5.600 m (height), featuring 2.000 m (length) Ã 1.700 m (width) windows on both south and north walls with west edges offset 1.100 m from wall west edges, both having 1.25 m sill height.
+GPT_924: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5, 0), (5.6, 5, 0), (5.6, 0, 0), (0, 0, 5.6), (0, 5, 5.6), (5.6, 5, 5.6), (5.6, 0, 5.6)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (1.1,0,2.95), (1.1,0,1.25), (3.1,0,1.25), (3.1,0,2.95)",
+    "s1_2, EXT_WINDOW1, s1_n, (1.1,5,1.25), (1.1,5,2.95), (3.1,5,2.95), (3.1,5,1.25)"
+    ),
+    ("zone02",
+    [(5.6, 0, 0), (5.6, 5, 0), (11.2, 5, 0), (11.2, 0, 0), (5.6, 0, 5.6), (5.6, 5, 5.6), (11.2, 5, 5.6), (11.2, 0, 5.6)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (6.7,0,2.95), (6.7,0,1.25), (8.7,0,1.25), (8.7,0,2.95)",
+    "s2_2, EXT_WINDOW1, s2_n, (6.7,5,1.25), (6.7,5,2.95), (8.7,5,2.95), (8.7,5,1.25)"
+    ),
+    ("zone03",
+    [(11.2, 0, 0), (11.2, 5, 0), (16.8, 5, 0), (16.8, 0, 0), (11.2, 0, 5.6), (11.2, 5, 5.6), (16.8, 5, 5.6), (16.8, 0, 5.6)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (12.3,0,2.95), (12.3,0,1.25), (14.3,0,1.25), (14.3,0,2.95)",
+    "s3_2, EXT_WINDOW1, s3_n, (12.3,5,1.25), (12.3,5,2.95), (14.3,5,2.95), (14.3,5,1.25)"
+    ),
+    ("zone04",
+    [(16.8, 0, 0), (16.8, 5, 0), (22.4, 5, 0), (22.4, 0, 0), (16.8, 0, 5.6), (16.8, 5, 5.6), (22.4, 5, 5.6), (22.4, 0, 5.6)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (17.9,0,2.95), (17.9,0,1.25), (19.9,0,1.25), (19.9,0,2.95)",
+    "s4_2, EXT_WINDOW1, s4_n, (17.9,5,1.25), (17.9,5,2.95), (19.9,5,2.95), (19.9,5,1.25)"
+    ),
+    ("zone05",
+    [(22.4, 0, 0), (22.4, 5, 0), (28.0, 5, 0), (28.0, 0, 0), (22.4, 0, 5.6), (22.4, 5, 5.6), (28.0, 5, 5.6), (28.0, 0, 5.6)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (23.5,0,2.95), (23.5,0,1.25), (25.5,0,1.25), (25.5,0,2.95)",
+    "s5_2, EXT_WINDOW1, s5_n, (23.5,5,1.25), (23.5,5,2.95), (25.5,5,2.95), (25.5,5,1.25)"
+    )
+)
+```
+
+=== 第 48 对 (原编号: 953) ===
+Human_953: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 5.100 m (length) Ã 5.300 m (width) Ã 6.600 m (height), featuring 2.700 m (length) Ã 1.100 m (width) windows on both south and north walls with west edges offset 0.800 m from wall west edges, both having 1.25 m sill height.
+GPT_953: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.3, 0), (5.1, 5.3, 0), (5.1, 0, 0), (0, 0, 6.6), (0, 5.3, 6.6), (5.1, 5.3, 6.6), (5.1, 0, 6.6)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.8,0,2.35), (0.8,0,1.25), (3.5,0,1.25), (3.5,0,2.35)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.8,5.3,1.25), (0.8,5.3,2.35), (3.5,5.3,2.35), (3.5,5.3,1.25)"
+    ),
+    ("zone02",
+    [(5.1, 0, 0), (5.1, 5.3, 0), (10.2, 5.3, 0), (10.2, 0, 0), (5.1, 0, 6.6), (5.1, 5.3, 6.6), (10.2, 5.3, 6.6), (10.2, 0, 6.6)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (5.9,0,2.35), (5.9,0,1.25), (8.6,0,1.25), (8.6,0,2.35)",
+    "s2_2, EXT_WINDOW1, s2_n, (5.9,5.3,1.25), (5.9,5.3,2.35), (8.6,5.3,2.35), (8.6,5.3,1.25)"
+    ),
+    ("zone03",
+    [(10.2, 0, 0), (10.2, 5.3, 0), (15.3, 5.3, 0), (15.3, 0, 0), (10.2, 0, 6.6), (10.2, 5.3, 6.6), (15.3, 5.3, 6.6), (15.3, 0, 6.6)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (11.0,0,2.35), (11.0,0,1.25), (13.7,0,1.25), (13.7,0,2.35)",
+    "s3_2, EXT_WINDOW1, s3_n, (11.0,5.3,1.25), (11.0,5.3,2.35), (13.7,5.3,2.35), (13.7,5.3,1.25)"
+    ),
+    ("zone04",
+    [(15.3, 0, 0), (15.3, 5.3, 0), (20.4, 5.3, 0), (20.4, 0, 0), (15.3, 0, 6.6), (15.3, 5.3, 6.6), (20.4, 5.3, 6.6), (20.4, 0, 6.6)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (16.1,0,2.35), (16.1,0,1.25), (18.8,0,1.25), (18.8,0,2.35)",
+    "s4_2, EXT_WINDOW1, s4_n, (16.1,5.3,1.25), (16.1,5.3,2.35), (18.8,5.3,2.35), (18.8,5.3,1.25)"
+    ),
+    ("zone05",
+    [(20.4, 0, 0), (20.4, 5.3, 0), (25.5, 5.3, 0), (25.5, 0, 0), (20.4, 0, 6.6), (20.4, 5.3, 6.6), (25.5, 5.3, 6.6), (25.5, 0, 6.6)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (21.2,0,2.35), (21.2,0,1.25), (23.9,0,1.25), (23.9,0,2.35)",
+    "s5_2, EXT_WINDOW1, s5_n, (21.2,5.3,1.25), (21.2,5.3,2.35), (23.9,5.3,2.35), (23.9,5.3,1.25)"
+    )
+)
+```
+
+=== 第 49 对 (原编号: 963) ===
+Human_963: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 6.000 m (length) Ã 5.800 m (width) Ã 7.300 m (height), featuring 3.500 m (length) Ã 1.200 m (width) windows on both south and north walls with west edges offset 0.800 m from wall west edges, both having 1.25 m sill height.
+GPT_963: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.8, 0), (6.0, 5.8, 0), (6.0, 0, 0), (0, 0, 7.3), (0, 5.8, 7.3), (6.0, 5.8, 7.3), (6.0, 0, 7.3)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.8,0,2.45), (0.8,0,1.25), (4.3,0,1.25), (4.3,0,2.45)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.8,5.8,1.25), (0.8,5.8,2.45), (4.3,5.8,2.45), (4.3,5.8,1.25)"
+    ),
+    ("zone02",
+    [(6.0, 0, 0), (6.0, 5.8, 0), (12.0, 5.8, 0), (12.0, 0, 0), (6.0, 0, 7.3), (6.0, 5.8, 7.3), (12.0, 5.8, 7.3), (12.0, 0, 7.3)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (6.8,0,2.45), (6.8,0,1.25), (10.3,0,1.25), (10.3,0,2.45)",
+    "s2_2, EXT_WINDOW1, s2_n, (6.8,5.8,1.25), (6.8,5.8,2.45), (10.3,5.8,2.45), (10.3,5.8,1.25)"
+    ),
+    ("zone03",
+    [(12.0, 0, 0), (12.0, 5.8, 0), (18.0, 5.8, 0), (18.0, 0, 0), (12.0, 0, 7.3), (12.0, 5.8, 7.3), (18.0, 5.8, 7.3), (18.0, 0, 7.3)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (12.8,0,2.45), (12.8,0,1.25), (16.3,0,1.25), (16.3,0,2.45)",
+    "s3_2, EXT_WINDOW1, s3_n, (12.8,5.8,1.25), (12.8,5.8,2.45), (16.3,5.8,2.45), (16.3,5.8,1.25)"
+    ),
+    ("zone04",
+    [(18.0, 0, 0), (18.0, 5.8, 0), (24.0, 5.8, 0), (24.0, 0, 0), (18.0, 0, 7.3), (18.0, 5.8, 7.3), (24.0, 5.8, 7.3), (24.0, 0, 7.3)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (18.8,0,2.45), (18.8,0,1.25), (22.3,0,1.25), (22.3,0,2.45)",
+    "s4_2, EXT_WINDOW1, s4_n, (18.8,5.8,1.25), (18.8,5.8,2.45), (22.3,5.8,2.45), (22.3,5.8,1.25)"
+    ),
+    ("zone05",
+    [(24.0, 0, 0), (24.0, 5.8, 0), (30.0, 5.8, 0), (30.0, 0, 0), (24.0, 0, 7.3), (24.0, 5.8, 7.3), (30.0, 5.8, 7.3), (30.0, 0, 7.3)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (24.8,0,2.45), (24.8,0,1.25), (28.3,0,1.25), (28.3,0,2.45)",
+    "s5_2, EXT_WINDOW1, s5_n, (24.8,5.8,1.25), (24.8,5.8,2.45), (28.3,5.8,2.45), (28.3,5.8,1.25)"
+    )
+)
+```
+
+=== 第 50 对 (原编号: 998) ===
+Human_998: Generate a 5-zone building model with identical rectangular zones sharing adjoining east-west walls. Each zone measures 6.800 m (length) Ã 5.700 m (width) Ã 6.500 m (height), featuring 2.500 m (length) Ã 2.000 m (width) windows on both south and north walls with west edges offset 0.800 m from wall west edges, both having 1.25 m sill height.
+GPT_998: ```python
+(
+    ("zone01",
+    [(0, 0, 0), (0, 5.7, 0), (6.8, 5.7, 0), (6.8, 0, 0), (0, 0, 6.5), (0, 5.7, 6.5), (6.8, 5.7, 6.5), (6.8, 0, 6.5)],
+    "s1_b, GROUND_FLOOR, b",
+    "s1_t, EXT_ROOF, t",
+    "s1_e, ADJ_WALL, e, zone02",
+    "s1_w, EXT_WALL, w",
+    "s1_n, EXT_WALL, n",
+    "s1_s, EXT_WALL, s",
+    "s1_1, EXT_WINDOW1, s1_s, (0.8,0,3.25), (0.8,0,1.25), (3.3,0,1.25), (3.3,0,3.25)",
+    "s1_2, EXT_WINDOW1, s1_n, (0.8,5.7,1.25), (0.8,5.7,3.25), (3.3,5.7,3.25), (3.3,5.7,1.25)"
+    ),
+    ("zone02",
+    [(6.8, 0, 0), (6.8, 5.7, 0), (13.6, 5.7, 0), (13.6, 0, 0), (6.8, 0, 6.5), (6.8, 5.7, 6.5), (13.6, 5.7, 6.5), (13.6, 0, 6.5)],
+    "s2_b, GROUND_FLOOR, b",
+    "s2_t, EXT_ROOF, t",
+    "s2_e, ADJ_WALL, e, zone03",
+    "s2_w, ADJ_WALL, w, zone01",
+    "s2_n, EXT_WALL, n",
+    "s2_s, EXT_WALL, s",
+    "s2_1, EXT_WINDOW1, s2_s, (7.6,0,3.25), (7.6,0,1.25), (10.1,0,1.25), (10.1,0,3.25)",
+    "s2_2, EXT_WINDOW1, s2_n, (7.6,5.7,1.25), (7.6,5.7,3.25), (10.1,5.7,3.25), (10.1,5.7,1.25)"
+    ),
+    ("zone03",
+    [(13.6, 0, 0), (13.6, 5.7, 0), (20.4, 5.7, 0), (20.4, 0, 0), (13.6, 0, 6.5), (13.6, 5.7, 6.5), (20.4, 5.7, 6.5), (20.4, 0, 6.5)],
+    "s3_b, GROUND_FLOOR, b",
+    "s3_t, EXT_ROOF, t",
+    "s3_e, ADJ_WALL, e, zone04",
+    "s3_w, ADJ_WALL, w, zone02",
+    "s3_n, EXT_WALL, n",
+    "s3_s, EXT_WALL, s",
+    "s3_1, EXT_WINDOW1, s3_s, (14.4,0,3.25), (14.4,0,1.25), (16.9,0,1.25), (16.9,0,3.25)",
+    "s3_2, EXT_WINDOW1, s3_n, (14.4,5.7,1.25), (14.4,5.7,3.25), (16.9,5.7,3.25), (16.9,5.7,1.25)"
+    ),
+    ("zone04",
+    [(20.4, 0, 0), (20.4, 5.7, 0), (27.2, 5.7, 0), (27.2, 0, 0), (20.4, 0, 6.5), (20.4, 5.7, 6.5), (27.2, 5.7, 6.5), (27.2, 0, 6.5)],
+    "s4_b, GROUND_FLOOR, b",
+    "s4_t, EXT_ROOF, t",
+    "s4_e, ADJ_WALL, e, zone05",
+    "s4_w, ADJ_WALL, w, zone03",
+    "s4_n, EXT_WALL, n",
+    "s4_s, EXT_WALL, s",
+    "s4_1, EXT_WINDOW1, s4_s, (21.2,0,3.25), (21.2,0,1.25), (23.7,0,1.25), (23.7,0,3.25)",
+    "s4_2, EXT_WINDOW1, s4_n, (21.2,5.7,1.25), (21.2,5.7,3.25), (23.7,5.7,3.25), (23.7,5.7,1.25)"
+    ),
+    ("zone05",
+    [(27.2, 0, 0), (27.2, 5.7, 0), (34.0, 5.7, 0), (34.0, 0, 0), (27.2, 0, 6.5), (27.2, 5.7, 6.5), (34.0, 5.7, 6.5), (34.0, 0, 6.5)],
+    "s5_b, GROUND_FLOOR, b",
+    "s5_t, EXT_ROOF, t",
+    "s5_e, EXT_WALL, e",
+    "s5_w, ADJ_WALL, w, zone04",
+    "s5_n, EXT_WALL, n",
+    "s5_s, EXT_WALL, s",
+    "s5_1, EXT_WINDOW1, s5_s, (28.0,0,3.25), (28.0,0,1.25), (30.5,0,1.25), (30.5,0,3.25)",
+    "s5_2, EXT_WINDOW1, s5_n, (28.0,5.7,1.25), (28.0,5.7,3.25), (30.5,5.7,3.25), (30.5,5.7,1.25)"
+    )
+)
+```
+
