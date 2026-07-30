@@ -1,0 +1,215 @@
+{
+  "workflow": "restore_13_complex_from_18_rectangular",
+  "corrections": [
+    {
+      "issue": "surface vertex order",
+      "fix": "final surfaces preserve the reference 13-zone model vertex order so wall/window normals follow the original TRNSYS convention"
+    },
+    {
+      "issue": "adjacent-wall segmentation",
+      "fix": "final surfaces preserve the reference topology and one-to-one adjacent-wall pairings; zero-gap surface coalescence is disabled"
+    },
+    {
+      "issue": "input window geometry was previously not inherited",
+      "fix": "restore13 now reads windows from the input rectangular IDF and projects their height and wall-edge gaps to the final 13-zone parent surfaces"
+    }
+  ],
+  "window_projection": {
+    "input_window_count": 15,
+    "reference_window_count_for_topology_only": 12,
+    "final_window_count": 17,
+    "split_input_windows": [
+      "42C7E7",
+      "67AF87"
+    ],
+    "z_ranges": [
+      [
+        0.1,
+        3.1
+      ]
+    ],
+    "rule": "window z values and distances to the source wall edges are inherited from input/manual_restore_input.idf; after restoring 13-zone topology, windows crossing a parent-surface boundary are split so every fenestration object belongs to exactly one final BuildingSurface:Detailed"
+  },
+  "operations": [
+    {
+      "step": 1,
+      "operation": "batch_split",
+      "batch_size": 4,
+      "reason_for_order": "split first because later merges need the west/east child pieces as independent inputs",
+      "actions": [
+        {
+          "target": "zone07",
+          "axis": "x",
+          "distance_from_west": 7.8,
+          "cut_x": 16.6,
+          "outputs": [
+            "zone07_west",
+            "zone07_east"
+          ]
+        },
+        {
+          "target": "zone15",
+          "axis": "x",
+          "cut_x": 16.6,
+          "outputs": [
+            "zone15_west",
+            "zone15_east"
+          ]
+        },
+        {
+          "target": "zone11",
+          "axis": "x",
+          "cut_x": 22.05,
+          "outputs": [
+            "zone11_west",
+            "zone11_east"
+          ]
+        },
+        {
+          "target": "zone12",
+          "axis": "x",
+          "cut_x": 17.15,
+          "outputs": [
+            "zone12_west",
+            "zone12_east"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "operation": "batch_rectangular_merge",
+      "batch_size": 5,
+      "reason_for_order": "rectangular and L-shaped full-edge merges can be completed after the child pieces exist and before sloped/trimmed restoration",
+      "actions": [
+        {
+          "inputs": [
+            "zone01",
+            "zone07_west"
+          ],
+          "output": "zone01",
+          "result_shape": "L"
+        },
+        {
+          "inputs": [
+            "zone07_east",
+            "zone16"
+          ],
+          "output": "zone06",
+          "result_shape": "L"
+        },
+        {
+          "inputs": [
+            "zone02",
+            "zone03"
+          ],
+          "output": "zone02",
+          "result_shape": "rectangle"
+        },
+        {
+          "inputs": [
+            "zone10",
+            "zone11_east"
+          ],
+          "output": "zone11",
+          "result_shape": "L"
+        },
+        {
+          "inputs": [
+            "zone13",
+            "zone14",
+            "zone12_west"
+          ],
+          "output": "zone13",
+          "result_shape": "L"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "operation": "batch_trimmed_merge",
+      "batch_size": 3,
+      "reason_for_order": "sloped and trimmed merges are applied after rectangular pieces are available; the two south outputs reuse one full P0-to-P2 line",
+      "shared_parameters": {
+        "south_cut_line": "through (0,0) and (34.2,8.054235169875)",
+        "rule": "the line is defined once; intersections with intermediate zone boundaries are calculated automatically"
+      },
+      "actions": [
+        {
+          "inputs": [
+            "zone06",
+            "zone15_west"
+          ],
+          "output": "zone05",
+          "trim_type": "south_sloped_cut",
+          "cut_line_ref": "south_cut_line"
+        },
+        {
+          "inputs": [
+            "zone15_east",
+            "zone18"
+          ],
+          "output": "zone08",
+          "trim_type": "south_sloped_cut",
+          "cut_line_ref": "south_cut_line"
+        },
+        {
+          "inputs": [
+            "zone11_west",
+            "zone12_east"
+          ],
+          "output": "zone12",
+          "trim_type": "local_polyline_trim",
+          "trim_points": [
+            [
+              22.05,
+              25.567114767738
+            ],
+            [
+              25.4,
+              25.467114767738
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "operation": "batch_direct_mapping_and_topology_fix",
+      "batch_size": 5,
+      "reason_for_order": "unchanged rectangles are mapped after the constructive operations, then final topology and vertex order are normalized once",
+      "actions": [
+        {
+          "input": "zone04",
+          "output": "zone03",
+          "action": "direct_mapping"
+        },
+        {
+          "input": "zone05",
+          "output": "zone04",
+          "action": "direct_mapping"
+        },
+        {
+          "input": "zone17",
+          "output": "zone07",
+          "action": "direct_mapping"
+        },
+        {
+          "input": "zone08",
+          "output": "zone09",
+          "action": "direct_mapping"
+        },
+        {
+          "input": "zone09",
+          "output": "zone10",
+          "action": "direct_mapping"
+        }
+      ],
+      "final_normalization": [
+        "preserve reference surface vertex order",
+        "preserve one-to-one reference wall topology",
+        "remap windows to final parent surfaces"
+      ]
+    }
+  ]
+}

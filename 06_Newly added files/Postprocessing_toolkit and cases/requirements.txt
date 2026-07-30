@@ -1,0 +1,2 @@
+# The runtime tools use only the Python standard library.
+# Tkinter is required by the GUI and is included with standard Windows Python distributions.

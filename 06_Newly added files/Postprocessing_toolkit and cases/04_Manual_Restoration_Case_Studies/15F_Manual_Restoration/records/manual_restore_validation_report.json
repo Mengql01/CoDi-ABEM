@@ -1,0 +1,32 @@
+{
+  "case": "15th-floor manual restoration",
+  "status": "validated",
+  "geometry_files_modified_during_publication_preparation": false,
+  "input": {
+    "path": "../input/manual_restore_input.idf",
+    "zones": 18,
+    "building_surfaces": 108,
+    "fenestration_surfaces": 15,
+    "sha256": "B6A070FF9B912D367CB567ADC5FCA21389AD477F22F34741210C037F1A9AD8E1"
+  },
+  "reference": {
+    "path": "../reference/reference_13zone.idf",
+    "zones": 13,
+    "building_surfaces": 94,
+    "fenestration_surfaces": 12,
+    "sha256": "48769126C47E651CEC477621A897372B7BC788BCA58BE4138376BBE7D55EB15E"
+  },
+  "output": {
+    "path": "../output/manual_restore_input_processed.idf",
+    "zones": 13,
+    "building_surfaces": 110,
+    "fenestration_surfaces": 17,
+    "sha256": "314CAE93122E271FBC6178B408BEEFCF86273ABEDD0A06647C90C625A49BC569"
+  },
+  "topology_policy": {
+    "preserve_surface_vertex_order": true,
+    "preserve_one_to_one_adjacent_wall_segmentation": true,
+    "merge_coplanar_zero_gap_surfaces": false
+  },
+  "authoritative_operation_record": "manual_restore_operations.json"
+}
