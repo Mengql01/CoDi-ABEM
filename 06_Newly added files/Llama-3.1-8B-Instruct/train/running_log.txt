@@ -1,0 +1,1026 @@
+[INFO|2026-06-22 20:13:29] tokenization_utils_base.py:2048 >> loading file tokenizer.json
+
+[INFO|2026-06-22 20:13:29] tokenization_utils_base.py:2048 >> loading file tokenizer.model
+
+[INFO|2026-06-22 20:13:29] tokenization_utils_base.py:2048 >> loading file added_tokens.json
+
+[INFO|2026-06-22 20:13:29] tokenization_utils_base.py:2048 >> loading file special_tokens_map.json
+
+[INFO|2026-06-22 20:13:29] tokenization_utils_base.py:2048 >> loading file tokenizer_config.json
+
+[INFO|2026-06-22 20:13:29] tokenization_utils_base.py:2048 >> loading file chat_template.jinja
+
+[INFO|2026-06-22 20:13:29] tokenization_utils_base.py:2313 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+
+[INFO|2026-06-22 20:13:29] configuration_utils.py:697 >> loading configuration file /root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct/config.json
+
+[INFO|2026-06-22 20:13:29] configuration_utils.py:771 >> Model config LlamaConfig {
+  "_name_or_path": "/root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": [
+    128001,
+    128008,
+    128009
+  ],
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 8.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+
+[INFO|2026-06-22 20:13:29] tokenization_utils_base.py:2048 >> loading file tokenizer.json
+
+[INFO|2026-06-22 20:13:29] tokenization_utils_base.py:2048 >> loading file tokenizer.model
+
+[INFO|2026-06-22 20:13:29] tokenization_utils_base.py:2048 >> loading file added_tokens.json
+
+[INFO|2026-06-22 20:13:29] tokenization_utils_base.py:2048 >> loading file special_tokens_map.json
+
+[INFO|2026-06-22 20:13:29] tokenization_utils_base.py:2048 >> loading file tokenizer_config.json
+
+[INFO|2026-06-22 20:13:29] tokenization_utils_base.py:2048 >> loading file chat_template.jinja
+
+[INFO|2026-06-22 20:13:30] tokenization_utils_base.py:2313 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+
+[INFO|2026-06-22 20:13:30] logging.py:143 >> Add pad token: <|eot_id|>
+
+[INFO|2026-06-22 20:13:30] logging.py:143 >> Add <|eot_id|>,<|eom_id|> to stop words.
+
+[INFO|2026-06-22 20:13:30] logging.py:143 >> Loading dataset train.json...
+
+[INFO|2026-06-22 20:13:35] configuration_utils.py:697 >> loading configuration file /root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct/config.json
+
+[INFO|2026-06-22 20:13:35] configuration_utils.py:771 >> Model config LlamaConfig {
+  "_name_or_path": "/root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": [
+    128001,
+    128008,
+    128009
+  ],
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 8.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+
+[INFO|2026-06-22 20:13:35] modeling_utils.py:3979 >> loading weights file /root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct/model.safetensors.index.json
+
+[INFO|2026-06-22 20:13:35] modeling_utils.py:1633 >> Instantiating LlamaForCausalLM model under default dtype torch.bfloat16.
+
+[INFO|2026-06-22 20:13:35] configuration_utils.py:1140 >> Generate config GenerationConfig {
+  "bos_token_id": 128000,
+  "eos_token_id": [
+    128001,
+    128008,
+    128009
+  ]
+}
+
+
+[INFO|2026-06-22 20:13:39] modeling_utils.py:4970 >> All model checkpoint weights were used when initializing LlamaForCausalLM.
+
+
+[INFO|2026-06-22 20:13:39] modeling_utils.py:4978 >> All the weights of LlamaForCausalLM were initialized from the model checkpoint at /root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use LlamaForCausalLM for predictions without further training.
+
+[INFO|2026-06-22 20:13:40] configuration_utils.py:1093 >> loading configuration file /root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct/generation_config.json
+
+[INFO|2026-06-22 20:13:40] configuration_utils.py:1140 >> Generate config GenerationConfig {
+  "bos_token_id": 128000,
+  "do_sample": true,
+  "eos_token_id": [
+    128001,
+    128008,
+    128009
+  ],
+  "temperature": 0.6,
+  "top_p": 0.9
+}
+
+
+[INFO|2026-06-22 20:13:40] logging.py:143 >> Gradient checkpointing enabled.
+
+[INFO|2026-06-22 20:13:40] logging.py:143 >> Using torch SDPA for faster training and inference.
+
+[INFO|2026-06-22 20:13:40] logging.py:143 >> Upcasting trainable params to float32.
+
+[INFO|2026-06-22 20:13:40] logging.py:143 >> Fine-tuning method: LoRA
+
+[INFO|2026-06-22 20:13:40] logging.py:143 >> Found linear modules: o_proj,down_proj,k_proj,q_proj,up_proj,gate_proj,v_proj
+
+[INFO|2026-06-22 20:13:40] logging.py:143 >> trainable params: 20,971,520 || all params: 8,051,232,768 || trainable%: 0.2605
+
+[INFO|2026-06-22 20:13:40] trainer.py:746 >> Using auto half precision backend
+
+[WARNING|2026-06-22 20:13:40] trainer.py:781 >> No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+
+[INFO|2026-06-22 20:13:40] logging.py:143 >> Using LoRA+ optimizer with loraplus lr ratio 16.00.
+
+[INFO|2026-06-22 20:13:40] trainer.py:2405 >> ***** Running training *****
+
+[INFO|2026-06-22 20:13:40] trainer.py:2406 >>   Num examples = 800
+
+[INFO|2026-06-22 20:13:40] trainer.py:2407 >>   Num Epochs = 4
+
+[INFO|2026-06-22 20:13:40] trainer.py:2408 >>   Instantaneous batch size per device = 2
+
+[INFO|2026-06-22 20:13:40] trainer.py:2411 >>   Total train batch size (w. parallel, distributed & accumulation) = 4
+
+[INFO|2026-06-22 20:13:40] trainer.py:2412 >>   Gradient Accumulation steps = 2
+
+[INFO|2026-06-22 20:13:40] trainer.py:2413 >>   Total optimization steps = 800
+
+[INFO|2026-06-22 20:13:40] trainer.py:2414 >>   Number of trainable parameters = 20,971,520
+
+[INFO|2026-06-22 20:14:32] logging.py:143 >> {'loss': 0.0838, 'learning_rate': 4.9995e-06, 'epoch': 0.03, 'throughput': 1789.58}
+
+[INFO|2026-06-22 20:15:24] logging.py:143 >> {'loss': 0.0582, 'learning_rate': 4.9981e-06, 'epoch': 0.05, 'throughput': 1775.20}
+
+[INFO|2026-06-22 20:16:17] logging.py:143 >> {'loss': 0.0407, 'learning_rate': 4.9957e-06, 'epoch': 0.07, 'throughput': 1762.98}
+
+[INFO|2026-06-22 20:17:10] logging.py:143 >> {'loss': 0.0262, 'learning_rate': 4.9923e-06, 'epoch': 0.10, 'throughput': 1755.32}
+
+[INFO|2026-06-22 20:18:03] logging.py:143 >> {'loss': 0.0145, 'learning_rate': 4.9880e-06, 'epoch': 0.12, 'throughput': 1750.64}
+
+[INFO|2026-06-22 20:18:57] logging.py:143 >> {'loss': 0.0083, 'learning_rate': 4.9827e-06, 'epoch': 0.15, 'throughput': 1745.96}
+
+[INFO|2026-06-22 20:19:50] logging.py:143 >> {'loss': 0.0056, 'learning_rate': 4.9764e-06, 'epoch': 0.17, 'throughput': 1743.94}
+
+[INFO|2026-06-22 20:20:43] logging.py:143 >> {'loss': 0.0065, 'learning_rate': 4.9692e-06, 'epoch': 0.20, 'throughput': 1743.14}
+
+[INFO|2026-06-22 20:21:36] logging.py:143 >> {'loss': 0.0055, 'learning_rate': 4.9611e-06, 'epoch': 0.23, 'throughput': 1741.89}
+
+[INFO|2026-06-22 20:22:30] logging.py:143 >> {'loss': 0.0105, 'learning_rate': 4.9520e-06, 'epoch': 0.25, 'throughput': 1739.89}
+
+[INFO|2026-06-22 20:23:24] logging.py:143 >> {'loss': 0.0044, 'learning_rate': 4.9419e-06, 'epoch': 0.28, 'throughput': 1738.41}
+
+[INFO|2026-06-22 20:24:17] logging.py:143 >> {'loss': 0.0035, 'learning_rate': 4.9309e-06, 'epoch': 0.30, 'throughput': 1737.72}
+
+[INFO|2026-06-22 20:25:10] logging.py:143 >> {'loss': 0.0038, 'learning_rate': 4.9190e-06, 'epoch': 0.33, 'throughput': 1737.10}
+
+[INFO|2026-06-22 20:26:03] logging.py:143 >> {'loss': 0.0051, 'learning_rate': 4.9061e-06, 'epoch': 0.35, 'throughput': 1738.27}
+
+[INFO|2026-06-22 20:26:56] logging.py:143 >> {'loss': 0.0031, 'learning_rate': 4.8924e-06, 'epoch': 0.38, 'throughput': 1737.49}
+
+[INFO|2026-06-22 20:27:49] logging.py:143 >> {'loss': 0.0033, 'learning_rate': 4.8776e-06, 'epoch': 0.40, 'throughput': 1737.86}
+
+[INFO|2026-06-22 20:28:42] logging.py:143 >> {'loss': 0.0044, 'learning_rate': 4.8620e-06, 'epoch': 0.42, 'throughput': 1737.40}
+
+[INFO|2026-06-22 20:29:35] logging.py:143 >> {'loss': 0.0027, 'learning_rate': 4.8455e-06, 'epoch': 0.45, 'throughput': 1736.71}
+
+[INFO|2026-06-22 20:30:28] logging.py:143 >> {'loss': 0.0022, 'learning_rate': 4.8280e-06, 'epoch': 0.47, 'throughput': 1736.47}
+
+[INFO|2026-06-22 20:31:21] logging.py:143 >> {'loss': 0.0020, 'learning_rate': 4.8097e-06, 'epoch': 0.50, 'throughput': 1736.09}
+
+[INFO|2026-06-22 20:31:21] trainer.py:4258 >> 
+***** Running Evaluation *****
+
+[INFO|2026-06-22 20:31:21] trainer.py:4260 >>   Num examples = 100
+
+[INFO|2026-06-22 20:31:21] trainer.py:4263 >>   Batch size = 2
+
+[INFO|2026-06-22 20:32:42] trainer.py:3942 >> Saving model checkpoint to saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-100
+
+[INFO|2026-06-22 20:32:42] configuration_utils.py:697 >> loading configuration file /root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct/config.json
+
+[INFO|2026-06-22 20:32:42] configuration_utils.py:771 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": [
+    128001,
+    128008,
+    128009
+  ],
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 8.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+
+[INFO|2026-06-22 20:32:42] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-100/tokenizer_config.json
+
+[INFO|2026-06-22 20:32:42] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-100/special_tokens_map.json
+
+[INFO|2026-06-22 20:33:36] logging.py:143 >> {'loss': 0.0021, 'learning_rate': 4.7905e-06, 'epoch': 0.53, 'throughput': 1617.67}
+
+[INFO|2026-06-22 20:34:29] logging.py:143 >> {'loss': 0.0026, 'learning_rate': 4.7704e-06, 'epoch': 0.55, 'throughput': 1622.62}
+
+[INFO|2026-06-22 20:35:23] logging.py:143 >> {'loss': 0.0019, 'learning_rate': 4.7494e-06, 'epoch': 0.57, 'throughput': 1626.93}
+
+[INFO|2026-06-22 20:36:16] logging.py:143 >> {'loss': 0.0030, 'learning_rate': 4.7275e-06, 'epoch': 0.60, 'throughput': 1631.21}
+
+[INFO|2026-06-22 20:37:09] logging.py:143 >> {'loss': 0.0024, 'learning_rate': 4.7048e-06, 'epoch': 0.62, 'throughput': 1635.65}
+
+[INFO|2026-06-22 20:38:02] logging.py:143 >> {'loss': 0.0021, 'learning_rate': 4.6812e-06, 'epoch': 0.65, 'throughput': 1638.87}
+
+[INFO|2026-06-22 20:38:56] logging.py:143 >> {'loss': 0.0024, 'learning_rate': 4.6568e-06, 'epoch': 0.68, 'throughput': 1641.85}
+
+[INFO|2026-06-22 20:39:49] logging.py:143 >> {'loss': 0.0030, 'learning_rate': 4.6316e-06, 'epoch': 0.70, 'throughput': 1644.92}
+
+[INFO|2026-06-22 20:40:43] logging.py:143 >> {'loss': 0.0025, 'learning_rate': 4.6055e-06, 'epoch': 0.72, 'throughput': 1647.61}
+
+[INFO|2026-06-22 20:41:35] logging.py:143 >> {'loss': 0.0030, 'learning_rate': 4.5787e-06, 'epoch': 0.75, 'throughput': 1650.59}
+
+[INFO|2026-06-22 20:42:28] logging.py:143 >> {'loss': 0.0058, 'learning_rate': 4.5510e-06, 'epoch': 0.78, 'throughput': 1653.42}
+
+[INFO|2026-06-22 20:43:22] logging.py:143 >> {'loss': 0.0024, 'learning_rate': 4.5225e-06, 'epoch': 0.80, 'throughput': 1655.83}
+
+[INFO|2026-06-22 20:44:14] logging.py:143 >> {'loss': 0.0027, 'learning_rate': 4.4933e-06, 'epoch': 0.82, 'throughput': 1658.40}
+
+[INFO|2026-06-22 20:45:08] logging.py:143 >> {'loss': 0.0019, 'learning_rate': 4.4633e-06, 'epoch': 0.85, 'throughput': 1660.36}
+
+[INFO|2026-06-22 20:46:02] logging.py:143 >> {'loss': 0.0020, 'learning_rate': 4.4325e-06, 'epoch': 0.88, 'throughput': 1662.03}
+
+[INFO|2026-06-22 20:46:55] logging.py:143 >> {'loss': 0.0017, 'learning_rate': 4.4010e-06, 'epoch': 0.90, 'throughput': 1663.91}
+
+[INFO|2026-06-22 20:47:48] logging.py:143 >> {'loss': 0.0025, 'learning_rate': 4.3688e-06, 'epoch': 0.93, 'throughput': 1665.56}
+
+[INFO|2026-06-22 20:48:42] logging.py:143 >> {'loss': 0.0019, 'learning_rate': 4.3358e-06, 'epoch': 0.95, 'throughput': 1667.20}
+
+[INFO|2026-06-22 20:49:36] logging.py:143 >> {'loss': 0.0022, 'learning_rate': 4.3021e-06, 'epoch': 0.97, 'throughput': 1668.71}
+
+[INFO|2026-06-22 20:50:29] logging.py:143 >> {'loss': 0.0016, 'learning_rate': 4.2678e-06, 'epoch': 1.00, 'throughput': 1670.20}
+
+[INFO|2026-06-22 20:50:29] trainer.py:4258 >> 
+***** Running Evaluation *****
+
+[INFO|2026-06-22 20:50:29] trainer.py:4260 >>   Num examples = 100
+
+[INFO|2026-06-22 20:50:29] trainer.py:4263 >>   Batch size = 2
+
+[INFO|2026-06-22 20:51:50] trainer.py:3942 >> Saving model checkpoint to saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-200
+
+[INFO|2026-06-22 20:51:50] configuration_utils.py:697 >> loading configuration file /root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct/config.json
+
+[INFO|2026-06-22 20:51:50] configuration_utils.py:771 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": [
+    128001,
+    128008,
+    128009
+  ],
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 8.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+
+[INFO|2026-06-22 20:51:50] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-200/tokenizer_config.json
+
+[INFO|2026-06-22 20:51:50] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-200/special_tokens_map.json
+
+[INFO|2026-06-22 20:52:43] logging.py:143 >> {'loss': 0.0026, 'learning_rate': 4.2327e-06, 'epoch': 1.02, 'throughput': 1613.83}
+
+[INFO|2026-06-22 20:53:36] logging.py:143 >> {'loss': 0.0021, 'learning_rate': 4.1970e-06, 'epoch': 1.05, 'throughput': 1616.47}
+
+[INFO|2026-06-22 20:54:29] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 4.1606e-06, 'epoch': 1.07, 'throughput': 1618.80}
+
+[INFO|2026-06-22 20:55:23] logging.py:143 >> {'loss': 0.0021, 'learning_rate': 4.1236e-06, 'epoch': 1.10, 'throughput': 1621.15}
+
+[INFO|2026-06-22 20:56:15] logging.py:143 >> {'loss': 0.0022, 'learning_rate': 4.0860e-06, 'epoch': 1.12, 'throughput': 1623.63}
+
+[INFO|2026-06-22 20:57:09] logging.py:143 >> {'loss': 0.0025, 'learning_rate': 4.0477e-06, 'epoch': 1.15, 'throughput': 1625.90}
+
+[INFO|2026-06-22 20:58:02] logging.py:143 >> {'loss': 0.0011, 'learning_rate': 4.0089e-06, 'epoch': 1.18, 'throughput': 1628.03}
+
+[INFO|2026-06-22 20:58:55] logging.py:143 >> {'loss': 0.0029, 'learning_rate': 3.9695e-06, 'epoch': 1.20, 'throughput': 1630.22}
+
+[INFO|2026-06-22 20:59:48] logging.py:143 >> {'loss': 0.0018, 'learning_rate': 3.9295e-06, 'epoch': 1.23, 'throughput': 1632.23}
+
+[INFO|2026-06-22 21:00:40] logging.py:143 >> {'loss': 0.0020, 'learning_rate': 3.8889e-06, 'epoch': 1.25, 'throughput': 1634.84}
+
+[INFO|2026-06-22 21:01:34] logging.py:143 >> {'loss': 0.0019, 'learning_rate': 3.8478e-06, 'epoch': 1.27, 'throughput': 1636.17}
+
+[INFO|2026-06-22 21:02:29] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 3.8062e-06, 'epoch': 1.30, 'throughput': 1637.49}
+
+[INFO|2026-06-22 21:03:22] logging.py:143 >> {'loss': 0.0027, 'learning_rate': 3.7641e-06, 'epoch': 1.32, 'throughput': 1639.11}
+
+[INFO|2026-06-22 21:04:15] logging.py:143 >> {'loss': 0.0016, 'learning_rate': 3.7216e-06, 'epoch': 1.35, 'throughput': 1640.82}
+
+[INFO|2026-06-22 21:05:08] logging.py:143 >> {'loss': 0.0023, 'learning_rate': 3.6785e-06, 'epoch': 1.38, 'throughput': 1642.38}
+
+[INFO|2026-06-22 21:06:01] logging.py:143 >> {'loss': 0.0028, 'learning_rate': 3.6350e-06, 'epoch': 1.40, 'throughput': 1643.99}
+
+[INFO|2026-06-22 21:06:54] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 3.5910e-06, 'epoch': 1.43, 'throughput': 1645.37}
+
+[INFO|2026-06-22 21:07:48] logging.py:143 >> {'loss': 0.0018, 'learning_rate': 3.5466e-06, 'epoch': 1.45, 'throughput': 1646.78}
+
+[INFO|2026-06-22 21:08:41] logging.py:143 >> {'loss': 0.0019, 'learning_rate': 3.5019e-06, 'epoch': 1.48, 'throughput': 1648.04}
+
+[INFO|2026-06-22 21:09:36] logging.py:143 >> {'loss': 0.0061, 'learning_rate': 3.4567e-06, 'epoch': 1.50, 'throughput': 1649.24}
+
+[INFO|2026-06-22 21:09:36] trainer.py:4258 >> 
+***** Running Evaluation *****
+
+[INFO|2026-06-22 21:09:36] trainer.py:4260 >>   Num examples = 100
+
+[INFO|2026-06-22 21:09:36] trainer.py:4263 >>   Batch size = 2
+
+[INFO|2026-06-22 21:10:57] trainer.py:3942 >> Saving model checkpoint to saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-300
+
+[INFO|2026-06-22 21:10:57] configuration_utils.py:697 >> loading configuration file /root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct/config.json
+
+[INFO|2026-06-22 21:10:57] configuration_utils.py:771 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": [
+    128001,
+    128008,
+    128009
+  ],
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 8.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+
+[INFO|2026-06-22 21:10:57] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-300/tokenizer_config.json
+
+[INFO|2026-06-22 21:10:57] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-300/special_tokens_map.json
+
+[INFO|2026-06-22 21:11:51] logging.py:143 >> {'loss': 0.0015, 'learning_rate': 3.4112e-06, 'epoch': 1.52, 'throughput': 1611.92}
+
+[INFO|2026-06-22 21:12:45] logging.py:143 >> {'loss': 0.0020, 'learning_rate': 3.3653e-06, 'epoch': 1.55, 'throughput': 1613.62}
+
+[INFO|2026-06-22 21:13:38] logging.py:143 >> {'loss': 0.0022, 'learning_rate': 3.3191e-06, 'epoch': 1.57, 'throughput': 1615.35}
+
+[INFO|2026-06-22 21:14:31] logging.py:143 >> {'loss': 0.0013, 'learning_rate': 3.2725e-06, 'epoch': 1.60, 'throughput': 1617.11}
+
+[INFO|2026-06-22 21:15:24] logging.py:143 >> {'loss': 0.0023, 'learning_rate': 3.2257e-06, 'epoch': 1.62, 'throughput': 1618.80}
+
+[INFO|2026-06-22 21:16:17] logging.py:143 >> {'loss': 0.0023, 'learning_rate': 3.1786e-06, 'epoch': 1.65, 'throughput': 1620.47}
+
+[INFO|2026-06-22 21:17:11] logging.py:143 >> {'loss': 0.0016, 'learning_rate': 3.1312e-06, 'epoch': 1.68, 'throughput': 1621.99}
+
+[INFO|2026-06-22 21:18:04] logging.py:143 >> {'loss': 0.0014, 'learning_rate': 3.0836e-06, 'epoch': 1.70, 'throughput': 1623.40}
+
+[INFO|2026-06-22 21:18:56] logging.py:143 >> {'loss': 0.0022, 'learning_rate': 3.0358e-06, 'epoch': 1.73, 'throughput': 1625.02}
+
+[INFO|2026-06-22 21:19:50] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 2.9877e-06, 'epoch': 1.75, 'throughput': 1626.44}
+
+[INFO|2026-06-22 21:20:42] logging.py:143 >> {'loss': 0.0016, 'learning_rate': 2.9395e-06, 'epoch': 1.77, 'throughput': 1628.03}
+
+[INFO|2026-06-22 21:21:35] logging.py:143 >> {'loss': 0.0022, 'learning_rate': 2.8911e-06, 'epoch': 1.80, 'throughput': 1629.52}
+
+[INFO|2026-06-22 21:22:28] logging.py:143 >> {'loss': 0.0013, 'learning_rate': 2.8425e-06, 'epoch': 1.82, 'throughput': 1630.80}
+
+[INFO|2026-06-22 21:23:22] logging.py:143 >> {'loss': 0.0016, 'learning_rate': 2.7938e-06, 'epoch': 1.85, 'throughput': 1632.05}
+
+[INFO|2026-06-22 21:24:15] logging.py:143 >> {'loss': 0.0013, 'learning_rate': 2.7450e-06, 'epoch': 1.88, 'throughput': 1633.28}
+
+[INFO|2026-06-22 21:25:09] logging.py:143 >> {'loss': 0.0021, 'learning_rate': 2.6961e-06, 'epoch': 1.90, 'throughput': 1634.33}
+
+[INFO|2026-06-22 21:26:03] logging.py:143 >> {'loss': 0.0016, 'learning_rate': 2.6472e-06, 'epoch': 1.93, 'throughput': 1635.38}
+
+[INFO|2026-06-22 21:26:56] logging.py:143 >> {'loss': 0.0018, 'learning_rate': 2.5981e-06, 'epoch': 1.95, 'throughput': 1636.55}
+
+[INFO|2026-06-22 21:27:49] logging.py:143 >> {'loss': 0.0017, 'learning_rate': 2.5491e-06, 'epoch': 1.98, 'throughput': 1637.77}
+
+[INFO|2026-06-22 21:28:42] logging.py:143 >> {'loss': 0.0022, 'learning_rate': 2.5000e-06, 'epoch': 2.00, 'throughput': 1638.91}
+
+[INFO|2026-06-22 21:28:42] trainer.py:4258 >> 
+***** Running Evaluation *****
+
+[INFO|2026-06-22 21:28:42] trainer.py:4260 >>   Num examples = 100
+
+[INFO|2026-06-22 21:28:42] trainer.py:4263 >>   Batch size = 2
+
+[INFO|2026-06-22 21:30:03] trainer.py:3942 >> Saving model checkpoint to saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-400
+
+[INFO|2026-06-22 21:30:03] configuration_utils.py:697 >> loading configuration file /root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct/config.json
+
+[INFO|2026-06-22 21:30:03] configuration_utils.py:771 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": [
+    128001,
+    128008,
+    128009
+  ],
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 8.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+
+[INFO|2026-06-22 21:30:03] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-400/tokenizer_config.json
+
+[INFO|2026-06-22 21:30:03] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-400/special_tokens_map.json
+
+[INFO|2026-06-22 21:30:57] logging.py:143 >> {'loss': 0.0018, 'learning_rate': 2.4509e-06, 'epoch': 2.02, 'throughput': 1611.18}
+
+[INFO|2026-06-22 21:31:50] logging.py:143 >> {'loss': 0.0013, 'learning_rate': 2.4019e-06, 'epoch': 2.05, 'throughput': 1612.50}
+
+[INFO|2026-06-22 21:32:44] logging.py:143 >> {'loss': 0.0023, 'learning_rate': 2.3528e-06, 'epoch': 2.08, 'throughput': 1613.83}
+
+[INFO|2026-06-22 21:33:37] logging.py:143 >> {'loss': 0.0018, 'learning_rate': 2.3039e-06, 'epoch': 2.10, 'throughput': 1615.11}
+
+[INFO|2026-06-22 21:34:30] logging.py:143 >> {'loss': 0.0010, 'learning_rate': 2.2550e-06, 'epoch': 2.12, 'throughput': 1616.32}
+
+[INFO|2026-06-22 21:35:24] logging.py:143 >> {'loss': 0.0020, 'learning_rate': 2.2062e-06, 'epoch': 2.15, 'throughput': 1617.63}
+
+[INFO|2026-06-22 21:36:17] logging.py:143 >> {'loss': 0.0018, 'learning_rate': 2.1575e-06, 'epoch': 2.17, 'throughput': 1618.81}
+
+[INFO|2026-06-22 21:37:10] logging.py:143 >> {'loss': 0.0015, 'learning_rate': 2.1089e-06, 'epoch': 2.20, 'throughput': 1620.11}
+
+[INFO|2026-06-22 21:38:03] logging.py:143 >> {'loss': 0.0015, 'learning_rate': 2.0605e-06, 'epoch': 2.23, 'throughput': 1621.29}
+
+[INFO|2026-06-22 21:38:56] logging.py:143 >> {'loss': 0.0020, 'learning_rate': 2.0123e-06, 'epoch': 2.25, 'throughput': 1622.47}
+
+[INFO|2026-06-22 21:39:49] logging.py:143 >> {'loss': 0.0018, 'learning_rate': 1.9642e-06, 'epoch': 2.27, 'throughput': 1623.61}
+
+[INFO|2026-06-22 21:40:43] logging.py:143 >> {'loss': 0.0013, 'learning_rate': 1.9164e-06, 'epoch': 2.30, 'throughput': 1624.66}
+
+[INFO|2026-06-22 21:41:37] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 1.8688e-06, 'epoch': 2.33, 'throughput': 1625.70}
+
+[INFO|2026-06-22 21:42:30] logging.py:143 >> {'loss': 0.0013, 'learning_rate': 1.8214e-06, 'epoch': 2.35, 'throughput': 1626.76}
+
+[INFO|2026-06-22 21:43:24] logging.py:143 >> {'loss': 0.0018, 'learning_rate': 1.7743e-06, 'epoch': 2.38, 'throughput': 1627.82}
+
+[INFO|2026-06-22 21:44:17] logging.py:143 >> {'loss': 0.0014, 'learning_rate': 1.7275e-06, 'epoch': 2.40, 'throughput': 1628.85}
+
+[INFO|2026-06-22 21:45:10] logging.py:143 >> {'loss': 0.0015, 'learning_rate': 1.6809e-06, 'epoch': 2.42, 'throughput': 1629.83}
+
+[INFO|2026-06-22 21:46:04] logging.py:143 >> {'loss': 0.0021, 'learning_rate': 1.6347e-06, 'epoch': 2.45, 'throughput': 1630.77}
+
+[INFO|2026-06-22 21:46:57] logging.py:143 >> {'loss': 0.0015, 'learning_rate': 1.5888e-06, 'epoch': 2.48, 'throughput': 1631.75}
+
+[INFO|2026-06-22 21:47:51] logging.py:143 >> {'loss': 0.0016, 'learning_rate': 1.5433e-06, 'epoch': 2.50, 'throughput': 1632.70}
+
+[INFO|2026-06-22 21:47:51] trainer.py:4258 >> 
+***** Running Evaluation *****
+
+[INFO|2026-06-22 21:47:51] trainer.py:4260 >>   Num examples = 100
+
+[INFO|2026-06-22 21:47:51] trainer.py:4263 >>   Batch size = 2
+
+[INFO|2026-06-22 21:49:12] trainer.py:3942 >> Saving model checkpoint to saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-500
+
+[INFO|2026-06-22 21:49:12] configuration_utils.py:697 >> loading configuration file /root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct/config.json
+
+[INFO|2026-06-22 21:49:12] configuration_utils.py:771 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": [
+    128001,
+    128008,
+    128009
+  ],
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 8.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+
+[INFO|2026-06-22 21:49:12] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-500/tokenizer_config.json
+
+[INFO|2026-06-22 21:49:12] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-500/special_tokens_map.json
+
+[INFO|2026-06-22 21:50:05] logging.py:143 >> {'loss': 0.0014, 'learning_rate': 1.4981e-06, 'epoch': 2.52, 'throughput': 1610.58}
+
+[INFO|2026-06-22 21:50:59] logging.py:143 >> {'loss': 0.0013, 'learning_rate': 1.4534e-06, 'epoch': 2.55, 'throughput': 1611.63}
+
+[INFO|2026-06-22 21:51:52] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 1.4090e-06, 'epoch': 2.58, 'throughput': 1612.73}
+
+[INFO|2026-06-22 21:52:45] logging.py:143 >> {'loss': 0.0013, 'learning_rate': 1.3650e-06, 'epoch': 2.60, 'throughput': 1613.78}
+
+[INFO|2026-06-22 21:53:39] logging.py:143 >> {'loss': 0.0010, 'learning_rate': 1.3215e-06, 'epoch': 2.62, 'throughput': 1614.85}
+
+[INFO|2026-06-22 21:54:32] logging.py:143 >> {'loss': 0.0017, 'learning_rate': 1.2784e-06, 'epoch': 2.65, 'throughput': 1615.89}
+
+[INFO|2026-06-22 21:55:25] logging.py:143 >> {'loss': 0.0019, 'learning_rate': 1.2359e-06, 'epoch': 2.67, 'throughput': 1616.92}
+
+[INFO|2026-06-22 21:56:18] logging.py:143 >> {'loss': 0.0021, 'learning_rate': 1.1938e-06, 'epoch': 2.70, 'throughput': 1617.93}
+
+[INFO|2026-06-22 21:57:12] logging.py:143 >> {'loss': 0.0013, 'learning_rate': 1.1522e-06, 'epoch': 2.73, 'throughput': 1618.88}
+
+[INFO|2026-06-22 21:58:05] logging.py:143 >> {'loss': 0.0018, 'learning_rate': 1.1111e-06, 'epoch': 2.75, 'throughput': 1619.78}
+
+[INFO|2026-06-22 21:58:58] logging.py:143 >> {'loss': 0.0022, 'learning_rate': 1.0705e-06, 'epoch': 2.77, 'throughput': 1620.77}
+
+[INFO|2026-06-22 21:59:51] logging.py:143 >> {'loss': 0.0029, 'learning_rate': 1.0305e-06, 'epoch': 2.80, 'throughput': 1621.75}
+
+[INFO|2026-06-22 22:00:43] logging.py:143 >> {'loss': 0.0011, 'learning_rate': 9.9111e-07, 'epoch': 2.83, 'throughput': 1622.93}
+
+[INFO|2026-06-22 22:01:36] logging.py:143 >> {'loss': 0.0021, 'learning_rate': 9.5227e-07, 'epoch': 2.85, 'throughput': 1623.86}
+
+[INFO|2026-06-22 22:02:30] logging.py:143 >> {'loss': 0.0017, 'learning_rate': 9.1402e-07, 'epoch': 2.88, 'throughput': 1624.62}
+
+[INFO|2026-06-22 22:03:24] logging.py:143 >> {'loss': 0.0011, 'learning_rate': 8.7638e-07, 'epoch': 2.90, 'throughput': 1625.39}
+
+[INFO|2026-06-22 22:04:18] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 8.3937e-07, 'epoch': 2.92, 'throughput': 1626.16}
+
+[INFO|2026-06-22 22:05:12] logging.py:143 >> {'loss': 0.0056, 'learning_rate': 8.0300e-07, 'epoch': 2.95, 'throughput': 1626.92}
+
+[INFO|2026-06-22 22:06:05] logging.py:143 >> {'loss': 0.0011, 'learning_rate': 7.6728e-07, 'epoch': 2.98, 'throughput': 1627.70}
+
+[INFO|2026-06-22 22:06:59] logging.py:143 >> {'loss': 0.0016, 'learning_rate': 7.3223e-07, 'epoch': 3.00, 'throughput': 1628.52}
+
+[INFO|2026-06-22 22:06:59] trainer.py:4258 >> 
+***** Running Evaluation *****
+
+[INFO|2026-06-22 22:06:59] trainer.py:4260 >>   Num examples = 100
+
+[INFO|2026-06-22 22:06:59] trainer.py:4263 >>   Batch size = 2
+
+[INFO|2026-06-22 22:08:20] trainer.py:3942 >> Saving model checkpoint to saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-600
+
+[INFO|2026-06-22 22:08:20] configuration_utils.py:697 >> loading configuration file /root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct/config.json
+
+[INFO|2026-06-22 22:08:20] configuration_utils.py:771 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": [
+    128001,
+    128008,
+    128009
+  ],
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 8.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+
+[INFO|2026-06-22 22:08:20] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-600/tokenizer_config.json
+
+[INFO|2026-06-22 22:08:20] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-600/special_tokens_map.json
+
+[INFO|2026-06-22 22:09:14] logging.py:143 >> {'loss': 0.0017, 'learning_rate': 6.9787e-07, 'epoch': 3.02, 'throughput': 1610.13}
+
+[INFO|2026-06-22 22:10:07] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 6.6419e-07, 'epoch': 3.05, 'throughput': 1611.03}
+
+[INFO|2026-06-22 22:11:01] logging.py:143 >> {'loss': 0.0016, 'learning_rate': 6.3123e-07, 'epoch': 3.08, 'throughput': 1611.89}
+
+[INFO|2026-06-22 22:11:54] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 5.9899e-07, 'epoch': 3.10, 'throughput': 1612.78}
+
+[INFO|2026-06-22 22:12:47] logging.py:143 >> {'loss': 0.0016, 'learning_rate': 5.6747e-07, 'epoch': 3.12, 'throughput': 1613.58}
+
+[INFO|2026-06-22 22:13:40] logging.py:143 >> {'loss': 0.0016, 'learning_rate': 5.3671e-07, 'epoch': 3.15, 'throughput': 1614.44}
+
+[INFO|2026-06-22 22:14:34] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 5.0670e-07, 'epoch': 3.17, 'throughput': 1615.21}
+
+[INFO|2026-06-22 22:15:28] logging.py:143 >> {'loss': 0.0019, 'learning_rate': 4.7746e-07, 'epoch': 3.20, 'throughput': 1616.00}
+
+[INFO|2026-06-22 22:16:22] logging.py:143 >> {'loss': 0.0020, 'learning_rate': 4.4900e-07, 'epoch': 3.23, 'throughput': 1616.74}
+
+[INFO|2026-06-22 22:17:16] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 4.2133e-07, 'epoch': 3.25, 'throughput': 1617.50}
+
+[INFO|2026-06-22 22:18:09] logging.py:143 >> {'loss': 0.0015, 'learning_rate': 3.9446e-07, 'epoch': 3.27, 'throughput': 1618.26}
+
+[INFO|2026-06-22 22:19:02] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 3.6840e-07, 'epoch': 3.30, 'throughput': 1619.03}
+
+[INFO|2026-06-22 22:19:56] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 3.4316e-07, 'epoch': 3.33, 'throughput': 1619.76}
+
+[INFO|2026-06-22 22:20:50] logging.py:143 >> {'loss': 0.0006, 'learning_rate': 3.1876e-07, 'epoch': 3.35, 'throughput': 1620.47}
+
+[INFO|2026-06-22 22:21:43] logging.py:143 >> {'loss': 0.0011, 'learning_rate': 2.9520e-07, 'epoch': 3.38, 'throughput': 1621.21}
+
+[INFO|2026-06-22 22:22:36] logging.py:143 >> {'loss': 0.0018, 'learning_rate': 2.7248e-07, 'epoch': 3.40, 'throughput': 1621.94}
+
+[INFO|2026-06-22 22:23:29] logging.py:143 >> {'loss': 0.0013, 'learning_rate': 2.5063e-07, 'epoch': 3.42, 'throughput': 1622.70}
+
+[INFO|2026-06-22 22:24:22] logging.py:143 >> {'loss': 0.0014, 'learning_rate': 2.2964e-07, 'epoch': 3.45, 'throughput': 1623.44}
+
+[INFO|2026-06-22 22:25:14] logging.py:143 >> {'loss': 0.0019, 'learning_rate': 2.0953e-07, 'epoch': 3.48, 'throughput': 1624.23}
+
+[INFO|2026-06-22 22:26:08] logging.py:143 >> {'loss': 0.0017, 'learning_rate': 1.9030e-07, 'epoch': 3.50, 'throughput': 1624.99}
+
+[INFO|2026-06-22 22:26:08] trainer.py:4258 >> 
+***** Running Evaluation *****
+
+[INFO|2026-06-22 22:26:08] trainer.py:4260 >>   Num examples = 100
+
+[INFO|2026-06-22 22:26:08] trainer.py:4263 >>   Batch size = 2
+
+[INFO|2026-06-22 22:27:29] trainer.py:3942 >> Saving model checkpoint to saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-700
+
+[INFO|2026-06-22 22:27:29] configuration_utils.py:697 >> loading configuration file /root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct/config.json
+
+[INFO|2026-06-22 22:27:29] configuration_utils.py:771 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": [
+    128001,
+    128008,
+    128009
+  ],
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 8.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+
+[INFO|2026-06-22 22:27:29] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-700/tokenizer_config.json
+
+[INFO|2026-06-22 22:27:29] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-700/special_tokens_map.json
+
+[INFO|2026-06-22 22:28:23] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 1.7196e-07, 'epoch': 3.52, 'throughput': 1609.27}
+
+[INFO|2026-06-22 22:29:16] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 1.5452e-07, 'epoch': 3.55, 'throughput': 1610.06}
+
+[INFO|2026-06-22 22:30:10] logging.py:143 >> {'loss': 0.0052, 'learning_rate': 1.3798e-07, 'epoch': 3.58, 'throughput': 1610.80}
+
+[INFO|2026-06-22 22:31:04] logging.py:143 >> {'loss': 0.0015, 'learning_rate': 1.2236e-07, 'epoch': 3.60, 'throughput': 1611.54}
+
+[INFO|2026-06-22 22:31:57] logging.py:143 >> {'loss': 0.0015, 'learning_rate': 1.0765e-07, 'epoch': 3.62, 'throughput': 1612.24}
+
+[INFO|2026-06-22 22:32:51] logging.py:143 >> {'loss': 0.0011, 'learning_rate': 9.3862e-08, 'epoch': 3.65, 'throughput': 1612.96}
+
+[INFO|2026-06-22 22:33:44] logging.py:143 >> {'loss': 0.0009, 'learning_rate': 8.1002e-08, 'epoch': 3.67, 'throughput': 1613.69}
+
+[INFO|2026-06-22 22:34:37] logging.py:143 >> {'loss': 0.0016, 'learning_rate': 6.9075e-08, 'epoch': 3.70, 'throughput': 1614.44}
+
+[INFO|2026-06-22 22:35:30] logging.py:143 >> {'loss': 0.0023, 'learning_rate': 5.8085e-08, 'epoch': 3.73, 'throughput': 1615.18}
+
+[INFO|2026-06-22 22:36:24] logging.py:143 >> {'loss': 0.0010, 'learning_rate': 4.8037e-08, 'epoch': 3.75, 'throughput': 1615.87}
+
+[INFO|2026-06-22 22:37:18] logging.py:143 >> {'loss': 0.0013, 'learning_rate': 3.8934e-08, 'epoch': 3.77, 'throughput': 1616.52}
+
+[INFO|2026-06-22 22:38:11] logging.py:143 >> {'loss': 0.0018, 'learning_rate': 3.0779e-08, 'epoch': 3.80, 'throughput': 1617.20}
+
+[INFO|2026-06-22 22:39:04] logging.py:143 >> {'loss': 0.0012, 'learning_rate': 2.3577e-08, 'epoch': 3.83, 'throughput': 1617.87}
+
+[INFO|2026-06-22 22:39:58] logging.py:143 >> {'loss': 0.0015, 'learning_rate': 1.7329e-08, 'epoch': 3.85, 'throughput': 1618.53}
+
+[INFO|2026-06-22 22:40:51] logging.py:143 >> {'loss': 0.0016, 'learning_rate': 1.2038e-08, 'epoch': 3.88, 'throughput': 1619.17}
+
+[INFO|2026-06-22 22:41:44] logging.py:143 >> {'loss': 0.0019, 'learning_rate': 7.7067e-09, 'epoch': 3.90, 'throughput': 1619.84}
+
+[INFO|2026-06-22 22:42:38] logging.py:143 >> {'loss': 0.0015, 'learning_rate': 4.3360e-09, 'epoch': 3.92, 'throughput': 1620.46}
+
+[INFO|2026-06-22 22:43:32] logging.py:143 >> {'loss': 0.0011, 'learning_rate': 1.9274e-09, 'epoch': 3.95, 'throughput': 1621.07}
+
+[INFO|2026-06-22 22:44:25] logging.py:143 >> {'loss': 0.0023, 'learning_rate': 4.8190e-10, 'epoch': 3.98, 'throughput': 1621.76}
+
+[INFO|2026-06-22 22:45:19] logging.py:143 >> {'loss': 0.0019, 'learning_rate': 0.0000e+00, 'epoch': 4.00, 'throughput': 1622.37}
+
+[INFO|2026-06-22 22:45:19] trainer.py:4258 >> 
+***** Running Evaluation *****
+
+[INFO|2026-06-22 22:45:19] trainer.py:4260 >>   Num examples = 100
+
+[INFO|2026-06-22 22:45:19] trainer.py:4263 >>   Batch size = 2
+
+[INFO|2026-06-22 22:46:40] trainer.py:3942 >> Saving model checkpoint to saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-800
+
+[INFO|2026-06-22 22:46:40] configuration_utils.py:697 >> loading configuration file /root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct/config.json
+
+[INFO|2026-06-22 22:46:40] configuration_utils.py:771 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": [
+    128001,
+    128008,
+    128009
+  ],
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 8.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+
+[INFO|2026-06-22 22:46:40] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-800/tokenizer_config.json
+
+[INFO|2026-06-22 22:46:40] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/checkpoint-800/special_tokens_map.json
+
+[INFO|2026-06-22 22:46:40] trainer.py:2657 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+
+[INFO|2026-06-22 22:46:40] trainer.py:3942 >> Saving model checkpoint to saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111
+
+[INFO|2026-06-22 22:46:40] configuration_utils.py:697 >> loading configuration file /root/autodl-tmp/modelscope/hub/LLM-Research/Meta-Llama-3.1-8B-Instruct/config.json
+
+[INFO|2026-06-22 22:46:40] configuration_utils.py:771 >> Model config LlamaConfig {
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": [
+    128001,
+    128008,
+    128009
+  ],
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 131072,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": {
+    "factor": 8.0,
+    "high_freq_factor": 4.0,
+    "low_freq_factor": 1.0,
+    "original_max_position_embeddings": 8192,
+    "rope_type": "llama3"
+  },
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 128256
+}
+
+
+[INFO|2026-06-22 22:46:41] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/tokenizer_config.json
+
+[INFO|2026-06-22 22:46:41] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Llama-3.1-8B-Instruct/lora/train_2026-06-22-19-52-55-8b-lora-4lun-6500jieduan-eval0.111/special_tokens_map.json
+
+[WARNING|2026-06-22 22:46:41] logging.py:148 >> No metric eval_accuracy to plot.
+
+[INFO|2026-06-22 22:46:41] trainer.py:4258 >> 
+***** Running Evaluation *****
+
+[INFO|2026-06-22 22:46:41] trainer.py:4260 >>   Num examples = 100
+
+[INFO|2026-06-22 22:46:41] trainer.py:4263 >>   Batch size = 2
+
+[INFO|2026-06-22 22:48:02] modelcard.py:449 >> Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Causal Language Modeling', 'type': 'text-generation'}}
+
